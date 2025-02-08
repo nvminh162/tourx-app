@@ -9,7 +9,7 @@ GV: Từ Thị Xuân Hiền
 ## Đề tài: Xây dựng ứng dụng web đặt tour du lịch
 ## 🤝 Thành viên tham gia phát triển dự án
 - Nguyễn Văn Minh - 22003405 - STT53
-- .......................... - STT51
+- Bùi Quang Minh - 22664411 - STT51
 - Nguyễn Tấn Minh - 22001075 - STT52
 - .......................... - STT54
 - .......................... - STT55
