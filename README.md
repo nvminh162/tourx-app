@@ -132,6 +132,16 @@ https://www.facebook.com/share/18ZzsYovom/
   - `style`: Chỉnh sửa style không ảnh hưởng logic  
   - `docs`: Cập nhật tài liệu 
 
+## Extension using VSCode 
+```
+    Simple react snippets
+    Htmltagwrap
+    Prettier
+    Prettier - Code formatter
+    PostCSS Language Support
+    Tailwind CSS IntelliSense
+```
+
 ## 🤝 Đóng Góp
 Mọi sự đóng góp đều được hoan nghênh! Để đơn giản hoá chỉ sử dụng nhánh `main` để thành viên chưa chưa có kinh nghiệm về `git` vẫn có thể làm việc. Vui lòng kiểm tra thật kỹ trước khi push commit tránh sai sót không đáng có. Xin cảm ơn!
 
