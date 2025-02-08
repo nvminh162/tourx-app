@@ -90,10 +90,11 @@ Dự án được xây dựng và phát triển bởi nhóm 11 - (2025-2026) - I
 ## List những thứ quan trọng thường sử dụng
 ```
 Những thư viện và tool chính cần biết để thực hiện dự án
-- dùng Tailwind xuyên suốt dự án
-- dùng scss/sass module hoá
-- clsx or classnames (recommend dùng clsx) để kết hợp với SCSS/SASS
-- biết cơ bản các hooks trong react
+- Biết cú pháp và sử dụng ngôn ngữ lập trình Javascript
+- Dùng Tailwind xuyên suốt dự án
+- Dùng scss/sass module hoá
+- Clsx or classnames (recommend dùng clsx) để kết hợp với SCSS/SASS
+- Biết cơ bản các hooks trong react
 ```
 
 ## 🎯 Code Convention  
