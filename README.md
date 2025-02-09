@@ -11,7 +11,7 @@ GV: Từ Thị Xuân Hiền
 - Nguyễn Văn Minh - 22003405 - STT53
 - Bùi Quang Minh - 22664411 - STT51
 - Nguyễn Tấn Minh - 22001075 - STT52
-- .......................... - STT54
+- Trần Công Minh - 22638121 - STT54
 - .......................... - STT55
 
 ## 🌟 Giới Thiệu TourX - Website Đặt Tour Du Lịch Trực Tuyến
