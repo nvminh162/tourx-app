@@ -89,7 +89,6 @@ npm run dev
 - Tuân thủ **JSX Syntax** chuẩn của React
 - Đặt tên file **PascalCase** cho component (`HeaderComponent.js`)
 - Biến và hàm sử dụng **camelCase** (`fetchUserData`)
-- Hạn chế sử dụng **any** trong TypeScript
 - Sử dụng **async/await** thay vì `.then().catch()` 
 
 ### 4️⃣ **Quy Tắc Viết CSS**  
