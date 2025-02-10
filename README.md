@@ -21,6 +21,7 @@ TourX là một nền tảng giúp người dùng dễ dàng tìm kiếm, đặt
 ## 🚀 Công Nghệ Sử Dụng  
 - **Frontend**: ReactJS, Vite, SWC  
 - **UI Library**: TailwindCSS
+- **CSS Preprocessor**: SCSS
 - **State Management**: Redux Toolkit / Context API
 - **Routing**: React Router  
 - **API**: RESTful API  
@@ -53,11 +54,86 @@ npm install
 npm run dev  
 ```
 
-## ----- </ Development Area > -------------------------------
-# Quy ước khi code - code convention
+# <span style="color:red;">----- </ Development Area > ---------------------</span>
+# Quy ước khi viết code - code convention
+
+## 📢 Ngôn ngữ khi làm việc
+- Sử dụng `Tiếng Anh` 100% khi làm việc: `đặt tên biến`, `comment code`, `commit code` ...
+
+## 🎯 Code Convention  
+### 1️⃣ **Cấu Trúc Dự Án**  
+- **components/**: Chứa các component tái sử dụng:
+  + Mỗi component nên có một thư mục riêng. Ví dụ: `Button.jsx`.
+  + Trong mỗi thư mục component, cần có file `index.jsx` để export component chính.
+- **pages/**: Chứa các trang chính của ứng dụng, mỗi trang nên có một thư mục riêng chứa file gồm: `.jsx`, `.scss` và `index.jsx`  
+- **hooks/**: Chứa các custom hooks, mỗi hook nên có một file riêng và đặt tên theo quy tắc `useSomething.js`.  
+- **utils/**: Chứa các hàm tiện ích, mỗi hàm nên có một file riêng và đặt tên theo quy tắc `somethingUtils.js`.  
+- **services/**: Chứa các request API, mỗi service nên có một file riêng và đặt tên theo quy tắc `somethingService.js`. 
+- **[Đọc thêm ...](https://www.facebook.com/share/18ZzsYovom/)**
+
+### 2️⃣ **Quy Tắc Đặt Tên Biến**
+
+- Biến và hàm sử dụng **camelCase** (`fetchUserData`)
+- Component sử dụng **PascalCase** (`UserProfile`)
+- Hằng số và action types sử dụng **UPPER\_CASE** (`API_URL`)
+- Tên file component sử dụng **PascalCase** (`UserProfile.js`)
+- Helper function sử dụng **camelCase** (`formatDate.js`)
+- Thư mục sử dụng **kebab-case** (`user-profile/`)
+- Class CSS sử dụng **kebab-case** (`header-container`)
+- Inline style trong React sử dụng **camelCase** (`backgroundColor`)
+- Hook custom bắt đầu với "use" (`useAuth`)
+- API instance sử dụng **PascalCase** (`ApiClient`)
+
+### 3️⃣ **Quy Tắc Viết Code**
+- Sử dụng **ESLint** và **Prettier** để đảm bảo chất lượng code
+- Tuân thủ **JSX Syntax** chuẩn của React
+- Đặt tên file **PascalCase** cho component (`HeaderComponent.js`)
+- Biến và hàm sử dụng **camelCase** (`fetchUserData`)
+- Hạn chế sử dụng **any** trong TypeScript
+- Sử dụng **async/await** thay vì `.then().catch()` 
+
+### 4️⃣ **Quy Tắc Viết CSS**  
+- Sử dụng **TailwindCSS** cho phần lớn styling  
+- Tránh viết `inline-style` trực tiếp trong JSX  
+- Nếu cần CSS tùy chỉnh, sử dụng file `.scss` riêng  
+
+### 5️⃣ **Quy Tắc Commit**  
+- Sử dụng format chuẩn: `type(scope): message`  
+- Các loại commit phổ biến:  
+  + `feat`: Tính năng mới  
+  + `fix`: Sửa lỗi  
+  + `refactor`: Cải tiến code  
+  + `style`: Chỉnh sửa style không ảnh hưởng logic  
+  + `docs`: Cập nhật tài liệu 
+
+## Extension using VSCode 
+```
+  Simple react snippets
+  Htmltagwrap
+  Prettier
+  Prettier - Code formatter
+  PostCSS Language Support
+  Tailwind CSS IntelliSense
+```
+
+## Một số website tham khảo
+```
+https://mixivivu.com
+```
+```
+https://travel.com.vn
+```
+```
+https://fiditour.com
+```
+```
+https://www.ivivu.com
+```
+```
+Updating ...
+```
 
 ## 📚 Thư Viện Sử Dụng
-
 - `react` ^19.0.0: Thư viện UI chính
 - `react-dom` ^19.0.0: Hỗ trợ render React vào DOM
 - `react-router-dom` ^7.1.5: Quản lý định tuyến trong ứng dụng
@@ -92,65 +168,6 @@ Những thư viện và tool chính cần biết để thực hiện dự án
 - Dùng scss/sass module hoá
 - Clsx or classnames (recommend dùng clsx) để kết hợp với SCSS/SASS
 - Biết cơ bản các hooks trong react
-```
-
-## 🎯 Code Convention  
-### 1️⃣ **Cấu Trúc Dự Án**  
-- **components/**: Chứa các component tái sử dụng  
-- **pages/**: Chứa các trang chính của ứng dụng  
-- **hooks/**: Chứa các custom hooks  
-- **utils/**: Chứa các hàm tiện ích  
-- **services/**: Chứa các request API  
-- **[Đọc thêm ...](https://www.facebook.com/share/18ZzsYovom/)**
-  
-
-### 2️⃣ **Quy Tắc Viết Code**  
-- Sử dụng **ESLint** và **Prettier** để đảm bảo chất lượng code  
-- Tuân thủ **JSX Syntax** chuẩn của React  
-- Đặt tên file **PascalCase** cho component (`HeaderComponent.js`)  
-- Biến và hàm sử dụng **camelCase** (`fetchUserData`)  
-- Hạn chế sử dụng **any** trong TypeScript  
-- Sử dụng **async/await** thay vì `.then().catch()`  
-
-### 3️⃣ **Quy Tắc Viết CSS**  
-- Sử dụng **TailwindCSS** cho phần lớn styling  
-- Tránh viết inline-style trực tiếp trong JSX  
-- Nếu cần CSS tùy chỉnh, sử dụng file `.scss` riêng  
-
-### 4️⃣ **Quy Tắc Commit**  
-- Sử dụng format chuẩn: `type(scope): message`  
-- Các loại commit phổ biến:  
-  + `feat`: Tính năng mới  
-  + `fix`: Sửa lỗi  
-  + `refactor`: Cải tiến code  
-  + `style`: Chỉnh sửa style không ảnh hưởng logic  
-  + `docs`: Cập nhật tài liệu 
-
-## 📝 Extension using VSCode 
-```
-  Simple react snippets
-  Htmltagwrap
-  Prettier
-  Prettier - Code formatter
-  PostCSS Language Support
-  Tailwind CSS IntelliSense
-```
-
-## 📢 Một số website tham khảo
-```
-https://mixivivu.com
-```
-```
-https://travel.com.vn
-```
-```
-https://fiditour.com
-```
-```
-https://www.ivivu.com
-```
-```
-Updating ...
 ```
 
 ## 🤝 Đóng Góp
