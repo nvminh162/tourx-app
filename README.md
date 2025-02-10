@@ -101,10 +101,7 @@ Những thư viện và tool chính cần biết để thực hiện dự án
 - **hooks/**: Chứa các custom hooks  
 - **utils/**: Chứa các hàm tiện ích  
 - **services/**: Chứa các request API  
-- **Đọc thêm ở đây...**
-```
-https://www.facebook.com/share/18ZzsYovom/
-```
+- **[Đọc thêm ...](https://www.facebook.com/share/18ZzsYovom/)**
   
 
 ### 2️⃣ **Quy Tắc Viết Code**  
@@ -123,20 +120,20 @@ https://www.facebook.com/share/18ZzsYovom/
 ### 4️⃣ **Quy Tắc Commit**  
 - Sử dụng format chuẩn: `type(scope): message`  
 - Các loại commit phổ biến:  
-  - `feat`: Tính năng mới  
-  - `fix`: Sửa lỗi  
-  - `refactor`: Cải tiến code  
-  - `style`: Chỉnh sửa style không ảnh hưởng logic  
-  - `docs`: Cập nhật tài liệu 
+  + `feat`: Tính năng mới  
+  + `fix`: Sửa lỗi  
+  + `refactor`: Cải tiến code  
+  + `style`: Chỉnh sửa style không ảnh hưởng logic  
+  + `docs`: Cập nhật tài liệu 
 
 ## 📝 Extension using VSCode 
 ```
-    Simple react snippets
-    Htmltagwrap
-    Prettier
-    Prettier - Code formatter
-    PostCSS Language Support
-    Tailwind CSS IntelliSense
+  Simple react snippets
+  Htmltagwrap
+  Prettier
+  Prettier - Code formatter
+  PostCSS Language Support
+  Tailwind CSS IntelliSense
 ```
 
 ## 📢 Một số website tham khảo
