@@ -4,18 +4,19 @@
 ```
 DHKTPM18B - 420301541302
 GV: Từ Thị Xuân Hiền
-    Nguyễn Trọng Tiến
 ```
-## Đề tài: Xây dựng ứng dụng web đặt tour du lịch
-## 🤝 Thành viên tham gia phát triển dự án
-- Nguyễn Văn Minh - 22003405 - STT53
+## Đề tài: Xây dựng ứng dụng website đặt tour du lịch
+## 🤝 Thành viên tham gia phát triển
+- Nguyễn Văn Minh - 22003405 - STT53 (PM)
 - Bùi Quang Minh - 22664411 - STT51
 - Nguyễn Tấn Minh - 22001075 - STT52
 - Trần Công Minh - 22638121 - STT54
-- .......................... - STT55
+- Trần Vũ Uyên My - 22002045 - STT55
 
-## 🌟 Giới Thiệu TourX - Website Đặt Tour Du Lịch Trực Tuyến
-TourX là một nền tảng giúp người dùng dễ dàng tìm kiếm, đặt và quản lý các chuyến du lịch một cách tiện lợi. Với giao diện trực quan, trải nghiệm mượt mà và thông tin chi tiết về các điểm đến, TravelTour mang đến cho bạn những hành trình tuyệt vời nhất.  
+  **[Danh sách nhóm](https://docs.google.com/spreadsheets/d/1gaygAMW25scOlaIoXddVJZmmhO2n-DJ-/edit?usp=sharing&ouid=101662654548516828365&rtpof=true&sd=true)**
+
+## 🌟 Giới Thiệu TourX
+TourX là một nền tảng giúp người dùng dễ dàng tìm kiếm, đặt và quản lý các chuyến du lịch một cách tiện lợi. Với giao diện trực quan, trải nghiệm mượt mà và thông tin chi tiết về các điểm đến, TourX mang đến cho bạn những hành trình tuyệt vời nhất.  
 
 ## 🚀 Công Nghệ Sử Dụng  
 - **Frontend**: ReactJS, Vite, SWC  
@@ -23,7 +24,7 @@ TourX là một nền tảng giúp người dùng dễ dàng tìm kiếm, đặt
 - **State Management**: Redux Toolkit / Context API
 - **Routing**: React Router  
 - **API**: RESTful API  
-- **Authentication**: Firebase Auth / JWT 
+- **Authentication**: Firebase Auth
 
 ## 🔥 Tính Năng Chính  
 - 📌 Tìm kiếm và đặt tour du lịch theo địa điểm, giá cả, đánh giá  
@@ -52,12 +53,8 @@ npm install
 npm run dev  
 ```
 
-## 📝 Đội ngũ  
-Dự án được xây dựng và phát triển bởi nhóm 11 - (2025-2026) - IUH.
-
-## ---------------------------------------------------------------------------
+## ----- </ Development Area > -------------------------------
 # Quy ước khi code - code convention
-
 
 ## 📚 Thư Viện Sử Dụng
 
@@ -132,7 +129,7 @@ https://www.facebook.com/share/18ZzsYovom/
   - `style`: Chỉnh sửa style không ảnh hưởng logic  
   - `docs`: Cập nhật tài liệu 
 
-## Extension using VSCode 
+## 📝 Extension using VSCode 
 ```
     Simple react snippets
     Htmltagwrap
@@ -142,8 +139,27 @@ https://www.facebook.com/share/18ZzsYovom/
     Tailwind CSS IntelliSense
 ```
 
+## 📢 Một số website tham khảo
+```
+https://mixivivu.com
+```
+```
+https://travel.com.vn
+```
+```
+https://fiditour.com
+```
+```
+https://www.ivivu.com
+```
+```
+Updating ...
+```
+
 ## 🤝 Đóng Góp
 Mọi sự đóng góp đều được hoan nghênh! Để đơn giản hoá chỉ sử dụng nhánh `main` để thành viên chưa chưa có kinh nghiệm về `git` vẫn có thể làm việc. Vui lòng kiểm tra thật kỹ trước khi push commit tránh sai sót không đáng có. Xin cảm ơn!
 
-📢 *Nếu bạn thích dự án này, hãy ⭐ trên GitHub!*
+## 📝 Đội ngũ  
+Dự án được xây dựng và phát triển bởi nhóm 11 - (2025-2026) - IUH.
 
+📢 *Nếu bạn thích dự án này, hãy ⭐ trên GitHub!*
