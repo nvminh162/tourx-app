@@ -113,6 +113,12 @@ npm run dev
   Tailwind CSS IntelliSense
 ```
 
+## Extension chrome for Redux library 
+```
+  React Developer Tools
+  Redux DevTools
+```
+
 ## Một số website tham khảo
 ```
 https://mixivivu.com
