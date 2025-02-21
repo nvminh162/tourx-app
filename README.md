@@ -7,11 +7,11 @@ GV: Từ Thị Xuân Hiền
 ```
 ## Đề tài: Xây dựng ứng dụng website đặt tour du lịch
 ## 🤝 Thành viên tham gia phát triển
-- Nguyễn Văn Minh - 22003405 - STT53 (PM)
-- Bùi Quang Minh - 22664411 - STT51
-- Nguyễn Tấn Minh - 22001075 - STT52
-- Trần Công Minh - 22638121 - STT54
-- Trần Vũ Uyên My - 22002045 - STT55
+- `Nguyễn Văn Minh` - `22003405` - STT`53` (PM)
+- `Bùi Quang Minh` - `22664411` - STT`51`
+- `Nguyễn Tấn Minh` - `22001075` - STT`52`
+- `Trần Công Minh` - `22638121` - STT`54`
+- `Trần Vũ Uyên My` - `22002045` - STT`55`
 
   **[Danh sách nhóm](https://docs.google.com/spreadsheets/d/1gaygAMW25scOlaIoXddVJZmmhO2n-DJ-/edit?usp=sharing&ouid=101662654548516828365&rtpof=true&sd=true)**
 
@@ -54,7 +54,7 @@ npm install
 npm run dev  
 ```
 
-# <span style="color:red;">----- </ Development Area > ---------------------</span>
+# <span style="color:red;">----- </ Development > ---------------------</span>
 # Quy ước khi viết code - code convention
 
 ## 📢 Ngôn ngữ khi làm việc
@@ -80,7 +80,6 @@ npm run dev
 - Helper function sử dụng **camelCase** (`formatDate.js`)
 - Thư mục sử dụng **kebab-case** (`user-profile/`)
 - Class CSS sử dụng **kebab-case** (`header-container`)
-- Inline style trong React sử dụng **camelCase** (`backgroundColor`)
 - Hook custom bắt đầu với "use" (`useAuth`)
 - API instance sử dụng **PascalCase** (`ApiClient`)
 
@@ -109,7 +108,6 @@ npm run dev
 ```
   Simple react snippets
   Htmltagwrap
-  Prettier
   Prettier - Code formatter
   PostCSS Language Support
   Tailwind CSS IntelliSense
@@ -164,6 +162,7 @@ Updating ...
 Những thư viện và tool chính cần biết để thực hiện dự án
 - Biết cú pháp và sử dụng ngôn ngữ lập trình Javascript
 - Dùng Tailwind xuyên suốt dự án
+- Dùng Redux Toolkit quản lí state
 - Dùng scss/sass module hoá
 - Clsx or classnames (recommend dùng clsx) để kết hợp với SCSS/SASS
 - Biết cơ bản các hooks trong react

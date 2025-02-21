@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import images from '~/assets/images';
 import styles from './Image.module.scss';
 
+// eslint-disable-next-line react/display-name
 const Image = forwardRef(({ src, alt, className, fallback = images.ownProject, ...props }, ref) => {
     const [_fallback, setFallback] = useState('');
 
