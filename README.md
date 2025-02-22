@@ -133,6 +133,9 @@ https://fiditour.com
 https://www.ivivu.com
 ```
 ```
+https://bestour.com.vn
+```
+```
 https://cungdulich.vn
 ```
 ```
@@ -158,6 +161,9 @@ https://www.bestprice.vn
 ```
 ```
 https://suntravel.com.vn
+```
+```
+https://bestour.com.vn
 ```
 ```
 
