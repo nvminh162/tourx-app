@@ -8,6 +8,7 @@ import styles from './DefaultLayout.module.scss';
 const cx = classNames.bind(styles);
 
 function DefaultLayout({ children }) {
+    {setTimeout(() => alert('Anh nhắc em!, Layout not released!'), 3000)}
     return (
         <div className={cx('wrapper')}>
             <Header />

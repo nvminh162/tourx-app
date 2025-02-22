@@ -11,7 +11,6 @@ GV: Từ Thị Xuân Hiền
 - `Bùi Quang Minh` - `22664411` - STT`51`
 - `Nguyễn Tấn Minh` - `22001075` - STT`52`
 - `Trần Công Minh` - `22638121` - STT`54`
-- `Trần Vũ Uyên My` - `22002045` - STT`55`
 
   **[Danh sách nhóm](https://docs.google.com/spreadsheets/d/1gaygAMW25scOlaIoXddVJZmmhO2n-DJ-/edit?usp=sharing&ouid=101662654548516828365&rtpof=true&sd=true)**
 
@@ -111,6 +110,7 @@ npm run dev
   Prettier - Code formatter
   PostCSS Language Support
   Tailwind CSS IntelliSense
+  Headwind
 ```
 
 ## Extension chrome for Redux library 
@@ -166,6 +166,7 @@ Updating ...
 ## List những thứ quan trọng thường sử dụng
 ```
 Những thư viện và tool chính cần biết để thực hiện dự án
+- Biết sử dụng kỹ thuật responsive website
 - Biết cú pháp và sử dụng ngôn ngữ lập trình Javascript
 - Dùng Tailwind xuyên suốt dự án
 - Dùng Redux Toolkit quản lí state

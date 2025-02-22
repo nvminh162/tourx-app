@@ -1,11 +1,6 @@
-import clsx from "clsx";
-import styles from './Login.module.scss'
-
 function Login() {
-    const classes = clsx(styles.wrapper)
-
     return (
-        <div className={classes}>
+        <div className="min-h-screen p-5 text-center bg-amber-400">
             Login page
         </div>
     );

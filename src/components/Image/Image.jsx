@@ -1,12 +1,10 @@
-import { forwardRef, useState } from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { forwardRef, useState } from 'react';
 
-import images from '~/assets/images';
-import styles from './Image.module.scss';
+import imgError from '~/assets/images/Error';
 
 // eslint-disable-next-line react/display-name
-const Image = forwardRef(({ src, alt, className, fallback = images.ownProject, ...props }, ref) => {
+const Image = forwardRef(({ src, alt, className, fallback = imgError.imgDefault, ...props }, ref) => {
     const [_fallback, setFallback] = useState('');
 
     const handleError = () => {
@@ -15,7 +13,7 @@ const Image = forwardRef(({ src, alt, className, fallback = images.ownProject, .
 
     return (
         <img
-            className={classNames(styles.wrapper, className)}
+            className={className}
             ref={ref}
             src={_fallback || src}
             alt={alt}
@@ -26,8 +24,8 @@ const Image = forwardRef(({ src, alt, className, fallback = images.ownProject, .
 });
 
 Image.propTypes = {
-    src: PropTypes.string,
-    alt: PropTypes.string,
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
     className: PropTypes.string,
     fallback: PropTypes.string,
 };

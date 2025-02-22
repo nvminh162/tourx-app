@@ -1,11 +1,6 @@
-import clsx from "clsx";
-import styles from './Search.module.scss'
-
 function Search() {
-    const classes = clsx(styles.wrapper)
-
     return (
-        <div className={classes}>
+        <div className="min-h-screen p-5 text-center bg-amber-600">
             Search page
         </div>
     );
