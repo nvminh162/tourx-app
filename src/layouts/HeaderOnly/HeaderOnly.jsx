@@ -7,7 +7,7 @@ function HeaderOnly({ children }) {
     return (
         <div className="w-full h-full">
             <Header />
-            <div className="max-w-[1392px] mx-auto mt-[96px]">
+            <div className="max-w-[1392px] mx-auto mt-24">
                 <div className="">{children}</div>
             </div>
         </div>
