@@ -12,15 +12,15 @@ function Header() {
     return (
         <div className="h-[96px] w-full drop-shadow-sm bg-white fixed top-0 z-50">
             <div className="flex items-center justify-between w-full h-full mx-auto max-w-7xl">
-                <div className="flex gap-10">
+                <div className="flex gap-8">
                     <Link to={config.routes.home}>
                         <Image
-                            src={imgHeader.logoIUH}
+                            src={imgHeader.logoTourX}
                             alt="Logo"
-                            className="w-[180px] h-[96px] object-cover select-none"
+                            className="w-[130px] h-[96px] object-cover select-none"
                         />
                     </Link>
-                    <div className="items-center gap-5 text-base font-semibold xl:flex">
+                    <div className="items-center gap-4 text-base font-semibold xl:flex">
                         {menuItems.map((item) => (
                             <Link
                                 to={item.to}
