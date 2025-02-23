@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import {
-    faBars,
-    faCaretDown,
-    faGlobe,
-    faMagnifyingGlass,
-    faUser,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCaretDown, faGlobe, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import Image from '~/components/Image/Image';
 import config from '~/config';
@@ -18,6 +12,10 @@ import Button from '~/components/Button';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const handleScrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <div className="h-[96px] w-full drop-shadow-sm bg-white fixed top-0 z-50">
             <div
@@ -25,12 +23,13 @@ const Header = () => {
                 onMouseLeave={() => setIsMenuOpen(false)}
                 onMouseDown={() => setIsMenuOpen(false)}
             >
-                <div className="flex gap-5 mx-5">
+                <div className="flex gap-10 mx-5">
                     <Link to={config.routes.home}>
                         <Image
                             src={imgUtils.logoTourX}
                             alt="Logo"
                             className="w-[130px] h-[96px] object-cover select-none"
+                            onClick={handleScrollTop}
                         />
                     </Link>
                     {/* Desktop */}
@@ -48,6 +47,7 @@ const Header = () => {
                                 }
                                 hover:text-primary-base hover:border-primary-base`
                                 }
+                                onClick={handleScrollTop}
                             >
                                 {item.title}
                             </NavLink>
@@ -55,10 +55,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="relative flex items-center justify-center mx-5">
-                    <Button
-                        to={config.routes.search}
-                        className="text-2xl rounded-full cursor-pointer h-13 w-13"
-                    >
+                    <Button to={config.routes.search} className="text-2xl rounded-full cursor-pointer h-13 w-13">
                         <FontAwesomeIcon icon={faMagnifyingGlass} fade />
                     </Button>
                     <Button className="text-2xl rounded-full cursor-pointer h-13 w-13">

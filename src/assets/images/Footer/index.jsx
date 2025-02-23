@@ -1,7 +1,7 @@
-import imgVerify from './verify.webp';
+import verify from './verify.webp';
 
 const imgFooter = {
-    imgVerify,
+    verify,
 };
 
 export default imgFooter;

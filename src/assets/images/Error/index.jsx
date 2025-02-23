@@ -1,4 +1,4 @@
-import imgDefault from './img-not-available.png';
+import imgDefault from './imgDefault.png';
 
 const imgError = {
     imgDefault,

@@ -144,7 +144,7 @@ const Footer = () => {
                         <Button href="https://iuh.edu.vn/">
                             <Image className="object-cover h-15 w-40" src={imgUtils.logoIUHWhite} />
                         </Button>
-                        <Image className="object-cover h-15 w-40" src={imgFooter.imgVerify} />
+                        <Image className="object-cover h-15 w-40" src={imgFooter.verify} />
                     </div>
                 </div>
             </div>
