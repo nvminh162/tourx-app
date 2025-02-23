@@ -1,23 +1,13 @@
-:root {
-    --primary-light: #caf8f8;
-    --primary-base: #77dada;
-    --primary-dark: #0e4f4f;
-    --black: #000;
-    --white: #fff;
-}
-
 .wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 100px;
-    border-radius: 4px;
     cursor: pointer;
-    background-color: var(--white);
     border: 1px solid transparent;
     user-select: none; //not selection text
+    //Spacing between buttons
     +.wrapper {
-        margin-left: 5px;
+        margin-left: 0px;
     }
     &.disabled {
         pointer-events: none;

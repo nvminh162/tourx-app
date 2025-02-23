@@ -4,24 +4,26 @@ import { forwardRef, useState } from 'react';
 import imgError from '~/assets/images/Error';
 
 // eslint-disable-next-line react/display-name
-const Image = forwardRef(({ src, alt, className, fallback = imgError.imgDefault, ...props }, ref) => {
-    const [_fallback, setFallback] = useState('');
+const Image = forwardRef(
+    ({ src, alt, className, fallback = imgError.imgDefault, ...props }, ref) => {
+        const [_fallback, setFallback] = useState('');
 
-    const handleError = () => {
-        setFallback(fallback);
-    };
+        const handleError = () => {
+            setFallback(fallback);
+        };
 
-    return (
-        <img
-            className={className}
-            ref={ref}
-            src={_fallback || src}
-            alt={alt}
-            {...props}
-            onError={handleError}
-        />
-    );
-});
+        return (
+            <img
+                className={className}
+                ref={ref}
+                src={_fallback || src || fallback}
+                alt={alt}
+                {...props}
+                onError={handleError}
+            />
+        );
+    },
+);
 
 Image.propTypes = {
     src: PropTypes.string.isRequired,

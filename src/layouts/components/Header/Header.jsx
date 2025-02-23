@@ -1,12 +1,19 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import {
+    faBars,
+    faCaretDown,
+    faGlobe,
+    faMagnifyingGlass,
+    faUser,
+} from '@fortawesome/free-solid-svg-icons';
 
 import Image from '~/components/Image/Image';
 import config from '~/config';
 import imgHeader from '~/assets/images/Header';
 import menuItems from '~/data/mocks/layouts/Header/menuItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCaretDown, faGlobe, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import Button from '~/components/Button';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +21,7 @@ function Header() {
     return (
         <div className="h-[96px] w-full drop-shadow-sm bg-white fixed top-0 z-50">
             <div
-                className="flex items-center justify-between w-full h-full mx-auto max-w-7xl"
+                className="flex items-center justify-between w-full h-full max-w-6xl mx-auto"
                 onMouseLeave={() => setIsMenuOpen(false)}
                 onMouseDown={() => setIsMenuOpen(false)}
             >
@@ -26,30 +33,42 @@ function Header() {
                             className="w-[130px] h-[96px] object-cover select-none"
                         />
                     </Link>
-                    <div className="items-center gap-5 text-base font-semibold hidden lg:flex">
+                    {/* Desktop */}
+                    <div className="items-center hidden gap-5 text-base font-semibold lg:flex">
                         {menuItems.map((item) => (
-                            <Link
+                            <NavLink
                                 to={item.to}
                                 key={item.id}
-                                className="select-none text-center flex items-center justify-center h-full transition duration-300 border-b-2 border-transparent hover:border-primary-base hover:text-primary-base min-w-[80px]"
+                                className={({ isActive }) =>
+                                    `select-none text-center flex items-center justify-center h-full transition duration-300 border-b-3 min-w-[80px] 
+                                ${
+                                    isActive
+                                        ? 'text-primary-base border-primary-base border-b-3'
+                                        : 'text-black border-transparent'
+                                }
+                                hover:text-primary-base hover:border-primary-base`
+                                }
                             >
                                 {item.title}
-                            </Link>
+                            </NavLink>
                         ))}
                     </div>
                 </div>
-                <div className="relative flex items-center justify-center gap-6 mx-5">
-                    <Link to={config.routes.search} className="text-2xl cursor-pointer">
+                <div className="relative flex items-center justify-center mx-5">
+                    <Button to={config.routes.search} className="text-2xl rounded-full cursor-pointer h-13 w-13">
                         <FontAwesomeIcon icon={faMagnifyingGlass} fade />
-                    </Link >
-                    <button className="text-2xl cursor-pointer">
+                    </Button>
+                    <Button className="text-2xl rounded-full cursor-pointer h-13 w-13">
                         <FontAwesomeIcon icon={faUser} />
-                    </button>
-                    <button className="text-2xl cursor-pointer hidden lg:block">
+                    </Button>
+                    <button className="relative hidden text-2xl rounded-full cursor-pointer w-13 h-13 lg:block">
                         <FontAwesomeIcon icon={faGlobe} />
-                        <FontAwesomeIcon className="ml-1.5 text-xl" icon={faCaretDown} />
+                        <FontAwesomeIcon className="absolute top-1/2 -right-1 -translate-y-1/2 ml-1.5 text-xl" icon={faCaretDown} />
                     </button>
-                    <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-3xl lg:hidden cursor-pointer">
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="text-3xl rounded-full cursor-pointer w-13 h-13 lg:hidden"
+                    >
                         <FontAwesomeIcon icon={faBars} />
                     </button>
                 </div>
@@ -59,11 +78,12 @@ function Header() {
                     }`}
                     style={{ transition: 'transform 0.3s ease, opacity 0.3s ease' }}
                 >
+                    {/* Mobible */}
                     {menuItems.map((item) => (
                         <Link
                             to={item.to}
                             key={item.id}
-                            className=" w-full text-center p-4 hover:bg-primary-base hover:text-black"
+                            className="w-full p-4 text-center hover:bg-primary-base hover:text-black"
                         >
                             {item.title}
                         </Link>

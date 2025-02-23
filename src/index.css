@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
+:root {
+    --primary-light: #77dada;
+    --primary-base: #25b0cd;
+    --primary-dark: #0e4f4f;
+    --black: #000;
+    --white: #fff;
+}
+
 @theme {
-    --color-primary-light: #caf8f8;
-    --color-primary-base: #77dada;
-    --color-primary-dark: #0e4f4f;
+    --color-primary-light: var(--primary-light);
+    --color-primary-base: var(--primary-base);
+    --color-primary-dark: var(--primary-dark);
 }

@@ -1,2 +1,2 @@
-export { default as DefaultLayout } from './DefaultLayout'
+export { default as LeftSidebarLayout } from './LeftSidebarLayout'
 export { default as HeaderOnly } from './HeaderOnly'

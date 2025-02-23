@@ -1,4 +1,4 @@
-import { DefaultLayout, HeaderOnly } from '~/layouts';
+import { LeftSidebarLayout, HeaderOnly } from '~/layouts';
 import config from '~/config';
 import {
     Home,
@@ -34,7 +34,7 @@ const publicRoutes = [
     { path: config.routes.regulations, element: Regulations, layout: HeaderOnly },
     { path: config.routes.terms, element: Terms, layout: HeaderOnly },
     { path: config.routes.usermanual, element: UserManual, layout: HeaderOnly },
-    { path: config.routes.search, element: Search, layout: DefaultLayout },
+    { path: config.routes.search, element: Search, layout: LeftSidebarLayout },
     { path: config.routes.login, element: Login, layout: null },
 ];
 

@@ -1,10 +1,5 @@
-import clsx from 'clsx';
-import styles from './Sidebar.module.scss';
-
 function Sidebar() {
-    const classes = clsx('sidebar', styles.wrapper);
-
-    return <div className={classes}>Sidebar layout</div>;
+    return <div className="min-h-screen p-5 text-center bg-violet-400">Sidebar layout</div>;
 }
 
 export default Sidebar;
