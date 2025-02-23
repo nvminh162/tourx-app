@@ -1,0 +1,10 @@
+[
+    { "id": 101, "type": "navigation", "title": "Về chúng tôi", "to": "/about" },
+    { "id": 102, "type": "navigation", "title": "Điều khoản và điều kiện", "to": "/terms" },
+    { "id": 103, "type": "navigation", "title": "Chính sách riêng tư", "to": "/privacy" },
+    { "id": 104, "type": "navigation", "title": "Hướng dẫn sử dụng", "to": "/user-manual" },
+    { "id": 105, "type": "navigation", "title": "Hình thức thanh toán", "to": "/payments" },
+    { "id": 106, "type": "navigation", "title": "Liên hệ", "to": "/contact" },
+    { "id": 107, "type": "phone", "title": "Hotline: 0353.999.999", "to": "0353999999" },
+    { "id": 108, "type": "email", "title": "Email: tourxcskh@gmail.com", "to": "tourxcskh@gmail.com" }
+]

@@ -13,6 +13,7 @@ const routes = {
     payments: '/payments',
     regulations: '/regulations',
     faq: '/faq',
+    notfound: '/404',
     search: '/search',
     login: '/login',
 };

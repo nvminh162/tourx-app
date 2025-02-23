@@ -17,6 +17,7 @@ import {
     Regulations,
     Terms,
     UserManual,
+    NotFound,
 } from '~/pages';
 
 const publicRoutes = [
@@ -34,6 +35,7 @@ const publicRoutes = [
     { path: config.routes.regulations, element: Regulations, layout: HeaderOnly },
     { path: config.routes.terms, element: Terms, layout: HeaderOnly },
     { path: config.routes.usermanual, element: UserManual, layout: HeaderOnly },
+    { path: config.routes.notfound, element: NotFound, layout: HeaderOnly },
     { path: config.routes.search, element: Search, layout: LeftSidebarLayout },
     { path: config.routes.login, element: Login, layout: null },
 ];

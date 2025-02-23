@@ -11,7 +11,7 @@ import {
 import Image from '~/components/Image/Image';
 import config from '~/config';
 import imgUtils from '~/assets/images/utils';
-import menuItems from '~/data/mocks/layouts/Header/menuItems';
+import menuItems from '~/data/mocks/Header/menuItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '~/components/Button';
 

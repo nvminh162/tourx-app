@@ -1,34 +1,34 @@
 [{
         "id": 1,
-        "type": "cruise",
+        "type": "navigation",
         "title": "Tìm kiếm du thuyền",
         "icon": null,
         "to": "/cruise"
     },
     {
         "id": 2,
-        "type": "flight",
+        "type": "navigation",
         "title": "Tìm vé máy bay",
         "icon": null,
         "to": "/flight"
     },
     {
         "id": 3,
-        "type": "hotel",
+        "type": "navigation",
         "title": "Tìm khách sạn",
         "icon": null,
         "to": "/hotel"
     },
     {
         "id": 4,
-        "type": "business",
+        "type": "navigation",
         "title": "Doanh nghiệp",
         "icon": null,
         "to": "/business"
     },
     {
         "id": 5,
-        "type": "blog",
+        "type": "navigation",
         "title": "Blog",
         "icon": null,
         "to": "/blog"
