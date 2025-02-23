@@ -6,7 +6,7 @@ import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Button({
+const Button = ({
     to,
     href,
     primary = false,
@@ -22,11 +22,11 @@ function Button({
     className,
     onClick,
     ...passProps
-}) {
+}) => {
     let Com = 'button';
     const props = { onClick, ...passProps };
 
-    //remove event if has disabled button
+    // Remove event if button is disabled
     if (disabled) {
         Object.keys(props).forEach((key) => {
             if (key.startsWith('on') && typeof props[key] === 'function') {
@@ -61,7 +61,7 @@ function Button({
             {iconRight && <span className={cx('icon')}>{iconRight}</span>}
         </Com>
     );
-}
+};
 
 Button.propTypes = {
     to: PropTypes.string,

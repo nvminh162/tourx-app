@@ -10,12 +10,12 @@ import {
 
 import Image from '~/components/Image/Image';
 import config from '~/config';
-import imgHeader from '~/assets/images/Header';
+import imgUtils from '~/assets/images/utils';
 import menuItems from '~/data/mocks/layouts/Header/menuItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '~/components/Button';
 
-function Header() {
+const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -28,7 +28,7 @@ function Header() {
                 <div className="flex gap-5 mx-5">
                     <Link to={config.routes.home}>
                         <Image
-                            src={imgHeader.logoTourX}
+                            src={imgUtils.logoTourX}
                             alt="Logo"
                             className="w-[130px] h-[96px] object-cover select-none"
                         />
@@ -55,7 +55,10 @@ function Header() {
                     </div>
                 </div>
                 <div className="relative flex items-center justify-center mx-5">
-                    <Button to={config.routes.search} className="text-2xl rounded-full cursor-pointer h-13 w-13">
+                    <Button
+                        to={config.routes.search}
+                        className="text-2xl rounded-full cursor-pointer h-13 w-13"
+                    >
                         <FontAwesomeIcon icon={faMagnifyingGlass} fade />
                     </Button>
                     <Button className="text-2xl rounded-full cursor-pointer h-13 w-13">
@@ -63,7 +66,10 @@ function Header() {
                     </Button>
                     <button className="relative hidden text-2xl rounded-full cursor-pointer w-13 h-13 lg:block">
                         <FontAwesomeIcon icon={faGlobe} />
-                        <FontAwesomeIcon className="absolute top-1/2 -right-1 -translate-y-1/2 ml-1.5 text-xl" icon={faCaretDown} />
+                        <FontAwesomeIcon
+                            className="absolute top-1/2 -right-1 -translate-y-1/2 ml-1.5 text-xl"
+                            icon={faCaretDown}
+                        />
                     </button>
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -92,6 +98,6 @@ function Header() {
             </div>
         </div>
     );
-}
+};
 
 export default Header;

@@ -4,6 +4,9 @@
     --primary-light: #77dada;
     --primary-base: #25b0cd;
     --primary-dark: #0e4f4f;
+    --footer-light: #475467;
+    --footer-base: #1d2939;
+    --footer-dark: #101828;
     --black: #000;
     --white: #fff;
 }
@@ -12,4 +15,7 @@
     --color-primary-light: var(--primary-light);
     --color-primary-base: var(--primary-base);
     --color-primary-dark: var(--primary-dark);
+    --color-footer-light: var(--footer-light);
+    --color-footer-base: var(--footer-base);
+    --color-footer-dark: var(--footer-dark);
 }

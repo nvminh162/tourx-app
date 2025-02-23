@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 import Header from '~/layouts/components/Header';
 import Sidebar from '~/layouts/components/Sidebar';
+import Footer from '../components/Footer';
 
-
-function LeftSidebarLayout({ children }) {
+const LeftSidebarLayout = ({ children }) => {
     return (
         <div className="w-full h-full">
             <Header />
@@ -14,9 +14,10 @@ function LeftSidebarLayout({ children }) {
                 </div>
                 <div className="col-span-4">{children}</div>
             </div>
+            <Footer />
         </div>
     );
-}
+};
 
 LeftSidebarLayout.propTypes = {
     children: PropTypes.node.isRequired,
