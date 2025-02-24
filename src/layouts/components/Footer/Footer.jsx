@@ -17,7 +17,7 @@ const Footer = () => {
 
     return (
         <div className="select-none">
-            <div className="w-full text-white bg-footer-dark">
+            <div className="w-full text-white bg-gray-900">
                 {/* footer 1 */}
                 <div className="grid grid-cols-1 lg:grid-cols-6 max-w-7xl lg:gap-15 mx-auto py-16 lg:space-y-0 space-y-10">
                     {/* Item 1 */}
@@ -37,7 +37,7 @@ const Footer = () => {
                         {/*Sub Item 2 */}
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mx-10 lg:mx-0 text-base">
                             <div className="flex flex-col space-y-4">
-                                <h3 className="uppercase text-[14px] font-sans text-footer-medium">Giới thiệu</h3>
+                                <h3 className="uppercase text-[14px] font-sans text-gray-500">Giới thiệu</h3>
                                 <>
                                     {introduce.map((item) => {
                                         let href = item.to;
@@ -51,7 +51,7 @@ const Footer = () => {
                                             <Link
                                                 onClick={handleScrollTop}
                                                 key={item.id}
-                                                className="text-base font-bold text-footer-light hover:text-primary-base"
+                                                className="text-base font-bold text-gray-400 hover:text-primary-base"
                                                 to={item.to}
                                             >
                                                 {item.title}
@@ -60,7 +60,7 @@ const Footer = () => {
                                             <a
                                                 key={item.id}
                                                 href={href}
-                                                className="text-base font-bold text-footer-light hover:text-primary-base"
+                                                className="text-base font-bold text-gray-400 hover:text-primary-base"
                                             >
                                                 {item.title}
                                             </a>
@@ -69,7 +69,7 @@ const Footer = () => {
                                 </>
                             </div>
                             <div className="flex flex-col space-y-4">
-                                <h3 className="uppercase text-[14px] font-sans text-footer-medium">Điểm đến</h3>
+                                <h3 className="uppercase text-[14px] font-sans text-gray-500">Điểm đến</h3>
                                 <>
                                     {destination.map((item) => {
                                         let href = item.to;
@@ -83,7 +83,7 @@ const Footer = () => {
                                             <Link
                                                 onClick={handleScrollTop}
                                                 key={item.id}
-                                                className="text-base font-bold text-footer-light hover:text-primary-base"
+                                                className="text-base font-bold text-gray-400 hover:text-primary-base"
                                                 to={item.to}
                                             >
                                                 {item.title}
@@ -92,7 +92,7 @@ const Footer = () => {
                                             <a
                                                 key={item.id}
                                                 href={href}
-                                                className="text-base font-bold text-footer-light hover:text-primary-base"
+                                                className="text-base font-bold text-gray-400 hover:text-primary-base"
                                             >
                                                 {item.title}
                                             </a>
@@ -101,7 +101,7 @@ const Footer = () => {
                                 </>
                             </div>
                             <div className="flex flex-col space-y-4">
-                                <h3 className="uppercase text-[14px] font-sans text-footer-medium">Du thuyền</h3>
+                                <h3 className="uppercase text-[14px] font-sans text-gray-500">Du thuyền</h3>
                                 <>
                                     {cruise.map((item) => {
                                         let href = item.to;
@@ -115,7 +115,7 @@ const Footer = () => {
                                             <Link
                                                 onClick={handleScrollTop}
                                                 key={item.id}
-                                                className="text-base font-bold text-footer-light hover:text-primary-base"
+                                                className="text-base font-bold text-gray-400 hover:text-primary-base"
                                                 to={item.to}
                                             >
                                                 {item.title}
@@ -124,7 +124,7 @@ const Footer = () => {
                                             <a
                                                 key={item.id}
                                                 href={href}
-                                                className="text-base font-bold text-footer-light hover:text-primary-base"
+                                                className="text-base font-bold text-gray-400 hover:text-primary-base"
                                             >
                                                 {item.title}
                                             </a>
@@ -137,7 +137,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* footer 2 */}
-            <div className="bg-footer-base text-footer-light">
+            <div className="bg-gray-800 text-gray-400">
                 <div className="flex flex-col-reverse items-center justify-between py-8 mx-auto text-base md:flex-row max-w-7xl">
                     <div className="m-2">© 2025 Tour Explore Group - TourX Group, Inc. All rights reserved.</div>
                     <div className="flex flex-col md:flex-row gap-5 m-2">

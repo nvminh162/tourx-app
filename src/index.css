@@ -1,23 +1,41 @@
 @import "tailwindcss";
 
 :root {
+    --black: #000;
+    --white: #fff;
     --primary-light: #77dada;
     --primary-base: #25b0cd;
     --primary-dark: #0e4f4f;
-    --footer-light: #98A2B3;
-    --footer-medium: #667085;
-    --footer-base: #1d2939;
-    --footer-dark: #101828;
-    --black: #000;
-    --white: #fff;
 }
 
 @theme {
     --color-primary-light: var(--primary-light);
     --color-primary-base: var(--primary-base);
     --color-primary-dark: var(--primary-dark);
-    --color-footer-light: var(--footer-light);
-    --color-footer-medium: var(--footer-medium);
-    --color-footer-base: var(--footer-base);
-    --color-footer-dark: var(--footer-dark);
+}
+
+/* Scroll design */
+html[style] {
+    overflow: auto !important;
+    padding-right: 0px !important;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+input,
+button,
+[tabindex] {
+    border: none;
+    outline: none;
 }

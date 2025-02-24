@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "name": "tất cả mức giá",
+      "image": null
+    },
+    {
+      "id": 2,
+      "name": "Từ 1 đến 3 triệu",
+      "image": null
+    },
+    {
+      "id": 3,
+      "name": "Từ 3 đến 6 triệu",
+      "image": null
+    },
+    {
+      "id": 4,
+      "name": "Từ 6 đến 9 triệu",
+      "image": null
+    },
+    {
+      "id": 5,
+      "name": "Trên 10 triệu",
+      "image": null
+    }
+  ]
+  

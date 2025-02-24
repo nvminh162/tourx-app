@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "tất cả địa điểm",
+      "image": "src/assets/images/utils/global.png"
+    },
+    {
+      "id": 2,
+      "name": "vịnh hạ long",
+      "image": "src/assets/images/HaLongBay/Place01/place02.webp"
+    },
+    {
+      "id": 3,
+      "name": "vịnh lan hạ",
+      "image": "src/assets/images/HaLongBay/Place01/place03.webp"
+    },
+    {
+      "id": 4,
+      "name": "đảo cát bà",
+      "image": "src/assets/images/HaLongBay/Place01/place04.webp"
+    }
+  ]
+  

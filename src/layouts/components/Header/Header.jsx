@@ -17,11 +17,10 @@ const Header = () => {
     };
 
     return (
-        <div className="h-[96px] w-full drop-shadow-sm bg-white fixed top-0 z-50">
+        <div className="h-[96px] w-full drop-shadow-sm bg-white fixed top-0 z-10">
             <div
                 className="flex items-center justify-between w-full h-full max-w-6xl mx-auto"
                 onMouseLeave={() => setIsMenuOpen(false)}
-                onMouseDown={() => setIsMenuOpen(false)}
             >
                 <div className="flex gap-10 mx-5">
                     <Link to={config.routes.home}>
@@ -77,7 +76,7 @@ const Header = () => {
                 </div>
                 <div
                     className={`shadow-2xl border-t-1 border-t-gray-300 absolute gap-3 xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center font-semibold text-lg transform transition-transform ${
-                        isMenuOpen ? 'opacity-100' : 'opacity-0'
+                        isMenuOpen ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
                     }`}
                     style={{ transition: 'transform 0.3s ease, opacity 0.3s ease' }}
                 >
@@ -87,6 +86,7 @@ const Header = () => {
                             to={item.to}
                             key={item.id}
                             className="w-full p-4 text-center hover:bg-primary-base hover:text-black"
+                            onClick={() => setIsMenuOpen(false)}
                         >
                             {item.title}
                         </Link>
