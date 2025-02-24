@@ -76,7 +76,9 @@ const Header = () => {
                 </div>
                 <div
                     className={`shadow-2xl border-t-1 border-t-gray-300 absolute gap-3 xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center font-semibold text-lg transform transition-transform ${
-                        isMenuOpen ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
+                        isMenuOpen
+                            ? 'opacity-100 visible pointer-events-auto'
+                            : 'opacity-0 invisible pointer-events-none'
                     }`}
                     style={{ transition: 'transform 0.3s ease, opacity 0.3s ease' }}
                 >
@@ -86,7 +88,10 @@ const Header = () => {
                             to={item.to}
                             key={item.id}
                             className="w-full p-4 text-center hover:bg-primary-base hover:text-black"
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={() => {
+                                setIsMenuOpen(false);
+                                handleScrollTop();
+                            }}
                         >
                             {item.title}
                         </Link>

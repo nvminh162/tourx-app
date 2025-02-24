@@ -1,4 +1,4 @@
-import { LeftSidebarLayout, HeaderOnly } from '~/layouts';
+import { LeftSidebarLayout } from '~/layouts';
 import config from '~/config';
 import {
     Home,
@@ -21,21 +21,21 @@ import {
 } from '~/pages';
 
 const publicRoutes = [
-    { path: config.routes.home, element: Home, layout: HeaderOnly },
-    { path: config.routes.cruise, element: Cruise, layout: HeaderOnly },
-    { path: config.routes.flight, element: Flight, layout: HeaderOnly },
-    { path: config.routes.hotel, element: Hotel, layout: HeaderOnly },
-    { path: config.routes.business, element: Business, layout: HeaderOnly },
-    { path: config.routes.blog, element: Blog, layout: HeaderOnly },
-    { path: config.routes.contact, element: Contact, layout: HeaderOnly },
-    { path: config.routes.about, element: About, layout: HeaderOnly },
-    { path: config.routes.faq, element: FAQ, layout: HeaderOnly },
-    { path: config.routes.payments, element: Payments, layout: HeaderOnly },
-    { path: config.routes.privacy, element: Privacy, layout: HeaderOnly },
-    { path: config.routes.regulations, element: Regulations, layout: HeaderOnly },
-    { path: config.routes.terms, element: Terms, layout: HeaderOnly },
-    { path: config.routes.usermanual, element: UserManual, layout: HeaderOnly },
-    { path: config.routes.notfound, element: NotFound, layout: HeaderOnly },
+    { path: config.routes.home, element: Home },
+    { path: config.routes.cruise, element: Cruise },
+    { path: config.routes.flight, element: Flight },
+    { path: config.routes.hotel, element: Hotel },
+    { path: config.routes.business, element: Business },
+    { path: config.routes.blog, element: Blog },
+    { path: config.routes.contact, element: Contact },
+    { path: config.routes.about, element: About },
+    { path: config.routes.faq, element: FAQ },
+    { path: config.routes.payments, element: Payments },
+    { path: config.routes.privacy, element: Privacy },
+    { path: config.routes.regulations, element: Regulations },
+    { path: config.routes.terms, element: Terms },
+    { path: config.routes.usermanual, element: UserManual },
+    { path: config.routes.notfound, element: NotFound },
     { path: config.routes.search, element: Search, layout: LeftSidebarLayout },
     { path: config.routes.login, element: Login, layout: null },
 ];
