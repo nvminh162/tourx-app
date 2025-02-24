@@ -28,7 +28,7 @@ const SelectMenus = ({ data }) => {
                         <ListboxOption
                             key={place.id}
                             value={place}
-                            className="group relative cursor-default py-2 pr-9 pl-3 text-gray-900 select-none data-focus:bg-primary-base data-focus:text-white data-focus:outline-hidden"
+                            className="group relative cursor-default py-2 pr-9 pl-3 text-gray-900 select-none data-focus:bg-primary-light data-focus:text-black data-focus:outline-hidden"
                         >
                             <div className="flex items-center">
                                 {place.image && (

@@ -7,10 +7,8 @@ const HeaderOnly = ({ children }) => {
     return (
         <div className="w-full h-full">
             <Header />
-            <div className="mx-auto mt-24 max-w-7xl">
-                <div className="">{children}</div>
-            </div>
-            <Footer/>
+            <div className="mx-auto mt-24 max-w-[1392px]">{children}</div>
+            <Footer />
         </div>
     );
 };

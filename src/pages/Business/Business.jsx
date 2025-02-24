@@ -1,7 +1,12 @@
-const Business = () => (
-    <div className="min-h-screen p-5 text-center bg-red-500">
-        Business page
-    </div>
-);
+import CruiseForm from "~/components/Form/Cruise";
+
+const Business = () => {
+    return (
+        <div className="py-20 flex items-center justify-center">
+            <CruiseForm />
+            {/* code continue here <TanMinhBeo/> */}
+        </div>
+    );
+};
 
 export default Business;

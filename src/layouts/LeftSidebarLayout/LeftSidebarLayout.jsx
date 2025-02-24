@@ -8,7 +8,7 @@ const LeftSidebarLayout = ({ children }) => {
     return (
         <div className="w-full h-full">
             <Header />
-            <div className="grid grid-cols-5 mx-auto mt-24 max-w-7xl">
+            <div className="grid grid-cols-5 mx-auto mt-24 max-w-[1392px]">
                 <div className="col-span-1">
                     <Sidebar />
                 </div>

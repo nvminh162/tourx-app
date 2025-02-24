@@ -43,12 +43,12 @@
 
 // btn types
 .primary {
-    background-color: var(--primary-base);
+    background-color: var(--primary-light);
     color: var(--black);
-    border-color: var(--primary-base);
+    border-color: var(--primary-light);
     &:hover {
         color: var(--white);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), var(--primary-dark);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), var(--primary-base);
         border-color: var(--primary-base);
     }
 }
