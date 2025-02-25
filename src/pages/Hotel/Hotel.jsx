@@ -1,7 +1,7 @@
-import imgHero from "~/assets/images/Hero";
-import videoHotel from "~/assets/videos/Hotel";
-import CruiseForm from "~/components/Form/Cruise";
-import Hero from "~/components/Hero";
+import imgHero from "../../assets/images/Hero";
+import videoHotel from "../../assets/videos/Hotel";
+import CruiseForm from "../../components/Form/Cruise";
+import Hero from "../../components/Hero";
 
 const Hotel = () => (
     <>

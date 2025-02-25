@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
-import Image from '~/components/Image';
-import Button from '~/components/Button/Button';
+import Button from '../../../components/Button/Button';
 
-import imgFooter from '~/assets/images/Footer';
-import imgUtils from '~/assets/images/utils';
+import imgFooter from '../../../assets/images/Footer';
+import imgUtils from '../../../assets/images/utils';
 
-import introduce from '~/data/mocks/Footer/introduce.json';
-import destination from '~/data/mocks/Footer/destination.json';
-import cruise from '~/data/mocks/Footer/cruise.json';
+import introduce from '../../../data/mocks/Footer/introduce.json';
+import destination from '../../../data/mocks/Footer/destination.json';
+import cruise from '../../../data/mocks/Footer/cruise.json';
+import Image from '../../../components/Image';
 
 const Footer = () => {
     const handleScrollTop = () => {

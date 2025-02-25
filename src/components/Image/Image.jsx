@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { forwardRef, useState } from 'react';
 
-import imgError from '~/assets/images/error';
+import imgError from '../../assets/images/error';
 
 // eslint-disable-next-line react/display-name
 const Image = forwardRef(

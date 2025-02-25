@@ -1,5 +1,5 @@
-import { LeftSidebarLayout } from '~/layouts';
-import config from '~/config';
+import { LeftSidebarLayout } from '../layouts';
+import config from '../config';
 import {
     Home,
     Search,
@@ -18,7 +18,7 @@ import {
     Terms,
     UserManual,
     NotFound,
-} from '~/pages';
+} from '../pages';
 
 const publicRoutes = [
     { path: config.routes.home, element: Home },

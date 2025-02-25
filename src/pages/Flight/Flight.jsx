@@ -1,8 +1,8 @@
-import imgHero from '~/assets/images/Hero';
-import videoFight from '~/assets/videos/Flight';
-import CruiseForm from '~/components/Form/Cruise';
+import imgHero from '../../assets/images/Hero';
+import videoFight from '../../assets/videos/Flight';
+import CruiseForm from '../../components/Form/Cruise';
 
-import Hero from '~/components/Hero';
+import Hero from '../../components/Hero';
 
 const Flight = () => (
     <>

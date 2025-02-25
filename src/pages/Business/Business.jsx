@@ -1,7 +1,7 @@
-import CruiseForm from '~/components/Form/Cruise';
-import imgUtils from '~/assets/images/utils';
-import Button from '~/components/Button';
-import SectionHeader from '~/components/SectionHeader';
+import CruiseForm from '../../components/Form/Cruise';
+import imgUtils from '../../assets/images/utils';
+import Button from '../../components/Button';
+import SectionHeader from '../../components/SectionHeader';
 
 
 const Business = () => {

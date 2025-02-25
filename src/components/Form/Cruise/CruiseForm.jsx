@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import SelectMenus from '~/components/SelectMenus';
-import Button from '~/components/Button';
+import SelectMenus from '../../../components/SelectMenus';
+import Button from '../../../components/Button';
 
-import halongbayJson from '~/data/mocks/Places/halongbay.json';
-import priceJson from '~/data/mocks/Price/price.json';
+import halongbayJson from '../../../data/mocks/Places/halongbay.json';
+import priceJson from '../../../data/mocks/Price/price.json';
 
 const CruiseForm = ({ className }) => {
     return (

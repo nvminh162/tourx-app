@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import imgUtils from '~/assets/images/utils';
-import Button from '~/components/Button';
+import imgUtils from '../../assets/images/utils';
+import Button from '../../components/Button';
 
 const Feedback = ({ data }) => {
     const [currentUserIndex, setCurrentUserIndex] = useState(0);

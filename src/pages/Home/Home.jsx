@@ -1,12 +1,12 @@
-import Hero from '~/components/Hero';
+import Hero from '../../components/Hero';
 
-import CruiseForm from '~/components/Form/Cruise';
-import Feedback from '~/components/Feedback';
-import SectionHeader from '~/components/SectionHeader';
+import CruiseForm from '../../components/Form/Cruise';
+import Feedback from '../../components/Feedback';
+import SectionHeader from '../../components/SectionHeader';
 
-import imgHero from '~/assets/images/Hero';
-import videoHaLongBay from '~/assets/videos/HaLongBay';
-import cruiseJson from '~/data/mocks/Feedback/cruise.json';
+import imgHero from '../../assets/images/Hero';
+import videoHaLongBay from '../../assets/videos/HaLongBay';
+import cruiseJson from '../../data/mocks/Feedback/cruise.json';
 
 const Home = () => {
     return (

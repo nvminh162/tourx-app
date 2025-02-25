@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import imgUtils from '~/assets/images/utils';
+import imgUtils from '../../assets/images/utils';
 
 const SectionHeader = ({ title, description, children, titleSize = '100%', reverse, className }) => {
     return (

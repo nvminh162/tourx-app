@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import Image from '~/components/Image';
+import Image from '../../components/Image';
 
 const Hero = ({ videoSrc, imageSrc, className, children }) => {
     const [isVisible, setIsVisible] = useState(false);

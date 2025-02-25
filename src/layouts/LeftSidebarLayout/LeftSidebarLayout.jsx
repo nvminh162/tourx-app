@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import Header from '~/layouts/components/Header';
-import Sidebar from '~/layouts/components/Sidebar';
+import Header from '../../layouts/components/Header';
+import Sidebar from '../../layouts/components/Sidebar';
 import Footer from '../components/Footer';
 
 const LeftSidebarLayout = ({ children }) => {
