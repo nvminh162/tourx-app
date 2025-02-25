@@ -5,6 +5,9 @@ import logoTourX from './logo-tourx.png';
 import global from './global.png';
 import headingBorder from './heading-border.webp';
 import quote from './quote.svg';
+import titanic from './titanic.png';                                                 
+import HaLongBay from './HaLongBay.png';                                                 
+import beer_sea from './beer_sea.png';                                                 
 
 const imgUtils = {
     logoIUH,
@@ -14,6 +17,9 @@ const imgUtils = {
     global,
     headingBorder,
     quote,
+    titanic,
+    HaLongBay,
+    beer_sea,
 };
 
 export default imgUtils;
