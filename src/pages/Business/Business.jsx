@@ -25,10 +25,14 @@ const Business = () => {
                         Du thuyền Hạ Long cũng sẽ là một món quà tri ân vô cùng ý nghĩa dành cho nhân viên của quý doanh nghiệp.
                         Bên cạnh đó, du thuyền Hạ Long còn rất phù hợp cho những cuộc hội thảo,
                         hợp tác đầu tư hay giao lưu của quý doanh nghiệp.
-                </p>
-                <Button className="mt-6 py-3 px-6 bg-blue-500 text-white font-bold rounded-lg">
-                    Liên hệ với TourX →
-                </Button>
+                    </p>
+                     
+                    <br />
+                    
+                    <Button primary rounded className="col-span-1 lg:col-span-5 py-3 min-w-[200px]">
+                            Liên hệ với TourX →
+                    </Button>
+
             </div>
 
             {/* Right content */}
