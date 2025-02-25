@@ -10,7 +10,7 @@ import priceJson from '~/data/mocks/Price/price.json';
 
 const CruiseForm = ({ className }) => {
     return (
-        <div className={`py-10 px-6 container lg:max-w-5xl bg-white items-center shadow-md border border-gray-300 rounded-4xl space-y-10 ${className}`}>
+        <div className={`py-10 px-6 bg-white items-center shadow-md border border-gray-300 rounded-4xl space-y-10 ${className}`}>
             <div className="text-center space-y-5 text-gray-900">
                 <h2 className="text-4xl font-bold">Bạn sẽ lựa chọn du thuyền nào?</h2>
                 <p className="text-[18px] font-light">Hơn 100 tour du thuyền hạng sang giá tốt đang chờ bạn</p>
