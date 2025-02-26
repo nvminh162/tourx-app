@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { forwardRef, useState } from 'react';
 
-import imgError from '../../assets/images/error';
+import defaults from '../../assets/images/default';
 
 // eslint-disable-next-line react/display-name
 const Image = forwardRef(
-    ({ src, alt, className, fallback = imgError.imgDefault, ...props }, ref) => {
+    ({ src, alt, className, fallback = defaults.imgDefault, ...props }, ref) => {
         const [_fallback, setFallback] = useState('');
 
         const handleError = () => {

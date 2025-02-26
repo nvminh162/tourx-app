@@ -1,7 +1,7 @@
 import imgDefault from './imgDefault.png';
 
-const imgError = {
+const defaults = {
     imgDefault,
 };
 
-export default imgError;
+export default defaults;
