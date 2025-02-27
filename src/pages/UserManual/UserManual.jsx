@@ -116,7 +116,7 @@ const UserManualSection = ({ id, title, sections }) => {
                         ))}
                     </ul>
                     {section.note && (
-                        <p className="mt-2 text-gray-600 text-sm italic">
+                        <p className="mt-2 text-red-500 text-sm italic">
                             <strong>Lưu ý:</strong> {section.note}
                         </p>
                     )}
@@ -144,8 +144,8 @@ const UserManual = () => {
     return (
         <div className="min-h-screen p-5 bg-gray-50">
             <div className="max-w-8xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <h1 className="text-3xl font-bold text-gray-800 mb-6">Hướng dẫn sử dụng</h1>
-                <hr className="mb-6 " />
+                <h1 className="text-3xl font-bold text-gray-800 mb-6">Hướng dẫn sử dụng website TourX</h1>
+                <div className=" font-black text-sky-600 m-6">/ / / / / / </div>
                 <TableOfContents items={userManualData} />
                 {userManualData.map((manual) => (
                     <UserManualSection key={manual.id} id={manual.id} title={manual.title} sections={manual.sections} />
