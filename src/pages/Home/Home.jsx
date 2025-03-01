@@ -7,8 +7,13 @@ import SectionHeader from '../../components/SectionHeader';
 import imgHero from '../../assets/images/Hero';
 import videoHaLongBay from '../../assets/videos/HaLongBay';
 import cruiseJson from '../../data/mocks/Feedback/cruise.json';
+import ServiceCard from '../../components/ServiceCard';
+
+import serviceCruises from '../../data/mocks/Services/cruises.json';
 
 const Home = () => {
+    console.log(serviceCruises);
+    
     return (
         <>
             <Hero className="relative" videoSrc={videoHaLongBay.halongbay} imageSrc={imgHero.halongbay}>
@@ -21,8 +26,23 @@ const Home = () => {
                 titleSize={300}
                 className="px-8 py-20"
             >
-                {/* List cruise here */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
+                    {serviceCruises.map(service => (
+                        <ServiceCard
+                            key={service.id}
+                            category={service.category}
+                            name={service.name}
+                            location={service.location}
+                            details={{ launchYear: service.launchYear, material: service.details.material, rooms: service.details.rooms }}
+                            price={service.price}
+                            image={service.image}
+                            rating={{ score: service.rating.score, count: service.rating.count }}
+                            to={service.to}
+                        />
+                    ))}
+                </div>
             </SectionHeader>
+            {/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
             <SectionHeader
                 title="Đánh giá từ những người đã trải nghiệm"
                 description="Khách hàng chia sẻ về những kỷ niệm tuyệt vời trên chuyến du lịch với chúng tôi."

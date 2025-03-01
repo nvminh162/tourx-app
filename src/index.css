@@ -3,15 +3,24 @@
 :root {
     --black: #000;
     --white: #fff;
+    
     --primary-light: #77dada;
     --primary-base: #25b0cd;
     --primary-dark: #0e4f4f;
+
+    --warning-light: #fedf89;
+    --warning-base: #f79009;
+    --warning-dark: #7a2e0e;
 }
 
 @theme {
     --color-primary-light: var(--primary-light);
     --color-primary-base: var(--primary-base);
     --color-primary-dark: var(--primary-dark);
+
+    --color-warning-light: var(--warning-light);
+    --color-warning-base: var(--warning-base);
+    --color-warning-dark: var(--warning-dark);
 }
 
 /* Scroll design */

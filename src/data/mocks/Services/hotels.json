@@ -1,0 +1,104 @@
+[
+    {
+        "id": 201,
+        "name": "DeLaSea Phát Linh Hạ Long",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 326
+        },
+        "price": 1550000,
+        "originalPrice": 1950000,
+        "rating": {
+            "score": 5.0,
+            "count": 4
+        },
+        "image": "url_anh",
+        "to": "/hotel/delasea-phat-linh-ha-long"
+    },
+    {
+        "id": 202,
+        "name": "Citadines Marina Hạ Long",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 580
+        },
+        "price": 1600000,
+        "originalPrice": 2000000,
+        "rating": {
+            "score": 5.0,
+            "count": 0
+        },
+        "image": "url_anh",
+        "to": "/hotel/citadines-marina-ha-long"
+    },
+    {
+        "id": 203,
+        "name": "Sea Stars Hotel Hạ Long",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 354
+        },
+        "price": 2300000,
+        "originalPrice": 2700000,
+        "rating": {
+            "score": 5.0,
+            "count": 1
+        },
+        "image": "url_anh",
+        "to": "/hotel/sea-stars-hotel-ha-long"
+    },
+    {
+        "id": 204,
+        "name": "Wyndham Legend Hạ Long",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 450
+        },
+        "price": 1700000,
+        "originalPrice": 2500000,
+        "rating": {
+            "score": 5.0,
+            "count": 0
+        },
+        "image": "url_anh",
+        "to": "/hotel/wyndham-legend-ha-long"
+    },
+    {
+        "id": 205,
+        "name": "Hạ Long Dream Hotel",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 186
+        },
+        "price": 1000000,
+        "originalPrice": 1600000,
+        "rating": {
+            "score": 4.0,
+            "count": 0
+        },
+        "image": "url_anh",
+        "to": "/hotel/ha-long-dream-hotel"
+    },
+    {
+        "id": 206,
+        "name": "DLecia Hạ Long",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 80
+        },
+        "price": 950000,
+        "originalPrice": 1400000,
+        "rating": {
+            "score": 4.0,
+            "count": 0
+        },
+        "image": "url_anh",
+        "to": "/hotel/dlecia-ha-long"
+    }
+]

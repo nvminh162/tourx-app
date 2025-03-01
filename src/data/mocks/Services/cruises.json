@@ -1,0 +1,116 @@
+[
+    {
+        "id": 101,
+        "name": "Du thuyền Heritage Bình Chuẩn Cát Bà",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2019,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 20
+        },
+        "originalPrice": null,
+        "price": 3675000,
+        "rating": {
+            "score": 4.9,
+            "count": 11
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp",
+        "to": "/404"
+    },
+    {
+        "id": 102,
+        "name": "Du Thuyền Stellar of the Seas",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2018,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 22
+        },
+        "originalPrice": null,
+        "price": 5450000,
+        "rating": {
+            "score": 5.0,
+            "count": 7
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/stellar-of-the-seas-cruise/thumbnail/9gg221zrdahd9rj5.jpg",
+        "to": "/404"
+    },
+    {
+        "id": 103,
+        "name": "Du thuyền Ambassador Hạ Long",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2018,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 46
+        },
+        "originalPrice": null,
+        "price": 4225000,
+        "rating": {
+            "score": 5.0,
+            "count": 3
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/thumbnail/a61tx4fxs16kq3cz.webp",
+        "to": "/404"
+    },
+    {
+        "id": 104,
+        "name": "Du thuyền Grand Pioneers",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2023,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 56
+        },
+        "originalPrice": null,
+        "price": 4700000,
+        "rating": {
+            "score": 5.0,
+            "count": 3
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/thumbnail/797egzzb3bs6yvm3.webp",
+        "to": "/404"
+    },
+    {
+        "id": 105,
+        "name": "Du thuyền Catherine",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2023,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 39
+        },
+        "originalPrice": null,
+        "price": 5050000,
+        "rating": {
+            "score": 5.0,
+            "count": 4
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-catherine/thumbnail/k9bs9jgaeith80s0.webp",
+        "to": "/404"
+    },
+    {
+        "id": 106,
+        "name": "Du thuyền Capella",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2020,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 30
+        },
+        "originalPrice": null,
+        "price": 4450000,
+        "rating": {
+            "score": 5.0,
+            "count": 2
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/thumbnail/6d89ppxbfwfm7djm.webp",
+        "to": "/404"
+    }
+]
