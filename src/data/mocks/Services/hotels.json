@@ -13,8 +13,8 @@
             "score": 5.0,
             "count": 4
         },
-        "image": "url_anh",
-        "to": "/hotel/delasea-phat-linh-ha-long"
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/delasea-phat-linh-ha-long/thumbnail/o6obristc019rsh0.webp",
+        "to": "/404"
     },
     {
         "id": 202,
@@ -30,8 +30,8 @@
             "score": 5.0,
             "count": 0
         },
-        "image": "url_anh",
-        "to": "/hotel/citadines-marina-ha-long"
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/thumbnail/dle1lmlm692jzgmm.webp",
+        "to": "/404"
     },
     {
         "id": 203,
@@ -47,8 +47,8 @@
             "score": 5.0,
             "count": 1
         },
-        "image": "url_anh",
-        "to": "/hotel/sea-stars-hotel-ha-long"
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/sea-stars-hotel-ha-long/thumbnail/gqb1f6tj1k2bpfft.webp",
+        "to": "/404"
     },
     {
         "id": 204,
@@ -64,8 +64,8 @@
             "score": 5.0,
             "count": 0
         },
-        "image": "url_anh",
-        "to": "/hotel/wyndham-legend-ha-long"
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/wyndham-legend-halong/thumbnail/90qkbmou7evmouer.webp",
+        "to": "/404"
     },
     {
         "id": 205,
@@ -81,8 +81,8 @@
             "score": 4.0,
             "count": 0
         },
-        "image": "url_anh",
-        "to": "/hotel/ha-long-dream-hotel"
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/ha-long-dream-hotel/thumbnail/09y58gzwhwe8xbme.webp",
+        "to": "/404"
     },
     {
         "id": 206,
@@ -98,7 +98,7 @@
             "score": 4.0,
             "count": 0
         },
-        "image": "url_anh",
-        "to": "/hotel/dlecia-ha-long"
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/dlecia-ha-long/thumbnail/ib0rl38xuwo3jn4j.webp",
+        "to": "/404"
     }
 ]

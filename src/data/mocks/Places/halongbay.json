@@ -1,23 +1,20 @@
 [
     {
-      "id": 1,
-      "name": "tất cả địa điểm",
-      "image": "src/assets/images/utils/global.png"
+        "id": 1,
+        "name": "vịnh hạ long",
+        "image": "https://minio.fares.vn/mixivivu-dev/home-page/547b7d230cacd9f280bd3.jpg",
+        "to": "/404"
     },
     {
-      "id": 2,
-      "name": "vịnh hạ long",
-      "image": "src/assets/images/HaLongBay/Place01/place02.webp"
+        "id": 2,
+        "name": "vịnh lan hạ",
+        "image": "https://minio.fares.vn/mixivivu-dev/home-page/6063b331c2be17e04eaf1.jpg",
+        "to": "/404"
     },
     {
-      "id": 3,
-      "name": "vịnh lan hạ",
-      "image": "src/assets/images/HaLongBay/Place01/place03.webp"
-    },
-    {
-      "id": 4,
-      "name": "đảo cát bà",
-      "image": "src/assets/images/HaLongBay/Place01/place04.webp"
+        "id": 3,
+        "name": "đảo cát bà",
+        "image": "https://minio.fares.vn/mixivivu-dev/home-page/ded9108b6104b45aed152.jpg",
+        "to": "/404"
     }
-  ]
-  
+]

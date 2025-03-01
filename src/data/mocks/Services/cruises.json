@@ -105,12 +105,12 @@
             "rooms": 30
         },
         "originalPrice": null,
-        "price": 4450000,
+        "price": null,
         "rating": {
             "score": 5.0,
             "count": 2
         },
         "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/thumbnail/6d89ppxbfwfm7djm.webp",
-        "to": "/404"
+        "to": "/contact"
     }
 ]

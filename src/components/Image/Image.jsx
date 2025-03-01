@@ -6,24 +6,21 @@ import defaults from '../../assets/images/default';
 // eslint-disable-next-line react/display-name
 const Image = forwardRef(
     ({ src, alt, className, fallback = defaults.imgDefault, ...props }, ref) => {
-        const [_fallback, setFallback] = useState('');
-
-        const handleError = () => {
-            setFallback(fallback);
-        };
+        const [error, setError] = useState(false);
 
         return (
             <img
                 className={className}
                 ref={ref}
-                src={src || _fallback}
+                src={error ? fallback : src}
                 alt={alt}
                 {...props}
-                onError={handleError}
+                onError={() => setError(true)} 
             />
         );
     },
 );
+
 
 Image.propTypes = {
     src: PropTypes.string.isRequired,

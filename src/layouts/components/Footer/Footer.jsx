@@ -139,7 +139,7 @@ const Footer = () => {
             {/* footer 2 */}
             <div className="bg-gray-800 text-gray-400">
                 <div className="flex flex-col-reverse items-center justify-between py-8 mx-auto text-base md:flex-row max-w-7xl">
-                    <div className="m-2">© 2025 Tour Explore Group - TourX Group, Inc. All rights reserved.</div>
+                    <div className="mx-5">© 2025 Tour Explore Group - TourX Group, Inc. All rights reserved.</div>
                     <div className="flex flex-col md:flex-row gap-5 m-2">
                         <Button href="https://iuh.edu.vn/">
                             <Image className="object-cover h-15 w-40" src={imgUtils.logoIUHWhite} />

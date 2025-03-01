@@ -54,7 +54,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="relative flex items-center justify-center mx-5">
-                    <Button to={config.routes.search} className="text-2xl rounded-full cursor-pointer h-13 w-13">
+                    <Button to={config.routes.notfound} className="text-2xl rounded-full cursor-pointer h-13 w-13">
                         <FontAwesomeIcon icon={faMagnifyingGlass} fade />
                     </Button>
                     <Button className="text-2xl rounded-full cursor-pointer h-13 w-13">

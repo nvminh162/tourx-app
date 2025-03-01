@@ -2,7 +2,9 @@ import CruiseForm from '../../components/Form/Cruise';
 import imgUtils from '../../assets/images/utils';
 import Button from '../../components/Button';
 import SectionHeader from '../../components/SectionHeader';
+import Image from '../../components/Image';
 
+import partnerCruisesJson from '../../data/mocks/Partners/cruises.json';
 
 const Business = () => {
     return (
@@ -78,9 +80,16 @@ const Business = () => {
                 title="Khách hàng của TourX"
                 description="TourX mang đến một trải nghiệm hoàn toàn mới, trải nghiệm đẳng cấp 5 sao cho khách hàng"
             >
-                {/* Note */}
-                Add list brand here
-                {/* Edit brand MixiVivu to TourX</> */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 place-items-center group">
+                {partnerCruisesJson.slice(0, 6).map((partner) => (
+                    <Image
+                        key={partner.id}
+                        src={partner.image}
+                        alt={partner.id}
+                        className="max-w-[176px] max-h-[64px] object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    />
+                ))}
+            </div>
             </SectionHeader>
         </div>
     );

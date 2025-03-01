@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import SelectMenus from '../../../components/SelectMenus';
 import Button from '../../../components/Button';
 
-import halongbayJson from '../../../data/mocks/Places/halongbay.json';
+import placesHaLongBayJson from '../../../data/mocks/Places/halongbay.json';
 import priceJson from '../../../data/mocks/Price/price.json';
 
 const CruiseForm = ({ className }) => {
@@ -31,11 +31,11 @@ const CruiseForm = ({ className }) => {
                 </div>
                 {/* Item 2 => Options */}
                 <div className="col-span-1 lg:col-span-5">
-                    <SelectMenus data={halongbayJson} />
+                    <SelectMenus data={placesHaLongBayJson} type="địa điểm"/>
                 </div>
                 {/* Item 3 => Options */}
                 <div className="col-span-1 lg:col-span-5">
-                    <SelectMenus data={priceJson} />
+                    <SelectMenus data={priceJson} type="giá"/>
                 </div>
                 {/* Item 4 => Submitnpm  */}
                 <Button primary rounded className="col-span-1 lg:col-span-3 py-3">

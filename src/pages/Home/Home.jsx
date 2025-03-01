@@ -6,14 +6,20 @@ import SectionHeader from '../../components/SectionHeader';
 
 import imgHero from '../../assets/images/Hero';
 import videoHaLongBay from '../../assets/videos/HaLongBay';
-import cruiseJson from '../../data/mocks/Feedback/cruise.json';
 import ServiceCard from '../../components/ServiceCard';
 
-import serviceCruises from '../../data/mocks/Services/cruises.json';
+import newsJson from '../../data/mocks/News/news.json';
+import placesHaLongBayJson from '../../data/mocks/Places/halongbay.json';
+import partnerCruisesJson from '../../data/mocks/Partners/cruises.json';
+import feedbackCruiseJson from '../../data/mocks/Feedback/cruises.json';
+import serviceCruisesJson from '../../data/mocks/Services/cruises.json';
+import PlaceCard from './../../components/PlaceCard/PlaceCard';
+import config from '../../config';
+import SeeMore from '../../components/SeeMore';
+import Image from './../../components/Image/Image';
+import News from '../../components/News/News';
 
 const Home = () => {
-    console.log(serviceCruises);
-    
     return (
         <>
             <Hero className="relative" videoSrc={videoHaLongBay.halongbay} imageSrc={imgHero.halongbay}>
@@ -27,13 +33,18 @@ const Home = () => {
                 className="px-8 py-20"
             >
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
-                    {serviceCruises.map(service => (
+                    {serviceCruisesJson.map((service) => (
                         <ServiceCard
                             key={service.id}
                             category={service.category}
                             name={service.name}
                             location={service.location}
-                            details={{ launchYear: service.launchYear, material: service.details.material, rooms: service.details.rooms }}
+                            details={{
+                                launchYear: service.details.launchYear,
+                                material: service.details.material,
+                                rooms: service.details.rooms,
+                            }}
+                            originalPrice={service.originalPrice}
                             price={service.price}
                             image={service.image}
                             rating={{ score: service.rating.score, count: service.rating.count }}
@@ -41,15 +52,15 @@ const Home = () => {
                         />
                     ))}
                 </div>
+                <SeeMore title="Xem tất cả Du thuyền" to={config.routes.notfound} />
             </SectionHeader>
-            {/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
             <SectionHeader
                 title="Đánh giá từ những người đã trải nghiệm"
                 description="Khách hàng chia sẻ về những kỷ niệm tuyệt vời trên chuyến du lịch với chúng tôi."
                 titleSize={400}
                 className="px-8 py-20"
             >
-                <Feedback data={cruiseJson} />
+                <Feedback data={feedbackCruiseJson} />
             </SectionHeader>
             <SectionHeader
                 title="Các điểm đến của TourX"
@@ -57,7 +68,11 @@ const Home = () => {
                 className="px-8 py-20"
                 reverse
             >
-                {/* List tour places */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
+                    {placesHaLongBayJson.map((place) => (
+                        <PlaceCard key={place.id} name={place.name} image={place.image} to={place.to} />
+                    ))}
+                </div>
             </SectionHeader>
             <SectionHeader
                 title="Đối tác Cùng các Hãng Du thuyền Lớn"
@@ -65,7 +80,16 @@ const Home = () => {
                 titleSize={300}
                 className="px-8 py-20"
             >
-                {/* List flight logo here */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 place-items-center group">
+                    {partnerCruisesJson.map((partner) => (
+                        <Image
+                            key={partner.id}
+                            src={partner.image}
+                            alt={partner.id}
+                            className="max-w-[176px] max-h-[64px] object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                        />
+                    ))}
+                </div>
             </SectionHeader>
             <SectionHeader
                 title="Hạ Long: Khám phá Sự đặc sắc và Cập nhật tin tức mới nhất"
@@ -73,7 +97,19 @@ const Home = () => {
                 titleSize={550}
                 className="px-8 py-20"
             >
-                {/* List ha long logo here */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
+                    {newsJson.slice(0, 3).map((item) => (
+                        <News
+                            key={item.id}
+                            title={item.title}
+                            description={item.description}
+                            date={item.date}
+                            image={item.image}
+                            to={item.to}
+                        />
+                    ))}
+                </div>
+                <SeeMore title="Xem tất cả" to={config.routes.notfound} />
             </SectionHeader>
         </>
     );

@@ -1,0 +1,80 @@
+[
+    {
+        "id": 201,
+        "service": "Khách sạn Golden Holiday Hội An",
+        "content": [
+            "Chúng tôi đã có một kỳ nghỉ tuyệt vời tại khách sạn Golden Holiday Hội An. Phòng ốc rộng rãi, thoáng mát và được trang trí đẹp mắt. Nhân viên rất thân thiện và luôn sẵn lòng hỗ trợ. Sẽ quay lại đây lần sau."
+        ],
+        "author": {
+            "id": 201,
+            "name": "Chị Minh Anh"
+        }
+    },
+    {
+        "id": 202,
+        "service": null,
+        "content": [
+            "Khách sạn Grand Tourane Đà Nẵng có vị trí tuyệt vời, gần biển và các nhà hàng nổi tiếng. Phòng nghỉ sạch sẽ, giường thoải mái và view rất đẹp.",
+            "Dịch vụ ăn uống tại nhà hàng khách sạn cũng rất chất lượng."
+        ],
+        "author": {
+            "id": 202,
+            "name": "Gia đình chị Trúc Quỳnh"
+        }
+    },
+    {
+        "id": 203,
+        "service": null,
+        "content": [
+            "Dịch vụ khách hàng ở đây thật sự ấn tượng. Mọi yêu cầu của chúng tôi đều được đáp ứng nhanh chóng. Cảm ơn đội ngũ nhân viên đã làm cho kỳ nghỉ của chúng tôi trở nên đáng nhớ."
+        ],
+        "author": {
+            "id": 203,
+            "name": "Anh Tiến Lâm"
+        }
+    },
+    {
+        "id": 204,
+        "service": null,
+        "content": [
+            "Tiện nghi trong phòng rất hiện đại và đầy đủ. Bể bơi sạch sẽ và không gian xung quanh rất thư giãn. Chúng tôi thực sự hài lòng với trải nghiệm này."
+        ],
+        "author": {
+            "id": 204,
+            "name": "Chị Thu Lệ"
+        }
+    },
+    {
+        "id": 205,
+        "service": null,
+        "content": [
+            "Bữa sáng tại khách sạn rất ngon và phong phú, có nhiều lựa chọn phù hợp với mọi khẩu vị. Phòng nghỉ được dọn dẹp hàng ngày và luôn gọn gàng, ngăn nắp."
+        ],
+        "author": {
+            "id": 205,
+            "name": "Chị Minh Khuê"
+        }
+    },
+    {
+        "id": 206,
+        "service": null,
+        "content": [
+            "Khách sạn có khu vực spa và gym rất tốt. Chúng tôi đã có những giờ phút thư giãn tuyệt vời tại đây. Chắc chắn sẽ giới thiệu khách sạn này cho bạn bè và gia đình."
+        ],
+        "author": {
+            "id": 206,
+            "name": "Chị Lan Anh"
+        }
+    },
+    {
+        "id": 207,
+        "service": null,
+        "content": [
+            "Mặc dù chúng tôi đến sớm trước giờ check-in, nhân viên vẫn sắp xếp cho chúng tôi nhận phòng sớm mà không thu thêm phí. Thật sự rất cảm kích về sự linh hoạt và chu đáo của các bạn."
+        ],
+        "author": {
+            "id": 207,
+            "name": "Anh Duy Hoà"
+        }
+    }
+]
