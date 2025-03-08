@@ -10,7 +10,7 @@ const userManualData = [
                 id: '1.1',
                 subtitle: 'Đồng ý với các điều khoản sử dụng',
                 content: [
-                    'Khi sử dụng Website Thương mại Điện tử Mixivivu.com (sau đây gọi tắt là “Website”), Quý khách ' +
+                    'Khi sử dụng Website Thương mại Điện tử TourX.com (sau đây gọi tắt là “Website”), Quý khách ' +
                     'đã mặc nhiên chấp thuận các điều khoản và điều kiện sử dụng (sau đây gọi tắt là “Điều kiện Sử dụng”) ' +
                     'được quy định dưới đây. Để biết được các sửa đổi mới nhất, Quý khách nên thường xuyên kiểm tra lại ' +
                     '“Điều kiện Sử dụng”. Chúng tôi có quyền thay đổi, điều chỉnh, thêm hay bớt các nội dung của “Điều kiện ' +
@@ -39,7 +39,7 @@ const userManualData = [
                 id: '2.1',
                 subtitle: '',
                 content: [
-                    'Sản phẩm giao dịch giữa Mixiviu.com và khách hàng là dịch vụ, nên không áp dụng chính sách bảo hành/bảo trì.'
+                    'Sản phẩm giao dịch giữa TourX.com và khách hàng là dịch vụ, nên không áp dụng chính sách bảo hành/bảo trì.'
                 ],
             },
         ],
@@ -52,10 +52,10 @@ const userManualData = [
                 id: '3.1',
                 subtitle: '',
                 content: [
-                    'Mixivivu.com và các nhà cung cấp khác cũng từ chối trách nhiệm hay đưa ra đảm bảo tằng ' +
+                    'TourX.com và các nhà cung cấp khác cũng từ chối trách nhiệm hay đưa ra đảm bảo tằng ' +
                     'website sẽ không có lỗi vận hành, an toàn, không bị gián đoạn hay bất cứ đảm bảo nào về ' +
                     'tính chính xác, đầy đủ và đúng hạn của các thông tin hiển thị.',
-                    'Khi truy cập vào website này, quý khách mặc nhiên đồng ý rằng Mixivivu, các nhà cung ' +
+                    'Khi truy cập vào website này, quý khách mặc nhiên đồng ý rằng TourX, các nhà cung ' +
                     'cấp khác cũng với đối tác liên kết không chịu bất cứ trách nhiệm nào liên quan đến thương ' +
                     'tật, mất mát, khiếu kiên, thiện hại trực tiếp hoặc gián tiếp do không lường trước dưới ' +
                     'bất kỳ hình thức nào phát sinh hay có liên quan đến việc',
@@ -94,7 +94,7 @@ const userManualData = [
                 content: [
                     'Sau khi quý khách thanh toán, vé máy bay của quý khách sẽ được gửi tới địa chỉ email mà quý ' +
                     'khách đăng ký. Trường hợp, quý khách không nhận được vé như đã thanh toán, quý khách vui lòng ' +
-                    'liên hệ số hotline: 0922 222 016 hoặc gửi email: info@mixivivu.com để yêu cầu sự hỗ trợ.',
+                    'liên hệ số hotline: 0353 999 999 hoặc gửi email: tourxcskh@gmail.com để yêu cầu sự hỗ trợ.',
                     'Mọi yêu cầu về thay đổi vé, hoàn vé, quý khách vui lòng liên hệ với chúng tôi theo số hotline ' +
                     'và email được công bố trên website để được trợ giúp nhanh nhất.',
                 ],

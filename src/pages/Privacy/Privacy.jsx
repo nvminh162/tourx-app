@@ -125,7 +125,7 @@ const Privacy = () => (
             <br />
             <p className="text-gray-700 font-medium">
             Thông tin cá nhân của Khách hàng Ban quản trị cam kết bảo mật tuyệt đối theo chính sách bảo mật 
-            thông tin cá nhân được đăng tải trên website: mixivivu.com.
+            thông tin cá nhân được đăng tải trên website: TourX.com.
             </p>
             <br />
             <p className="text-gray-700 font-medium">
