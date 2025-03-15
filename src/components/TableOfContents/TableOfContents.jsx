@@ -4,7 +4,13 @@ const TableOfContents = ({ items }) => {
     const handleScroll = (id) => {
         const section = document.getElementById(`section-${id}`);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            const headerHeight = document.querySelector('header')?.offsetHeight || 96; // Điều chỉnh theo chiều cao header
+            const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: sectionTop - headerHeight,
+                behavior: 'smooth',
+            });
         }
     };
 
@@ -18,7 +24,7 @@ const TableOfContents = ({ items }) => {
                             onClick={() => handleScroll(item.id)}
                             role="button"
                             aria-label={`Đi đến ${item.title}`}
-                            className="text-blue-600 hover:underline cursor-pointer active:bg-gray-200 px-1 rounded transition"
+                            className="text-blue-600 hover:underline cursor-pointer active:bg-gray-200 px-1 rounded transition scroll-mt-24"
                             tabIndex="0"
                         >
                             {item.id}. {item.title}
