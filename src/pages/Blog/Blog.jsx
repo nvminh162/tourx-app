@@ -79,7 +79,14 @@ const Blog = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`px-4 py-2 rounded-lg font-semibold ${activeTab === tab.id ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}
+              className={`px-4 py-2 rounded-lg font-semibold ${
+                activeTab === tab.id
+                  ? "text-white"
+                  : "bg-gray-200 text-gray-800"
+              }`}
+              style={{
+                backgroundColor: activeTab === tab.id ? "#25b0cd" : undefined, 
+              }}
               onClick={() => setActiveTab(tab.id)}
             >
               {tab.label}
@@ -89,8 +96,8 @@ const Blog = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {blogPosts.map((post) => (
-            <div 
-              key={post.id} 
+            <div
+              key={post.id}
               className="bg-white p-4 rounded-lg shadow-lg cursor-pointer"
               onClick={() => window.location.href = post.link}
             >
@@ -106,7 +113,12 @@ const Blog = () => {
           <p>Bản quyền © 2024 Hạ Long News</p>
           <div className="flex space-x-2">
             <button className="bg-gray-300 text-black px-3 py-1 rounded">⬅ Trước</button>
-            <button className="bg-blue-500 text-white px-3 py-1 rounded">1</button>
+            <button
+              className="text-white px-3 py-1 rounded"
+              style={{ backgroundColor: "#25b0cd" }} 
+            >
+              1
+            </button>
             <button className="bg-gray-300 text-black px-3 py-1 rounded">2</button>
             <button className="bg-gray-300 text-black px-3 py-1 rounded">3</button>
             <span className="px-3 py-1">...</span>
