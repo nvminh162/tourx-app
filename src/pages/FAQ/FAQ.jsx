@@ -78,7 +78,11 @@ const FAQ = () => {
     <div className="min-h-screen bg-gray-100 py-10">
       <div className="max-w-4xl mx-auto px-4">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 border-b-2 pb-3">Câu hỏi thường gặp</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Câu hỏi thường gặp</h1>
+          {}
+          <div className="mt-2 font-black" style={{ color: '#25b0cd' }}>
+            / / / / / / / / / / / / / / / / / / / / / / / /
+          </div>
         </div>
         <div className="space-y-6">
           {faqData.map(({ id, title, content }) => (
@@ -96,7 +100,7 @@ const FAQ = () => {
                   fill="none"
                   className={`transform transition-transform ${openSections.includes(id) ? "rotate-180" : "rotate-0"}`}
                 >
-                  <path d="M6 12L18 12" stroke="#77dada" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                  <path d="M6 12L18 12" stroke="#77dada" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
               {openSections.includes(id) && (
