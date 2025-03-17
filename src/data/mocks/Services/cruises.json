@@ -16,7 +16,15 @@
             "count": 11
         },
         "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp",
-        "to": "/404"
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/2l1uxvb4jp973ya1.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/zijzcqb3u2fvl6al.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/5wi49cs4yxosmkfp.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/l5vcfa270dz4z6s0.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/q4om9c6ar8dtx2f3.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/5w8gh78ihexozc0o.webp"
+        ],
+        "to": "/du-thuyen-heritage-binh-chuan-cat-ba"
     },
     {
         "id": 102,
@@ -35,7 +43,15 @@
             "count": 7
         },
         "image": "https://minio.fares.vn/mixivivu-dev/tour/stellar-of-the-seas-cruise/thumbnail/9gg221zrdahd9rj5.jpg",
-        "to": "/404"
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/d93skjm1sm2c0xju.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/wdzml2oad913oy6r.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/odn4qy2fu4schy4n.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/otsoogdz5iavkvnb.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/lb30la7mqcnrx1vy.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/lb30la7mqcnrx1vy.webp"
+        ],
+        "to": "/du-thuyen-stellar-of-the-seas"
     },
     {
         "id": 103,
@@ -54,7 +70,15 @@
             "count": 3
         },
         "image": "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/thumbnail/a61tx4fxs16kq3cz.webp",
-        "to": "/404"
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/0nwf5e709itcom32.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/qfo7o84sbci7xve7.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/ognkcpvwdy0gab11.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/hhhqbshqn6pxvbwd.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/iqmmohamsxhcweya.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/ezeki6xeis3hfmon.webp"
+        ],
+        "to": "/du-thuyen-ambassador-ha-long"
     },
     {
         "id": 104,
@@ -73,7 +97,15 @@
             "count": 3
         },
         "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/thumbnail/797egzzb3bs6yvm3.webp",
-        "to": "/404"
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/e03mmk9c8or24riz.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/bfy5moekbgpswflm.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/mflwqqksvsk3uz1a.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/c3q681obk6nc6isb.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/ornpi3ldiybt9xm0.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/9eo0pa2w9unujss9.webp"
+        ],
+        "to": "/du-thuyen-grand-pioneers"
     },
     {
         "id": 105,
@@ -92,7 +124,15 @@
             "count": 4
         },
         "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-catherine/thumbnail/k9bs9jgaeith80s0.webp",
-        "to": "/404"
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/pd31qe637l03mk3p.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/1799l78adrj9ij4e.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/ub3xjcm31yd1szlb.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/d7ckftksqau909w2.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/hxhzjyk2t4259emc.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/8knin9nwa5pt6yik.webp"
+        ],
+        "to": "/du-thuyen-catherine"
     },
     {
         "id": 106,
@@ -104,13 +144,21 @@
             "material": "Tàu vỏ Kim loại",
             "rooms": 30
         },
-        "originalPrice": null,
-        "price": null,
+        "originalPrice": 6000000,
+        "price": 4560000,
         "rating": {
             "score": 5.0,
             "count": 2
         },
         "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/thumbnail/6d89ppxbfwfm7djm.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/vp70moxf4nlwu3p4.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/yj8njcaq4ssio2nr.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/n73v93f78w11jcl2.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/540fkdtfujn3uw5h.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/lse6ki7gia3d0is1.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/1k6fx646ntazj48f.webp"
+        ],
         "to": "/contact"
     }
 ]

@@ -18,6 +18,7 @@ import {
     Terms,
     UserManual,
     NotFound,
+    CruiseDetail
 } from '../pages';
 
 const publicRoutes = [
@@ -38,9 +39,10 @@ const publicRoutes = [
     { path: config.routes.notfound, element: NotFound },
     { path: config.routes.search, element: Search, layout: LeftSidebarLayout },
     { path: config.routes.login, element: Login, layout: null },
+    { path: config.routes.cruiseDetail, element: CruiseDetail },
 ];
 
-// Private routes => For logged in users => Update coming soon!
+// Private routes => For logged in users => Update later!
 const privateRoutes = [];
 
 export { publicRoutes, privateRoutes };

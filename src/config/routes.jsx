@@ -16,6 +16,7 @@ const routes = {
     notfound: '/404',
     search: '/search',
     login: '/login',
+    cruiseDetail: '/cruise/:cruiseSlug',
 };
 
 export default routes;

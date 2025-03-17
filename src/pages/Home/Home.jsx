@@ -48,7 +48,7 @@ const Home = () => {
                             price={service.price}
                             image={service.image}
                             rating={{ score: service.rating.score, count: service.rating.count }}
-                            to={service.to}
+                            to={`/cruise${service.to}`}
                         />
                     ))}
                 </div>
