@@ -51,14 +51,18 @@ const Regulations = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <div className="min-h-screen bg-white py-10">
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 border-b-2 pb-3">Quy định chung và lưu ý</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Quy định chung và lưu ý</h1>
+          {}
+          <div className="mt-2 font-black" style={{ color: '#25b0cd' }}>
+            / / / / / / / / / / / / / / / / / / / / / / / /
+          </div>
         </div>
 
-        {/* Nội dung */}
+        {}
         <div className="space-y-6">
           {regulationsData.map(({ id, title, content }) => (
             <div key={id} className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
@@ -75,12 +79,17 @@ const Regulations = () => {
                   fill="none"
                   className={`transform transition-transform ${openSection === id ? "rotate-180" : "rotate-0"}`}
                 >
-                  <path d="M6 12L18 12" stroke="#77dada" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                  <path d="M6 12L18 12" stroke="#77dada" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
               {openSection === id && (
-                <div className="p-4 border-t border-gray-200 text-gray-700 bg-white">
-                  <p>{content}</p>
+                <div className="p-4 border-t border-gray-200 text-gray-700 bg-white text-justify">
+                  <p className="whitespace-pre-wrap">{content}</p>
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt="Placeholder Image"
+                    className="mt-4 w-16 h-16"
+                  />
                 </div>
               )}
             </div>
