@@ -1,0 +1,57 @@
+[
+    {
+        "id": 106,
+        "service": "",
+        "content": [
+            "Chuyến bay của chị với gia đình đã chọn rất thuận lợi em ạ. May là chị đặt vé bên em. Bên em tư vấn chọn chuyến của chị xông lên online cho chị nên em cẩn thận đổi giờ gần nhà. Ban lơn nhà chị được nghỉ thoải mái với sự nhẫn nại lúc cả cân tích lạm! Nhà chị cưng thượng xuyên đổi nên chi sẻ đặt vé bên em nhiều nhiều!"
+        ],
+        "author": {
+            "id": 106,
+            "name": "Chị Lê Thủy"
+        }
+    },
+    {
+        "id": 107,
+        "service": "",
+        "content": [
+            "Mới khi anh hay đi Vietnamairlines. Vừa rồi bên em tư vấn, anh bay thử Bamboo thay khá ổn em ạ. Chất lượng dịch vụ tốt, làm thủ tục nhanh. Vợ lại, đổi rồi cùng máy bay Bamboo vi nhà anh nhiều vali. Bamboo tĩnh căn nên cưng tiền. Anh hài lòng về chuyến bay!"
+        ],
+        "author": {
+            "id": 107,
+            "name": "Anh Quang Anh"
+        }
+    },
+    {
+        "id": 108,
+        "service": "",
+        "content": [
+            "Lần đầu chị đặt vé bay đi nước ngoài bên em và cảm thấy rất hài lòng! Chị cảm ơn bên em tư vấn cho chị chuyến bay, giá bay đẹp, thời gian chuyến hợp lý, không bị mệt. Chắc chắn chị sẽ đặt vé bên em nhiều nhiều."
+        ],
+        "author": {
+            "id": 108,
+            "name": "Chị Giang"
+        }
+    },
+    {
+        "id": 109,
+        "service": "",
+        "content": [
+            "Alo, mình vừa gia đình vừa vé. Cảm ơn bên bạn đặt vé cho mình nhé! Cảm nhận đi vừa làm bạn ạ. May là bạn tư vấn cho mình giá vị nhà mình có trẻ nhỏ. Chuyến bay chuần giò, chọn ngòi đẹp. Lần sau, mình lại nhờ bạn đặt vé nhé!"
+        ],
+        "author": {
+            "id": 109,
+            "name": "Bán Chu Huyền"
+        }
+    },
+    {
+        "id": 110,
+        "service": "",
+        "content": [
+            "Chuyến bay của mình rất hài lòng với dịch vụ bên em. Chị tư vấn chọn giờ bay hợp lý, làm thủ tục nhanh. Đi đúng chuyến nhà mình thích, đội bay nhiệt tình. Cảm ơn em nhé!"
+        ],
+        "author": {
+            "id": 110,
+            "name": "Chị Lê Thơ"
+        }
+    }
+]

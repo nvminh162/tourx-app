@@ -33,7 +33,7 @@ const Business = () => {
                     <br />
 
                     <Button primary rounded className="col-span-1 lg:col-span-5 py-3 min-w-[200px]">
-                        Liên hệ với TourX →
+                        Liên hệ với TourX
                     </Button>
                 </div>
                 {/* Right content */}

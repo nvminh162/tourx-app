@@ -48,3 +48,27 @@ button,
     border: none;
     outline: none;
 }
+
+/* Đè CSS của thư viện MUI */
+.MuiOutlinedInput-root {
+    border-radius: 9999px !important;
+    border: 1px solid #ccc !important;
+    background-color: white !important;
+    transition: none !important;
+    box-shadow: none !important;
+}
+.MuiOutlinedInput-root.Mui-focused {
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    background-color: white !important;
+}
+.MuiOutlinedInput-root:hover {
+    border-color: #ccc !important;
+}
+.MuiOutlinedInput-notchedOutline {
+    border: none !important;
+}
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root {
+    color: #00000099 !important;
+    background-color: white !important;
+}

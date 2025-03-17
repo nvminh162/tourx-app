@@ -1,0 +1,22 @@
+[
+    { "id": 1, "name": "Sân bay Quốc tế Nội Bài", "city": "Hà Nội" },
+    { "id": 2, "name": "Sân bay Quốc tế Tân Sơn Nhất", "city": "Thành phố Hồ Chí Minh" },
+    { "id": 3, "name": "Sân bay Quốc tế Đà Nẵng", "city": "Đà Nẵng" },
+    { "id": 4, "name": "Sân bay Quốc tế Phú Bài", "city": "Huế" },
+    { "id": 5, "name": "Sân bay Quốc tế Cam Ranh", "city": "Cam Ranh" },
+    { "id": 6, "name": "Sân bay Quốc tế Phú Quốc", "city": "Phú Quốc" },
+    { "id": 7, "name": "Sân bay Quốc tế Cát Bi", "city": "Hải Phòng" },
+    { "id": 8, "name": "Sân bay Quốc tế Vân Đồn", "city": "Quảng Ninh" },
+    { "id": 9, "name": "Sân bay Liên Khương", "city": "Đà Lạt" },
+    { "id": 10, "name": "Sân bay Pleiku", "city": "Pleiku" },
+    { "id": 11, "name": "Sân bay Tuy Hòa", "city": "Tuy Hòa" },
+    { "id": 12, "name": "Sân bay Phù Cát", "city": "Quy Nhơn" },
+    { "id": 13, "name": "Sân bay Quốc tế Vinh", "city": "Vinh" },
+    { "id": 14, "name": "Sân bay Đồng Hới", "city": "Đồng Hới" },
+    { "id": 15, "name": "Sân bay Buôn Ma Thuột", "city": "Buôn Ma Thuột" },
+    { "id": 16, "name": "Sân bay Côn Đảo", "city": "Côn Đảo" },
+    { "id": 17, "name": "Sân bay Điện Biên Phủ", "city": "Điện Biên Phủ" },
+    { "id": 18, "name": "Sân bay Cà Mau", "city": "Cà Mau" },
+    { "id": 19, "name": "Sân bay Rạch Giá", "city": "Rạch Giá" },
+    { "id": 20, "name": "Sân bay Quốc tế Cần Thơ", "city": "Cần Thơ" }
+]
