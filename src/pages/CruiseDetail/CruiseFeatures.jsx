@@ -2,7 +2,7 @@ import { Check, Anchor, Home, Utensils, Wine, Clock, Bath, Coffee } from "lucide
 
 const CruiseFeatures = () => {
   return (
-    <div className="container lg:w-6xl place-self-center">
+    <div className="container lg:w-6xl place-self-center px-5 lg:px-0 mx-auto">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left column - Features */}
           <div className="w-full lg:w-2/3">

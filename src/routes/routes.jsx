@@ -36,10 +36,11 @@ const publicRoutes = [
     { path: config.routes.regulations, element: Regulations },
     { path: config.routes.terms, element: Terms },
     { path: config.routes.usermanual, element: UserManual },
-    { path: config.routes.notfound, element: NotFound },
+    // { path: config.routes.notfound, element: NotFound },
     { path: config.routes.search, element: Search, layout: LeftSidebarLayout },
     { path: config.routes.login, element: Login, layout: null },
     { path: config.routes.cruiseDetail, element: CruiseDetail },
+    { path: "*", element: NotFound },
 ];
 
 // Private routes => For logged in users => Update later!

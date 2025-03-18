@@ -3,9 +3,9 @@ import clsx from 'clsx';
 
 import imgUtils from '../../assets/images/utils';
 
-const SectionHeader = ({ title, description, children, titleSize = '100%', reverse, className }) => {
+const SectionHeader = ({ title, description, children, titleSize = '100%', reverse, className, id }) => {
     return (
-        <div className={clsx('max-w-7xl mx-auto grid gap-10 lg:gap-20', className)}>
+        <div id={id} className={clsx('max-w-7xl mx-auto grid gap-10 lg:gap-20', className)}>
             <div className={clsx('grid grid-cols-1 gap-8', { 'lg:grid-cols-5': !reverse })}>
                 <div className={clsx('col-span-3 text-4xl font-bold text-gray-900', { 'flex flex-col items-center': reverse })}>
                     <h1 style={{ maxWidth: typeof titleSize === 'number' ? `${titleSize}px` : titleSize }} className="font-bold">
@@ -29,6 +29,7 @@ SectionHeader.propTypes = {
     titleSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     className: PropTypes.string,
     reverse: PropTypes.bool,
+    id: PropTypes.string,
 };
 
 export default SectionHeader;

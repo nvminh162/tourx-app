@@ -103,7 +103,7 @@ const CruiseReviews = () => {
     }
 
     return (
-        <div className="container lg:w-6xl place-self-center">
+        <div className="container lg:w-6xl place-self-center px-5 lg:px-0 mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                 <h2 className="text-2xl font-bold text-gray-800">Đánh giá (12)</h2>
 
@@ -169,8 +169,8 @@ const CruiseReviews = () => {
                                         style={{ width: `${(ratingCounts[star] / 12) * 100}%` }}
                                     ></div>
                                 </div>
-                                <div className="w-16 text-sm text-gray-600 text-right">
-                                    {ratingCounts[star]} Rates
+                                <div className="w-20 text-sm text-gray-600 text-right">
+                                    {ratingCounts[star]} Đánh giá
                                 </div>
                             </div>
                         ))}

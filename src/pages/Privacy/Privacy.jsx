@@ -4,10 +4,9 @@ const Privacy = () => (
             <div>
                 <h1 className="text-4xl font-bold text-black">Chính sách quyền riêng tư</h1>
             </div>
-            <div className=" font-black text-sky-600">/  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /  /</div>
         </div>
         <div>
-            <div className="text-xl font-black text-cyan-900">I.Chính sách quyền riêng tư:</div>
+            <div className="text-xl font-black">I.Chính sách quyền riêng tư:</div>
             <br />
             <p className="text-gray-700 font-medium">Chúng tôi đánh giá cao sự tin tưởng của quý khách trong việc 
             chọn TourX cho dịch vụ đặt phòng và vé máy bay trực tuyến của bạn. Chính vì vậy, chúng tôi sẽ 
@@ -20,7 +19,7 @@ const Privacy = () => (
             thuyền Hạ Long và vé máy bay)
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">1. Mục đích thu thập thông tin của khách hàng:</div>
+            <div className="text-lg font-bold">1. Mục đích thu thập thông tin của khách hàng:</div>
             <br />
             <p className="text-gray-700 font-medium">
             Mục đích: website TourX.com thu thập thông tin khách hàng phục vụ cho việc cung cấp dịch vụ, tour 
@@ -28,7 +27,7 @@ const Privacy = () => (
             mua cho khách hàng.
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">2. Phạm vi thu thập thông tin của khách hàng:</div>
+            <div className="text-lg font-bold">2. Phạm vi thu thập thông tin của khách hàng:</div>
             <br />
             <p className="text-gray-700 font-medium">
             Chúng tôi thu thập các thông tin cá nhân của Khách hàng như Họ tên, số điện thoại, email theo yêu cầu 
@@ -37,7 +36,7 @@ const Privacy = () => (
             Quản lý Vịnh Hạ Long và phục vụ tour du lịch của khách hàng.
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">3. Phạm vi sử dụng thông tin:</div>
+            <div className="text-lg font-bold">3. Phạm vi sử dụng thông tin:</div>
             <br />
             <p className="text-gray-700 font-medium">Website TourX sử dụng các thông tin của khách hàng như sau:</p>
             <br />
@@ -61,14 +60,14 @@ const Privacy = () => (
             - Chăm sóc khách hàng, tư vấn thông tin du lịch cho khách hàng khi có yêu cầu
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">4. Thời gian lưu trữ thông tin:</div>
+            <div className="text-lg font-bold">4. Thời gian lưu trữ thông tin:</div>
             <br />
             <p className="text-gray-700 font-medium">
             Việc lưu trữ thông tin là không có giới hạn nhằm phục vụ công việc kiểm tra lại dữ liệu chuyến bay hoặc 
             dữ liệu đi tàu khi có yêu cầu của các hãng hàng không.
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">5. Những người hoặc tổ chức được tiếp cận với thông tin:</div>
+            <div className="text-lg font-bold">5. Những người hoặc tổ chức được tiếp cận với thông tin:</div>
             <br />
             <p className="text-gray-700 font-medium">
             - Quản lý website.
@@ -82,7 +81,7 @@ const Privacy = () => (
             - Theo yêu cầu của cơ quan nhà nước có thẩm quyền;
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">6. Đơn vị thu thập thông tin:</div>
+            <div className="text-lg font-bold">6. Đơn vị thu thập thông tin:</div>
             <br />
             <p className="text-gray-700 font-medium">
             - Đơn vị thu thập thông tin: Công ty TNHH Du Lịch và Dịch Vụ Tour Explore - TourX
@@ -109,7 +108,7 @@ const Privacy = () => (
             nhận được những khiếu nại.
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">
+            <div className="text-lg font-bold">
             7. Phương tiện và công cụ để người tiêu dung tiếp cận, chỉnh sửa dữ liệu thông tin cá nhân của mình:
             </div>
             <br />
@@ -121,7 +120,7 @@ const Privacy = () => (
             email: <a href="" className="font-semibold text-sky-600">tourxcskh@gmail.com</a> để được hỗ trợ.
             </p>
             <br />
-            <div className="text-lg font-bold text-cyan-900">8. Cam kết bảo mật thông tin:</div>
+            <div className="text-lg font-bold">8. Cam kết bảo mật thông tin:</div>
             <br />
             <p className="text-gray-700 font-medium">
             Thông tin cá nhân của Khách hàng Ban quản trị cam kết bảo mật tuyệt đối theo chính sách bảo mật 
@@ -140,7 +139,7 @@ const Privacy = () => (
             tra và xử lý kịp thời, đồng thời thông báo cho Khách hàng được biết về vụ việc.
             </p>
             <br />
-            <div className="text-xl font-black text-cyan-900">II. Chính sách của chúng tôi về các Cookie:</div>
+            <div className="text-xl font-black">II. Chính sách của chúng tôi về các Cookie:</div>
             <br />
             <p className="text-gray-700 font-medium">
             Cookie là một file thông tin nhỏ yêu cầu được lưu trữ trên ổ cứng máy tính của bạn. Một khi bạn 
@@ -170,7 +169,7 @@ const Privacy = () => (
             các cookie nếu bạn muốn. Điều này có thể gây cản trở đến việc bạn nhận được lợi ích tối đa từ website.
             </p>
             <br />
-            <div className="text-xl font-black text-cyan-900">III. Các đường liên kết (link):</div>
+            <div className="text-xl font-black">III. Các đường liên kết (link):</div>
             <br />
             <p className="text-gray-700 font-medium">
             Website TourX của chúng tôi có thể có các đường link với các website khác. Khi bạn click vào các 
