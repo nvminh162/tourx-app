@@ -15,9 +15,11 @@ const routes = {
     faq: '/faq',
     notfound: '/404',
     search: '/search',
-    login: '/login',
     cruiseDetail: '/cruise/:cruiseSlug',
     hotelDetail: '/hotel/:hotelSlug',
+    auth: '/auth',
+    signup: '/signup',
+    forgetPwd: '/forgot-password',
 };
 
 export default routes;

@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="h-[96px] w-full drop-shadow-sm bg-white fixed top-0 z-10">
+      <div className="h-[96px] w-full drop-shadow-sm bg-white fixed top-0 z-50">
         <div
           className="flex items-center justify-between w-full h-full max-w-6xl mx-auto"
           onMouseLeave={() => setIsMenuOpen(false)}
