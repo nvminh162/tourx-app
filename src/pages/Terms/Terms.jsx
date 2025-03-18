@@ -1,5 +1,5 @@
-import { useState } from "react";
 import EmailLinkify from "../../components/EmailLinkify/EmailLinkify";
+import PropTypes from "prop-types";
 
 const userManualData = [
     {
@@ -173,12 +173,30 @@ const TermsSection = ({ id, title, sections }) => {
     );
 };
 
+TermsSection.propTypes = {
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    sections: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            subtitle: PropTypes.string,
+            content: PropTypes.arrayOf(
+                PropTypes.oneOfType([
+                    PropTypes.string,
+                    PropTypes.shape({
+                        list: PropTypes.arrayOf(PropTypes.string),
+                    }),
+                ])
+            ).isRequired,
+        })
+    ).isRequired,
+};
+
 const Terms = () => {
     return (
         <div className="min-h-screen p-5 bg-gray-50">
             <div className="max-w-8xl mx-auto bg-white p-8 rounded-lg shadow-md">
                 <h1 className="text-3xl font-bold text-gray-800 mb-6">Điều khoản và điều kiện</h1>
-                <div className="font-black text-sky-600 m-6">/ / / / / / </div>
                 <div className="text-gray-600 mt-2 space-y-1">
                     Website này thuộc quyền sở hữu và quản lý của Công ty TNHH Du lịch và dịch vụ Mixi Vivu. 
                     Khi truy cập và sử dụng website này, bạn đồng ý rằng đã đọc, hiểu các điều kiện và điều 
@@ -194,5 +212,7 @@ const Terms = () => {
         </div>
     );
 };
+
+
 
 export default Terms;

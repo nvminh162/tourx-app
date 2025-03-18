@@ -58,7 +58,7 @@ const CruiseRoom = () => {
     }
 
     return (
-        <div className="container lg:w-6xl place-self-center">
+        <div className="container lg:w-6xl place-self-center px-5 lg:px-0 mx-auto">
             <h2 className="text-3xl font-bold text-gray-800 mb-2">Các loại phòng & giá</h2>
 
             {/* Decorative wave pattern */}

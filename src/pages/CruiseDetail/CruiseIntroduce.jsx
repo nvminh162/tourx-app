@@ -1,6 +1,6 @@
 const CruiseIntroduce = () => {
   return (
-    <div className="container lg:w-6xl place-self-center">
+    <div className="container lg:w-6xl place-self-center px-5 lg:px-0 mx-auto">
       <h2 className="text-3xl font-bold text-gray-800 mb-2">Giới thiệu</h2>
 
       {/* Decorative wave pattern */}
@@ -30,7 +30,7 @@ const CruiseIntroduce = () => {
 
         <div className="my-6">
           <img
-            src="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1200&auto=format&fit=crop"
+            src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/blog/iv9fjnleft3mnbuo.webp"
             alt="Du thuyền Heritage Bình Chuẩn Cát Bà về đêm"
             className="w-full h-auto rounded-lg object-cover"
           />
@@ -46,7 +46,7 @@ const CruiseIntroduce = () => {
 
         <div className="my-6">
           <img
-            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+            src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/blog/1790l9warvgsukpr.webp"
             alt="Bể bơi 4 mùa trên du thuyền"
             className="w-full h-auto rounded-lg object-cover"
           />
@@ -62,7 +62,7 @@ const CruiseIntroduce = () => {
 
         <div className="my-6">
           <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"
+            src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/blog/fgbux3svpxwcs3f1.webp"
             alt="Nhà hàng trên du thuyền"
             className="w-full h-auto rounded-lg object-cover"
           />

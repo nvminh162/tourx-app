@@ -79,10 +79,6 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Câu hỏi thường gặp</h1>
-          {}
-          <div className="mt-2 font-black" style={{ color: '#25b0cd' }}>
-            / / / / / / / / / / / / / / / / / / / / / / / /
-          </div>
         </div>
         <div className="space-y-6">
           {faqData.map(({ id, title, content }) => (
