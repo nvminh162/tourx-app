@@ -22,6 +22,7 @@ const Hotel = () => (
         </Hero>
         <div className="lg:mt-32"></div>
         <SectionHeader
+            id="hotel"
             title="Khám phá và trải nghiệm tất cả dịch vụ tuyệt vời nhất từ các khách sạn trên mọi miền đất nước cùng TourX."
             description="Không gian nghỉ dưỡng sang trọng, tiện nghi và hiện đại cùng dịch vụ chuyên nghiệp, TourX tự hào mang đến những trải nghiệm hoàn hảo cho kỳ nghỉ của bạn, giúp bạn tận hưởng từng khoảnh khắc một cách đáng nhớ và trọn vẹn nhất!"
             titleSize={482}
@@ -75,7 +76,7 @@ const Hotel = () => (
             className="px-8 py-20"
         >
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 place-items-center group">
-                {partnerCruisesJson.slice(0,6).map((partner) => (
+                {partnerCruisesJson.slice(0, 6).map((partner) => (
                     <Image
                         key={partner.id}
                         src={partner.image}

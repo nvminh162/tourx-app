@@ -38,6 +38,10 @@ const ContactForm = () => {
     setShowSuccessModal(true);
   };
 
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="relative w-full max-w-2xl mx-auto my-12 bg-white md:p-6 rounded-xl shadow-lg z-10">
       <h2 className="text-xl md:text-2xl font-bold mb-4 text-center text-gray-900">
@@ -85,8 +89,9 @@ const ContactForm = () => {
           <button
             type="submit"
             className="w-full bg-teal-500 py-2 text-white text-base font-semibold rounded-2xl hover:bg-teal-600 transition duration-300"
+            onClick={handleScrollTop}
           >
-            Liên hệ với Mixivivu →
+            Liên hệ với Mixivivu
           </button>
         </div>
       </form>

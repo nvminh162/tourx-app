@@ -41,11 +41,15 @@ const FlightForm = ({ className }) => {
         setIsRoundTrip(event.target.value === "roundTrip"); // Set to true if roundTrip, false if oneWay
     };
 
+    const handleScrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <div className={`py-10 px-6 bg-white items-center shadow-md border border-gray-300 rounded-4xl lg:space-y-10 space-y-0 ${className}`}>
             <div className="text-center space-y-3 text-gray-900">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Mở cánh cửa khám phá cùng TouX</h2>
-                <p className="text-[18px] font-light">TouX - Đặt chân lên đỉnh mây với một bước nhảy</p>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Mở cánh cửa khám phá cùng TourX</h2>
+                <p className="text-[18px] font-light">TourX - Đặt chân lên đỉnh mây với một bước nhảy</p>
             </div>
             <div className='space-y-3'>
                 <div className='flex justify-between items-center space-x-3'>
@@ -101,7 +105,7 @@ const FlightForm = ({ className }) => {
                                     value={arrival}
                                     onChange={(newValue) => setArrival(newValue)}
                                     className="w-full"
-                                    minDate={departure} // Ensure return date is after departure date
+                                    minDate={departure}
                                     format="DD/MM/YYYY"
                                 />
                             </DemoContainer>
@@ -127,7 +131,7 @@ const FlightForm = ({ className }) => {
                         />
                     ))}
                     <div className="col-span-full lg:col-span-1 place-self-center w-full">
-                        <Button primary rounded className="h-[58px] w-full">
+                        <Button primary rounded className="h-[58px] w-full" onClick={handleScrollTop}>
                             Tìm kiếm
                         </Button>
                     </div>

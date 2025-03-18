@@ -23,7 +23,7 @@ const Home = () => {
     return (
         <>
             <Hero className="relative" videoSrc={videoHaLongBay.halongbay} imageSrc={imgHero.halongbay}>
-                <CruiseForm className="absolute left-1/2 -translate-x-1/2 top-1/2 lg:top-auto -translate-y-1/2 container lg:max-w-5xl" />
+                <CruiseForm to={config.routes.cruise} className="absolute left-1/2 -translate-x-1/2 top-1/2 lg:top-auto -translate-y-1/2 container lg:max-w-5xl" />
             </Hero>
             <div className="lg:mt-32"></div>
             <SectionHeader

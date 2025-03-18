@@ -6,13 +6,13 @@ Instructor: Từ Thị Xuân Hiền
 ```
 ## Project: Building a Tour Booking Website
 ## 🤝 Team Members
-- `Nguyễn Văn Minh` - `22003405` - STT`53` (PM)
-- `Bùi Quang Minh` - `22664411` - STT`51`
-- `Nguyễn Tấn Minh` - `22001075` - STT`52`
-- `Trần Công Minh` - `22638121` - STT`54`
-- `Trần Vũ Uyên My` - `22002045` - STT`55`
+- `Nguyễn Văn Minh` - `22003405` - STT 53 (Project Manager)
+- `Bùi Quang Minh` - `22664411` - STT 51
+- `Nguyễn Tấn Minh` - `22001075` - STT 52
+- `Trần Công Minh` - `22638121` - STT 54
+- `Trần Vũ Uyên My` - `22002045` - STT 55
 
-  **[Team List](https://docs.google.com/spreadsheets/d/1gaygAMW25scOlaIoXddVJZmmhO2n-DJ-/edit?usp=sharing&ouid=101662654548516828365&rtpof=true&sd=true)**
+  **[Class List DHKTPM18B](https://docs.google.com/spreadsheets/d/1gaygAMW25scOlaIoXddVJZmmhO2n-DJ-/edit?usp=sharing&ouid=101662654548516828365&rtpof=true&sd=true)**
 
 ## Production deployment: [fe-tour-app.vercel.app](https://fe-tour-app.vercel.app)
 

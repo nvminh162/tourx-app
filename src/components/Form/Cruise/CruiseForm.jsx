@@ -7,8 +7,13 @@ import Button from '../../../components/Button';
 
 import placesHaLongBayJson from '../../../data/mocks/Places/halongbay.json';
 import priceJson from '../../../data/mocks/Price/price.json';
+import { Link } from 'react-router-dom';
 
-const CruiseForm = ({ className }) => {
+const CruiseForm = ({ className, to }) => {
+    const handleScrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <div className={`py-10 px-6 bg-white items-center shadow-md border border-gray-300 rounded-4xl space-y-10 ${className}`}>
             <div className="text-center space-y-5 text-gray-900">
@@ -31,15 +36,15 @@ const CruiseForm = ({ className }) => {
                 </div>
                 {/* Item 2 => Options */}
                 <div className="col-span-1 lg:col-span-5">
-                    <SelectMenus data={placesHaLongBayJson} type="địa điểm"/>
+                    <SelectMenus data={placesHaLongBayJson} type="địa điểm" />
                 </div>
                 {/* Item 3 => Options */}
                 <div className="col-span-1 lg:col-span-5">
-                    <SelectMenus data={priceJson} type="giá"/>
+                    <SelectMenus data={priceJson} type="giá" />
                 </div>
                 {/* Item 4 => Submitnpm  */}
                 <Button primary rounded className="col-span-1 lg:col-span-3 py-3">
-                    Tìm kiếm
+                    <Link to={to} onClick={handleScrollTop}>Tìm kiếm</Link>
                 </Button>
             </div>
         </div>
@@ -48,6 +53,7 @@ const CruiseForm = ({ className }) => {
 
 CruiseForm.propTypes = {
     className: PropTypes.string,
+    to: PropTypes.string,
 };
 
 export default CruiseForm;
