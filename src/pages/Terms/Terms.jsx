@@ -1,7 +1,7 @@
+import { useState } from "react";
 import EmailLinkify from "../../components/EmailLinkify/EmailLinkify";
-import PropTypes from "prop-types";
 
-const userManualData = [
+const termsData = [
     {
         id: '1',
         title: 'Điều khoản chung',
@@ -173,46 +173,26 @@ const TermsSection = ({ id, title, sections }) => {
     );
 };
 
-TermsSection.propTypes = {
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    sections: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            subtitle: PropTypes.string,
-            content: PropTypes.arrayOf(
-                PropTypes.oneOfType([
-                    PropTypes.string,
-                    PropTypes.shape({
-                        list: PropTypes.arrayOf(PropTypes.string),
-                    }),
-                ])
-            ).isRequired,
-        })
-    ).isRequired,
-};
-
 const Terms = () => {
     return (
         <div className="min-h-screen p-5 bg-gray-50">
             <div className="max-w-8xl mx-auto bg-white p-8 rounded-lg shadow-md">
                 <h1 className="text-3xl font-bold text-gray-800 mb-6">Điều khoản và điều kiện</h1>
+                <img src="/src/assets/images/utils/heading-border.webp" alt="Error"/>
                 <div className="text-gray-600 mt-2 space-y-1">
-                    Website này thuộc quyền sở hữu và quản lý của Công ty TNHH Du lịch và dịch vụ Mixi Vivu. 
+                    Website này thuộc quyền sở hữu và quản lý của Công ty TNHH Du lịch và Dịch vụ Tour Explore - TourX. 
                     Khi truy cập và sử dụng website này, bạn đồng ý rằng đã đọc, hiểu các điều kiện và điều 
                     khoản dưới đây. Chính vì vậy, bạn cần đọc rõ và sử dụng tiếp.
                 </div>
                 <div className="text-gray-600 mt-2 space-y-1">
-                    Điều khoản và điều kiện trên Mixivivu.com bao gồm những nội dung sau:
+                    Điều khoản và điều kiện trên e-tour-app.vercel.app bao gồm những nội dung sau:
                 </div>
-                {userManualData.map((manual) => (
-                    <TermsSection key={manual.id} id={manual.id} title={manual.title} sections={manual.sections} />
+                {termsData.map((term) => (
+                    <TermsSection key={term.id} id={term.id} title={term.title} sections={term.sections} />
                 ))}
             </div>
         </div>
     );
 };
-
-
 
 export default Terms;
