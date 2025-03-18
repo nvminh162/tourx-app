@@ -3,23 +3,20 @@ import imgHero from '../../assets/images/Hero';
 import videoHaLongBay from '../../assets/videos/HaLongBay';
 import CruiseForm from '../../components/Form/Cruise';
 import { useState, useEffect } from 'react';
-import extendedCruiseData from './cruiseData'; // Import dữ liệu mới
+import extendedCruiseData from './cruiseData';
 
 const Cruise = () => {
-    // State để lưu danh sách du thuyền, bộ lọc, trạng thái sắp xếp, và phân trang
     const [cruises, setCruises] = useState([]);
-    const [filterStars, setFilterStars] = useState([]); // Mảng để lưu nhiều giá trị sao
-    const [filterAmenities, setFilterAmenities] = useState([]); // Mảng để lưu nhiều tiện ích
-    const [sortOption, setSortOption] = useState('none'); // none, lowToHigh, highToLow
-    const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại
-    const itemsPerPage = 5; // Số du thuyền trên mỗi trang
+    const [filterStars, setFilterStars] = useState([]);
+    const [filterAmenities, setFilterAmenities] = useState([]);
+    const [sortOption, setSortOption] = useState('none');
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 5;
 
-    // Mô phỏng dữ liệu từ file mới
     useEffect(() => {
         setCruises(extendedCruiseData);
     }, []);
 
-    // Hàm xử lý chọn/hủy sao
     const handleStarChange = (star) => {
         if (filterStars.includes(star)) {
             setFilterStars(filterStars.filter((s) => s !== star));
@@ -28,7 +25,6 @@ const Cruise = () => {
         }
     };
 
-    // Hàm xử lý chọn/hủy tiện ích
     const handleAmenityChange = (amenity) => {
         if (filterAmenities.includes(amenity)) {
             setFilterAmenities(filterAmenities.filter((a) => a !== amenity));
@@ -37,7 +33,6 @@ const Cruise = () => {
         }
     };
 
-    // Hàm lọc và sắp xếp du thuyền
     const filteredCruises = cruises
         .filter((cruise) => {
             const matchesStar =
@@ -55,21 +50,18 @@ const Cruise = () => {
             return 0;
         });
 
-    // Tính toán số trang
-    const totalItems = filteredCruises.length; // Tổng số du thuyền sau khi lọc
-    const totalPages = Math.ceil(totalItems / itemsPerPage); // Tổng số trang
-    const startIndex = (currentPage - 1) * itemsPerPage; // Chỉ số bắt đầu
-    const endIndex = startIndex + itemsPerPage; // Chỉ số kết thúc
-    const currentCruises = filteredCruises.slice(startIndex, endIndex); // Danh sách du thuyền hiện tại
+    const totalItems = filteredCruises.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentCruises = filteredCruises.slice(startIndex, endIndex);
 
-    // Xử lý chuyển trang
     const handlePageChange = (page) => {
         if (page >= 1 && page <= totalPages) {
             setCurrentPage(page);
         }
     };
 
-    // Xử lý chuyển trang trước/sau
     const handlePrevPage = () => {
         if (currentPage > 1) setCurrentPage(currentPage - 1);
     };
@@ -78,19 +70,16 @@ const Cruise = () => {
         if (currentPage < totalPages) setCurrentPage(currentPage + 1);
     };
 
-    // Tạo mảng các trang hiển thị (tối đa 5 trang)
     const getPaginationItems = () => {
         const pages = [];
         const maxPagesToShow = 5;
         let startPage = Math.max(1, currentPage - 2);
         let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
 
-        // Điều chỉnh startPage nếu endPage quá gần tổng số trang
         if (endPage - startPage < maxPagesToShow - 1 && startPage > 1) {
             startPage = Math.max(1, endPage - maxPagesToShow + 1);
         }
 
-        // Thêm các trang
         for (let i = startPage; i <= endPage; i++) {
             pages.push(i);
         }
@@ -106,13 +95,11 @@ const Cruise = () => {
                 <CruiseForm className="absolute left-1/2 -translate-x-1/2 top-1/2 lg:top-auto -translate-y-1/2 container lg:max-w-5xl" />
             </Hero>
 
-            {/* Section danh sách du thuyền với padding-top tăng */}
             <div className="max-w-7xl mx-auto pt-50 px-4 lg:px-8">
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
                     <div className="text-2xl font-bold text-gray-900 mb-4 lg:mb-0">
                         Tìm thấy {filteredCruises.length} kết quả
                     </div>
-                    {/* Combobox sắp xếp */}
                     <select
                         value={sortOption}
                         onChange={(e) => setSortOption(e.target.value)}
@@ -124,7 +111,6 @@ const Cruise = () => {
                     </select>
                 </div>
 
-                {/* Bộ lọc */}
                 <div className="flex flex-col lg:flex-row gap-6 mb-8">
                     <div className="w-full lg:w-1/4 bg-white p-4 rounded-lg shadow">
                         <h3 className="text-lg font-semibold text-gray-700 mb-4">Lọc kết quả</h3>
@@ -185,7 +171,6 @@ const Cruise = () => {
                         </div>
                     </div>
 
-                    {/* Danh sách du thuyền */}
                     <div className="w-full lg:w-3/4 grid grid-cols-1 gap-6">
                         {currentCruises.map((cruise) => (
                             <div
@@ -230,14 +215,12 @@ const Cruise = () => {
                     </div>
                 </div>
 
-                {/* Phân trang (sửa lại logic) */}
                 <div className="flex justify-between items-center mt-8 px-4 lg:px-8">
                     <span className="text-gray-600 text-sm font-medium">
                         Đang xem trang {currentPage} / {totalPages}
                     </span>
 
                     <div className="flex items-center space-x-2">
-                        {/* Nút Trước */}
                         <button
                             onClick={handlePrevPage}
                             className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 transition duration-200"
@@ -246,7 +229,6 @@ const Cruise = () => {
                             Trước
                         </button>
 
-                        {/* Các trang */}
                         {paginationItems.map((page) => (
                             <button
                                 key={page}
@@ -261,12 +243,10 @@ const Cruise = () => {
                             </button>
                         ))}
 
-                        {/* Dấu ... nếu có nhiều trang */}
                         {totalPages > 5 && currentPage < totalPages - 2 && (
                             <span className="px-3 py-1 text-gray-600">...</span>
                         )}
 
-                        {/* Trang cuối cùng (nếu có nhiều hơn 5 trang) */}
                         {totalPages > paginationItems[paginationItems.length - 1] && (
                             <button
                                 onClick={() => handlePageChange(totalPages)}
@@ -280,7 +260,6 @@ const Cruise = () => {
                             </button>
                         )}
 
-                        {/* Nút Tiếp */}
                         <button
                             onClick={handleNextPage}
                             className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 transition duration-200"
