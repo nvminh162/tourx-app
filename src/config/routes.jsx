@@ -17,6 +17,7 @@ const routes = {
     search: '/search',
     login: '/login',
     cruiseDetail: '/cruise/:cruiseSlug',
+    hotelDetail: '/hotel/:hotelSlug',
 };
 
 export default routes;

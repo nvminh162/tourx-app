@@ -32,7 +32,7 @@ const Flight = () => {
                 className="px-8 py-20"
             >
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 place-items-center group">
-                    {partnerFlightsJson.map((partner) => (
+                    {partnerFlightsJson.slice(0,5).map((partner) => (
                         <Image
                             key={partner.id}
                             src={partner.image}

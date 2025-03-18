@@ -81,7 +81,7 @@ const Home = () => {
                 className="px-8 py-20"
             >
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 place-items-center group">
-                    {partnerCruisesJson.map((partner) => (
+                    {partnerCruisesJson.slice(0,6).map((partner) => (
                         <Image
                             key={partner.id}
                             src={partner.image}

@@ -12,10 +12,11 @@
         "originalPrice": null,
         "price": 3675000,
         "rating": {
-            "score": 4.9,
-            "count": 11
+            "score": 4.6,
+            "count": 578
         },
-        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp",
+        "amenities": ["Cơ bản", "Bảo gồm tại chỗ bỏ ăn", "Quầy bar", "Lên 24 giờ", "Nhà hàng", "+10"],
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/2l1uxvb4jp973ya1.webp",
         "images": [
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/2l1uxvb4jp973ya1.webp",
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/zijzcqb3u2fvl6al.webp",
@@ -39,10 +40,10 @@
         "originalPrice": null,
         "price": 5450000,
         "rating": {
-            "score": 5.0,
-            "count": 7
+            "score": 4.3,
+            "count": 643
         },
-        "image": "https://minio.fares.vn/mixivivu-dev/tour/stellar-of-the-seas-cruise/thumbnail/9gg221zrdahd9rj5.jpg",
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/d93skjm1sm2c0xju.webp",
         "images": [
             "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/d93skjm1sm2c0xju.webp",
             "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/wdzml2oad913oy6r.webp",
@@ -67,9 +68,9 @@
         "price": 4225000,
         "rating": {
             "score": 5.0,
-            "count": 3
+            "count": 312
         },
-        "image": "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/thumbnail/a61tx4fxs16kq3cz.webp",
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/0nwf5e709itcom32.webp",
         "images": [
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/0nwf5e709itcom32.webp",
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/qfo7o84sbci7xve7.webp",
@@ -93,10 +94,10 @@
         "originalPrice": null,
         "price": 4700000,
         "rating": {
-            "score": 5.0,
-            "count": 3
+            "score": 3.0,
+            "count": 413
         },
-        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/thumbnail/797egzzb3bs6yvm3.webp",
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/e03mmk9c8or24riz.webp",
         "images": [
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/e03mmk9c8or24riz.webp",
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/bfy5moekbgpswflm.webp",
@@ -120,10 +121,10 @@
         "originalPrice": null,
         "price": 5050000,
         "rating": {
-            "score": 5.0,
-            "count": 4
+            "score": 4.5,
+            "count": 756
         },
-        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-catherine/thumbnail/k9bs9jgaeith80s0.webp",
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/pd31qe637l03mk3p.webp",
         "images": [
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/pd31qe637l03mk3p.webp",
             "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/1799l78adrj9ij4e.webp",
@@ -147,10 +148,10 @@
         "originalPrice": 6000000,
         "price": 4560000,
         "rating": {
-            "score": 5.0,
-            "count": 2
+            "score": 4.0,
+            "count": 286
         },
-        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/thumbnail/6d89ppxbfwfm7djm.webp",
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/vp70moxf4nlwu3p4.webp",
         "images": [
             "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/vp70moxf4nlwu3p4.webp",
             "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/yj8njcaq4ssio2nr.webp",

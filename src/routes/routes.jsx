@@ -18,7 +18,8 @@ import {
     Terms,
     UserManual,
     NotFound,
-    CruiseDetail
+    CruiseDetail,
+    HotelDetail
 } from '../pages';
 
 const publicRoutes = [
@@ -40,6 +41,7 @@ const publicRoutes = [
     { path: config.routes.search, element: Search, layout: LeftSidebarLayout },
     { path: config.routes.login, element: Login, layout: null },
     { path: config.routes.cruiseDetail, element: CruiseDetail },
+    { path: config.routes.hotelDetail, element: HotelDetail },
     { path: "*", element: NotFound },
 ];
 

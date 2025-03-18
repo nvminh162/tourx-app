@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
   const [activeTab, setActiveTab] = useState("all");
-  const navigate = useNavigate();
 
   const tabs = [
     { id: "all", label: "Tất cả" },
@@ -79,13 +77,12 @@ const Blog = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`px-4 py-2 rounded-lg font-semibold ${
-                activeTab === tab.id
+              className={`px-4 py-2 rounded-lg font-semibold ${activeTab === tab.id
                   ? "text-white"
                   : "bg-gray-200 text-gray-800"
-              }`}
+                }`}
               style={{
-                backgroundColor: activeTab === tab.id ? "#25b0cd" : undefined, 
+                backgroundColor: activeTab === tab.id ? "#25b0cd" : undefined,
               }}
               onClick={() => setActiveTab(tab.id)}
             >
@@ -108,26 +105,6 @@ const Blog = () => {
             </div>
           ))}
         </div>
-
-        <footer className="flex justify-between items-center mt-8 text-gray-700">
-          <p>Bản quyền © 2024 Hạ Long News</p>
-          <div className="flex space-x-2">
-            <button className="bg-gray-300 text-black px-3 py-1 rounded">⬅ Trước</button>
-            <button
-              className="text-white px-3 py-1 rounded"
-              style={{ backgroundColor: "#25b0cd" }} 
-            >
-              1
-            </button>
-            <button className="bg-gray-300 text-black px-3 py-1 rounded">2</button>
-            <button className="bg-gray-300 text-black px-3 py-1 rounded">3</button>
-            <span className="px-3 py-1">...</span>
-            <button className="bg-gray-300 text-black px-3 py-1 rounded">14</button>
-            <button className="bg-gray-300 text-black px-3 py-1 rounded">15</button>
-            <button className="bg-gray-300 text-black px-3 py-1 rounded">16</button>
-            <button className="bg-gray-300 text-black px-3 py-1 rounded">Tiếp ➡</button>
-          </div>
-        </footer>
       </div>
     </div>
   );
