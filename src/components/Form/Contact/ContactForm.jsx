@@ -94,7 +94,7 @@ const ContactForm = ({ onSuccess }) => {
                         <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">
                             {field.label} <span className="text-red-500">*</span>
                         </label>
-                        <div className="flex w-full items-center rounded-3xl bg-white border border-gray-300 pl-4 shadow-sm focus-within:ring-2 focus-within:ring-teal-400 transition-all">
+                        <div className="flex w-full items-center rounded-3xl bg-white border border-gray-300  shadow-sm focus-within:ring-2 focus-within:ring-teal-400 transition-all">
                             {field.type === 'textarea' ? (
                                 <textarea
                                     id={field.id}
@@ -102,7 +102,7 @@ const ContactForm = ({ onSuccess }) => {
                                     rows="3"
                                     value={formData[field.id]}
                                     onChange={handleChange}
-                                    className="px-4 py-3 block w-full bg-transparent text-base text-gray-900 placeholder:text-gray-400 focus:outline-none"
+                                    className="px-4 py-3 block w-full bg-transparent text-base text-gray-900 placeholder:text-gray-400 focus:outline-none rounded-3xl"
                                 />
                             ) : (
                                 <input
@@ -111,7 +111,7 @@ const ContactForm = ({ onSuccess }) => {
                                     placeholder={field.placeholder}
                                     value={formData[field.id]}
                                     onChange={handleChange}
-                                    className="px-4 py-3 block w-full bg-transparent text-base text-gray-900 placeholder:text-gray-400 focus:outline-none"
+                                    className="px-4 py-3 block w-full bg-transparent text-base text-gray-900 placeholder:text-gray-400 placeholder:leading-normal focus:outline-none rounded-3xl"
                                 />
                             )}
                         </div>
@@ -125,7 +125,7 @@ const ContactForm = ({ onSuccess }) => {
                         type="submit"
                         className="w-full bg-teal-600 py-3 text-white text-base font-semibold rounded-xl hover:bg-teal-700 transition duration-300"
                     >
-                        Gửi yêu cầu đến TourX
+                        Gửi yêu cầu đến TourX 
                     </Button>
                 </div>
             </form>
