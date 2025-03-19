@@ -48,7 +48,7 @@ const UserDropdown = () => {
         <div className="absolute right-0 z-10 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-52">
           {currentUser ? (
             <>
-              <div className="px-4 py-3 text-sm text-gray-900 text-center">
+              <div className="px-4 py-3 text-sm text-gray-900 text-start">
                 <div>Xin chào, {fullName}</div>
                 <div className="font-medium truncate">@{username}</div>
               </div>
