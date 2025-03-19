@@ -9,8 +9,9 @@ const SuccessModal = ({ onClose }) => {
             role="dialog"
             aria-modal="true"
             tabIndex="-1"
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }} // CSS inline với độ mờ 50%
         >
-            <div className="relative bg-white rounded-xl shadow-lg p-6 w-full max-w-sm text-center">
+            <div className="relative bg-white rounded-2xl shadow-lg p-6 w-full max-w-md text-center">
                 <button className="absolute top-2 right-2" onClick={onClose} aria-label="Đóng">
                     <img src={closeIcon} alt="Đóng" className="w-5 h-5" />
                 </button>
