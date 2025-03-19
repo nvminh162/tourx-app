@@ -29,6 +29,7 @@
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
+    "framer-motion": "^12.5.0",
     "lucide-react": "^0.482.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",

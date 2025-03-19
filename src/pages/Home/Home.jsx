@@ -52,7 +52,7 @@ const Home = () => {
                         />
                     ))}
                 </div>
-                <SeeMore title="Xem tất cả Du thuyền" to={config.routes.notfound} />
+                <SeeMore title="Xem tất cả Du thuyền" to={config.routes.cruise} />
             </SectionHeader>
             <SectionHeader
                 title="Đánh giá từ những người đã trải nghiệm"

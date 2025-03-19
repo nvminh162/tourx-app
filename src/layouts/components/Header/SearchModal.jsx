@@ -24,7 +24,6 @@ const SearchModal = ({ isOpen, onClose }) => {
     if (isOpen) {
       document.addEventListener("keydown", handleKeyDown)
       document.body.style.overflow = "hidden"
-      // Focus the input when modal opens
       setTimeout(() => {
         inputRef.current?.focus()
       }, 100)
@@ -150,7 +149,7 @@ const SearchModal = ({ isOpen, onClose }) => {
                       to={item.category === "cruise" ? `/cruise${item.to}` : `/hotel${item.to}`}
                       key={item.id}
                       className="block"
-                      onClick={onClose} // Close the modal when a link is clicked
+                      onClick={onClose}
                     >
                       <div className="flex border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                         <div className="w-32 h-32 flex-shrink-0">
