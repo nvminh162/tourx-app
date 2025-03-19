@@ -1,15 +1,24 @@
-import MapSection from '../../components/MapSection/MapSection';
-import ContactForm from '../../components/Form/Contact';
+  import { useState } from 'react';
+  import MapSection from '../../components/MapSection/MapSection';
+  import ContactForm from '../../components/Form/Contact/ContactForm';
+  import SuccessModal from '../../components/SuccessModal/SuccessModal';
 
-const Contact = () => {
+  const Contact = () => {
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+    const handleSuccess = () => {
+      setShowSuccessModal(true);
+    };
+
     return (
-        <div className="relative w-full min-h-screen pb-80">
-            <MapSection />
-            <div className="absolute left-1/2 top-[70%] -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-4 md:px-0 max-h-[80vh] overflow-y-auto">
-                <ContactForm />
-            </div>
+      <div className="relative w-full min-h-screen">
+        <MapSection />
+        <div className="w-full max-w-2xl mx-auto px-4 md:px-0 mt-[-10rem] md:mt-[-15rem]">
+            <ContactForm onSuccess={handleSuccess} />
         </div>
+        {showSuccessModal && <SuccessModal onClose={() => setShowSuccessModal(false)} />}
+      </div>
     );
-};
+  };
 
-export default Contact;
+  export default Contact;
