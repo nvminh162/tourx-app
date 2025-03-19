@@ -1,20 +1,59 @@
 import { Mail, ArrowLeft } from "lucide-react"
 import { Link } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
 import halongbayImg from "../../assets/images/Hero/halongbay.png"
-import { useState } from "react"
+import { setEmail, setError, clearError, sendResetLinkSuccess } from "./forgotPasswordSlice"
+import { forgotPasswordEmailSelector, forgotPasswordErrorSelector, emailSentSelector } from "../../redux/selectors"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { useEffect } from "react"
 
 const ForgetPassword = () => {
-  const [emailSent, setEmailSent] = useState(false)
-  const [email, setEmail] = useState("")
-  const [error, setError] = useState("")
+  const dispatch = useDispatch()
+
+  const email = useSelector(forgotPasswordEmailSelector)
+  const error = useSelector(forgotPasswordErrorSelector)
+  const emailSent = useSelector(emailSentSelector)
+
+  // ADDED: Show toast when error changes
+  useEffect(() => {
+    if (error) {
+      toast.error(error, {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      })
+    }
+  }, [error])
+
+  // ADDED: Show toast when email is sent
+  useEffect(() => {
+    if (emailSent) {
+      toast.success("Chúng tôi đã gửi liên kết đặt lại mật khẩu đến địa chỉ email của bạn.", {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      })
+    }
+  }, [emailSent])
 
   const validateEmail = () => {
+    dispatch(clearError())
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!email.trim()) {
-      setError("Email không được để trống")
+      dispatch(setError("Email không được để trống"))
       return false
     } else if (!emailRegex.test(email)) {
-      setError("Email không hợp lệ")
+      dispatch(setError("Email không hợp lệ"))
       return false
     }
 
@@ -23,11 +62,10 @@ const ForgetPassword = () => {
     const userExists = users.some((user) => user.email === email)
 
     if (!userExists) {
-      setError("Email không tồn tại trong hệ thống")
+      dispatch(setError("Email không tồn tại trong hệ thống"))
       return false
     }
 
-    setError("")
     return true
   }
 
@@ -37,13 +75,37 @@ const ForgetPassword = () => {
     if (validateEmail()) {
       // In a real application, you would send an email here
       // For this demo, we'll just simulate it
-      setEmailSent(true)
+      dispatch(sendResetLinkSuccess())
     }
   }
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value)
-    if (error) setError("")
+    dispatch(setEmail(e.target.value))
+  }
+
+  const handleResendEmail = () => {
+    // ADDED: Show toast when resending email
+    toast.info("Đang gửi lại email...", {
+      position: "bottom-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    })
+
+    setTimeout(() => {
+      toast.success("Đã gửi lại email thành công!", {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      })
+    }, 1000)
   }
 
   return (
@@ -82,7 +144,8 @@ const ForgetPassword = () => {
                 } focus:outline-none focus:ring-2`}
               />
               <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
-              {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+              {/* REMOVED: Error message is now shown as toast */}
+              {/* {error && <p className="text-red-500 text-sm mt-1">{error}</p>} */}
             </div>
 
             <button
@@ -94,11 +157,12 @@ const ForgetPassword = () => {
           </form>
         ) : (
           <div className="text-center">
-            <div className="bg-green-100 text-green-800 p-4 rounded-md mb-6">
+            {/* REMOVED: Success message is now shown as toast */}
+            {/* <div className="bg-green-100 text-green-800 p-4 rounded-md mb-6">
               Chúng tôi đã gửi liên kết đặt lại mật khẩu đến địa chỉ email của bạn.
-            </div>
+            </div> */}
             <button
-              onClick={() => setEmailSent(false)}
+              onClick={handleResendEmail}
               className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-full transition duration-200"
             >
               Gửi lại Email
@@ -106,6 +170,9 @@ const ForgetPassword = () => {
           </div>
         )}
       </div>
+
+      {/* ADDED: Toast container */}
+      <ToastContainer />
     </div>
   )
 }

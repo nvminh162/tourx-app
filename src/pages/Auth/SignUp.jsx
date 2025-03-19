@@ -1,59 +1,84 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Eye, EyeOff, User, Mail } from "lucide-react"
 import { Link, useNavigate } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
 import halongbayImg from "../../assets/images/Hero/halongbay.png"
+import { setFormField, setErrors, clearErrors, setIsSubmitting, signupSuccess } from "./signupSlice"
+import {
+  signupFormDataSelector,
+  signupErrorsSelector,
+  signupMessageSelector,
+  isSubmittingSelector,
+} from "../../redux/selectors"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [formData, setFormData] = useState({
-    fullname: "",
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  })
-  const [errors, setErrors] = useState({})
-  const [signupMessage, setSignupMessage] = useState({ type: "", text: "" })
+
+  const dispatch = useDispatch()
   const navigate = useNavigate()
+
+  const formData = useSelector(signupFormDataSelector)
+  const errors = useSelector(signupErrorsSelector)
+  const signupMessage = useSelector(signupMessageSelector)
+  const isSubmitting = useSelector(isSubmittingSelector)
+
+  // ADDED: Show toast when signupMessage changes
+  useEffect(() => {
+    if (signupMessage.text) {
+      if (signupMessage.type === "error") {
+        toast.error(signupMessage.text, {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        })
+      } else if (signupMessage.type === "success") {
+        toast.success(signupMessage.text, {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        })
+      }
+    }
+  }, [signupMessage])
 
   const togglePasswordVisibility = () => setShowPassword(!showPassword)
   const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword)
 
   const handleChange = (e) => {
     const { id, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [id]: value,
-    }))
-
-    // Clear error when user types
-    if (errors[id]) {
-      setErrors((prev) => ({
-        ...prev,
-        [id]: "",
-      }))
-    }
+    dispatch(setFormField({ field: id, value }))
   }
 
   const validateForm = () => {
     const newErrors = {}
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    if (!formData.fullname.trim()) {
+    if (!formData.fullname?.trim()) {
       newErrors.fullname = "Tên đầy đủ không được để trống"
     }
 
-    if (!formData.username.trim()) {
+    if (!formData.username?.trim()) {
       newErrors.username = "Tên người dùng không được để trống"
-    } else if (formData.username.length < 3) {
-      newErrors.username = "Tên người dùng phải có ít nhất 3 ký tự"
     }
 
-    if (!formData.email.trim()) {
+    if (!formData.email?.trim()) {
       newErrors.email = "Email không được để trống"
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Email không hợp lệ"
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      if (!emailRegex.test(formData.email)) {
+        newErrors.email = "Email không hợp lệ"
+      }
     }
 
     if (!formData.password) {
@@ -63,19 +88,20 @@ const SignUp = () => {
     }
 
     if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = "Mật khẩu nhập lại không khớp"
+      newErrors.confirmPassword = "Mật khẩu không khớp"
     }
 
-    setErrors(newErrors)
+    dispatch(setErrors(newErrors))
     return Object.keys(newErrors).length === 0
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setSignupMessage({ type: "", text: "" })
+    dispatch(setIsSubmitting(true))
+    dispatch(clearErrors())
 
     if (validateForm()) {
-      // Get existing users or initialize empty array
+      // Get existing users
       const users = JSON.parse(localStorage.getItem("users") || "[]")
 
       // Check if username or email already exists
@@ -83,18 +109,34 @@ const SignUp = () => {
       const emailExists = users.some((user) => user.email === formData.email)
 
       if (usernameExists) {
-        setErrors((prev) => ({
-          ...prev,
-          username: "Tên người dùng đã tồn tại",
-        }))
+        dispatch(setErrors({ username: "Tên người dùng đã tồn tại" }))
+        dispatch(setIsSubmitting(false))
+        // ADDED: Show toast for username exists error
+        toast.error("Tên người dùng đã tồn tại", {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        })
         return
       }
 
       if (emailExists) {
-        setErrors((prev) => ({
-          ...prev,
-          email: "Email đã được sử dụng",
-        }))
+        dispatch(setErrors({ email: "Email đã tồn tại" }))
+        dispatch(setIsSubmitting(false))
+        // ADDED: Show toast for email exists error
+        toast.error("Email đã tồn tại", {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        })
         return
       }
 
@@ -105,25 +147,20 @@ const SignUp = () => {
         username: formData.username,
         email: formData.email,
         password: formData.password,
-        createdAt: new Date().toISOString(),
       }
 
       // Add to users array
       users.push(newUser)
-
-      // Save to localStorage
       localStorage.setItem("users", JSON.stringify(users))
 
-      // Show success message
-      setSignupMessage({
-        type: "success",
-        text: "Đăng ký thành công! Đang chuyển hướng đến trang đăng nhập...",
-      })
+      dispatch(signupSuccess())
 
       // Redirect to login page after successful signup
       setTimeout(() => {
         navigate("/auth")
       }, 2000)
+    } else {
+      dispatch(setIsSubmitting(false))
     }
   }
 
@@ -139,29 +176,29 @@ const SignUp = () => {
       <div className="relative z-10 w-full max-w-md p-8 mx-4 rounded-lg backdrop-blur-sm bg-white/20">
         <h1 className="text-3xl font-semibold text-center mb-8 text-gray-800">ĐĂNG KÝ</h1>
 
-        {signupMessage.text && (
-          <div
-            className={`mb-4 p-3 rounded-md ${
-              signupMessage.type === "error"
-                ? "bg-red-100 text-red-700 border border-red-200"
-                : "bg-green-100 text-green-700 border border-green-200"
-            }`}
-          >
-            {signupMessage.text}
-          </div>
-        )}
+        {/* REMOVED: Message block is replaced with toast notifications */}
+        {/* {signupMessage.text && (
+                    <div
+                        className={`mb-4 p-3 rounded-md ${
+                            signupMessage.type === "error"
+                                ? "bg-red-100 text-red-700 border border-red-200"
+                                : "bg-green-100 text-green-700 border border-green-200"
+                        }`}
+                    >
+                        {signupMessage.text}
+                    </div>
+                )} */}
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="relative">
             <input
               type="text"
               id="fullname"
-              value={formData.fullname}
+              value={formData.fullname || ""}
               onChange={handleChange}
               placeholder="Tên đầy đủ"
-              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${
-                errors.fullname ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
-              } focus:outline-none focus:ring-2`}
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.fullname ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
             />
             <User className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
             {errors.fullname && <p className="text-red-500 text-sm mt-1">{errors.fullname}</p>}
@@ -171,12 +208,11 @@ const SignUp = () => {
             <input
               type="text"
               id="username"
-              value={formData.username}
+              value={formData.username || ""}
               onChange={handleChange}
               placeholder="Tên người dùng hoặc số diện thoại"
-              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${
-                errors.username ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
-              } focus:outline-none focus:ring-2`}
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.username ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
             />
             <User className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
             {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
@@ -186,12 +222,11 @@ const SignUp = () => {
             <input
               type="email"
               id="email"
-              value={formData.email}
+              value={formData.email || ""}
               onChange={handleChange}
               placeholder="Email"
-              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${
-                errors.email ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
-              } focus:outline-none focus:ring-2`}
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.email ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
             />
             <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -201,12 +236,11 @@ const SignUp = () => {
             <input
               type={showPassword ? "text" : "password"}
               id="password"
-              value={formData.password}
+              value={formData.password || ""}
               onChange={handleChange}
               placeholder="Mật khẩu"
-              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${
-                errors.password ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
-              } focus:outline-none focus:ring-2`}
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.password ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
             />
             <button
               type="button"
@@ -222,12 +256,11 @@ const SignUp = () => {
             <input
               type={showConfirmPassword ? "text" : "password"}
               id="confirmPassword"
-              value={formData.confirmPassword}
+              value={formData.confirmPassword || ""}
               onChange={handleChange}
               placeholder="Nhập lại mật khẩu"
-              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${
-                errors.confirmPassword ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
-              } focus:outline-none focus:ring-2`}
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.confirmPassword ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
             />
             <button
               type="button"
@@ -241,9 +274,10 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-full transition duration-200"
+            disabled={isSubmitting}
+            className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-full transition duration-200 disabled:opacity-70"
           >
-            Đăng ký
+            {isSubmitting ? "Đang xử lý..." : "Đăng ký"}
           </button>
         </form>
 
@@ -254,6 +288,9 @@ const SignUp = () => {
           </Link>
         </p>
       </div>
+
+      {/* ADDED: Toast container */}
+      <ToastContainer />
     </div>
   )
 }

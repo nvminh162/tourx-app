@@ -117,7 +117,7 @@ export default function NotificationDropdown() {
                 return (
                     <div className="text-gray-600 text-sm mb-1.5">
                         <span className="font-semibold text-gray-800">{notification.user.name}</span> and{" "}
-                        <span className="font-medium text-gray-800">{notification.count} người khác</span> yêu thích Stories. Hãy chia sẻ thêm khoảnh khắc của bạn cho mọi người.
+                        <span className="font-medium text-gray-800">{notification.count} người khác</span> yêu thích tin của bạn. Hãy chia sẻ thêm khoảnh khắc của bạn đến mọi người.
                     </div>
                 )
             case "mention":
@@ -163,7 +163,7 @@ export default function NotificationDropdown() {
                                 <div className="shrink-0 relative">
                                     <img
                                         className="rounded-full w-11 h-11"
-                                        src={notification.user.avatar || "/placeholder.svg"}
+                                        src={notification.user.avatar}
                                         alt={`${notification.user.name} avatar`}
                                     />
                                     <div

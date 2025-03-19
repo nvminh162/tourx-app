@@ -112,7 +112,7 @@ const ContactForm = ({ onSuccess }) => {
                         type="submit"
                         className="w-full bg-teal-600 py-3 text-white text-base font-semibold rounded-xl hover:bg-teal-700 transition duration-300"
                     >
-                        Gửi yêu cầu đến TourX →
+                        Gửi yêu cầu đến TourX
                     </Button>
                 </div>
             </form>

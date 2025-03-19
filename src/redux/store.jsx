@@ -1,13 +1,16 @@
 //REDUX_TOOLKIT
-import { configureStore } from "@reduxjs/toolkit";
-import filtersSlice from "./reduxSlicer/filtersSlice";
-import todoListSlice from "./reduxSlicer/todoListSlice";
+import { configureStore } from "@reduxjs/toolkit"
+import authReducer from "../pages/Auth/authSlice"
+import signupReducer from "../pages/Auth/signupSlice"
+import forgotPasswordReducer from "../pages/Auth/forgotPasswordSlice"
 
 const store = configureStore({
   reducer: {
-    filters: filtersSlice.reducer,
-    todoList: todoListSlice.reducer,
+    auth: authReducer,
+    signup: signupReducer,
+    forgotPassword: forgotPasswordReducer,
   },
-});
+})
 
 export default store
+

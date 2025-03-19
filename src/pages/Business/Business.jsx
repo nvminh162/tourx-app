@@ -5,6 +5,7 @@ import SectionHeader from '../../components/SectionHeader';
 import Image from '../../components/Image';
 
 import partnerCruisesJson from '../../data/mocks/Partners/cruises.json';
+import { Link } from 'react-router-dom';
 
 const Business = () => {
     return (
@@ -22,7 +23,7 @@ const Business = () => {
                     </h1>
                     <img className="mt-4" src={imgUtils.headingBorder} alt="spacing" />
                     <p className="text-[18px] text-gray-600 font-medium mt-6">
-                        Với sự trải nghiệm thực tế, Công ty TNHH Du lịch và Dịch vụ MixiVivu mong muốn đưa du thuyền Hạ
+                        Với sự trải nghiệm thực tế, Công ty TNHH Du lịch và Dịch vụ TourX mong muốn đưa du thuyền Hạ
                         Long trở thành một lựa chọn đầu tiên cho doanh nghiệp. Nhiều chương trình du lịch hấp dẫn, đa
                         dạng được kết hợp sẽ đem đến cho quý doanh nghiệp sự hài lòng và thuận tiện. Du thuyền Hạ Long
                         cũng sẽ là một món quà tri ân vô cùng ý nghĩa dành cho nhân viên của quý doanh nghiệp. Bên cạnh
@@ -33,7 +34,7 @@ const Business = () => {
                     <br />
 
                     <Button primary rounded className="col-span-1 lg:col-span-5 py-3 min-w-[200px]">
-                        Liên hệ với TourX
+                        <Link to="/contact">Liên hệ với TourX</Link>
                     </Button>
                 </div>
                 {/* Right content */}

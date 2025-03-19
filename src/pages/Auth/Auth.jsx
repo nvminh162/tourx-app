@@ -1,18 +1,63 @@
 import { useState, useEffect } from "react"
 import { Eye, EyeOff, User } from "lucide-react"
 import { Link, useNavigate } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
 import halongbayImg from "../../assets/images/Hero/halongbay.png"
+import {
+  setLoginCredentials,
+  setRememberMe,
+  setLoginMessage,
+  setErrors,
+  loginSuccess,
+  loadRememberedUser,
+} from "./authSlice"
+import {
+  loginMessageSelector,
+  authErrorsSelector,
+  rememberMeSelector,
+  loginCredentialsSelector,
+} from "../../redux/selectors"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
 
 const Auth = () => {
   const [showPassword, setShowPassword] = useState(false)
-  const [rememberMe, setRememberMe] = useState(false)
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  })
-  const [errors, setErrors] = useState({})
-  const [loginMessage, setLoginMessage] = useState({ type: "", text: "" })
+  const dispatch = useDispatch()
   const navigate = useNavigate()
+
+  const loginMessage = useSelector(loginMessageSelector)
+  const errors = useSelector(authErrorsSelector)
+  const rememberMe = useSelector(rememberMeSelector)
+  const loginCredentials = useSelector(loginCredentialsSelector)
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn)
+
+  // ADDED: Show toast when loginMessage changes
+  useEffect(() => {
+    if (loginMessage.text) {
+      if (loginMessage.type === "error") {
+        toast.error(loginMessage.text, {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        })
+      } else if (loginMessage.type === "success" && isLoggedIn) {
+        toast.success(loginMessage.text, {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        })
+      }
+    }
+  }, [loginMessage, isLoggedIn])
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
@@ -20,64 +65,74 @@ const Auth = () => {
 
   const handleChange = (e) => {
     const { id, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [id]: value,
-    }))
+    dispatch(
+      setLoginCredentials({
+        [id]: value,
+      }),
+    )
 
     // Clear error when user types
     if (errors[id]) {
-      setErrors((prev) => ({
-        ...prev,
-        [id]: "",
-      }))
+      dispatch(
+        setErrors({
+          ...errors,
+          [id]: "",
+        }),
+      )
     }
   }
 
   const validateForm = () => {
     const newErrors = {}
 
-    if (!formData.username.trim()) {
+    if (!loginCredentials.username?.trim()) {
       newErrors.username = "Tên người dùng không được để trống"
     }
 
-    if (!formData.password) {
+    if (!loginCredentials.password) {
       newErrors.password = "Mật khẩu không được để trống"
-    } else if (formData.password.length < 6) {
+    } else if (loginCredentials.password.length < 6) {
       newErrors.password = "Mật khẩu phải có ít nhất 6 ký tự"
     }
 
-    setErrors(newErrors)
+    dispatch(setErrors(newErrors))
     return Object.keys(newErrors).length === 0
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setLoginMessage({ type: "", text: "" })
+    dispatch(setLoginMessage({ type: "", text: "" }))
 
     if (validateForm()) {
       // Get users from localStorage
       const users = JSON.parse(localStorage.getItem("users") || "[]")
 
-      // Find user by username or phone
+      // Find user by username or phone or email
       const user = users.find(
-        (u) => u.username === formData.username || u.phone === formData.username || u.email === formData.username,
+        (u) =>
+          u.username === loginCredentials.username ||
+          u.phone === loginCredentials.username ||
+          u.email === loginCredentials.username,
       )
 
       if (!user) {
-        setLoginMessage({
-          type: "error",
-          text: "Tài khoản không tồn tại",
-        })
+        dispatch(
+          setLoginMessage({
+            type: "error",
+            text: "Tài khoản không tồn tại",
+          }),
+        )
         return
       }
 
       // Check password
-      if (user.password !== formData.password) {
-        setLoginMessage({
-          type: "error",
-          text: "Mật khẩu không chính xác",
-        })
+      if (user.password !== loginCredentials.password) {
+        dispatch(
+          setLoginMessage({
+            type: "error",
+            text: "Mật khẩu không chính xác",
+          }),
+        )
         return
       }
 
@@ -98,7 +153,7 @@ const Auth = () => {
         localStorage.setItem(
           "rememberedUser",
           JSON.stringify({
-            username: formData.username,
+            username: loginCredentials.username,
             rememberMe: true,
           }),
         )
@@ -106,10 +161,7 @@ const Auth = () => {
         localStorage.removeItem("rememberedUser")
       }
 
-      setLoginMessage({
-        type: "success",
-        text: "Đăng nhập thành công!",
-      })
+      dispatch(loginSuccess(currentUser))
 
       // Redirect to home page after successful login
       setTimeout(() => {
@@ -122,19 +174,16 @@ const Auth = () => {
   useEffect(() => {
     const rememberedUser = JSON.parse(localStorage.getItem("rememberedUser") || "null")
     if (rememberedUser) {
-      setFormData((prev) => ({
-        ...prev,
-        username: rememberedUser.username || "",
-      }))
-      setRememberMe(true)
+      dispatch(loadRememberedUser(rememberedUser))
     }
 
     // Check if user is already logged in
-    const currentUser = JSON.parse(localStorage.getItem("currentUser") || "null")
+    const currentUser = JSON.parse(localStorage.getItem("loginSession") || "null")
     if (currentUser && currentUser.isLoggedIn) {
+      dispatch(loginSuccess(currentUser))
       navigate("/")
     }
-  }, [navigate])
+  }, [dispatch, navigate])
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center">
@@ -148,7 +197,8 @@ const Auth = () => {
       <div className="relative z-10 w-full max-w-md p-8 mx-4 rounded-lg backdrop-blur-sm bg-white/20">
         <h1 className="text-3xl font-semibold text-center mb-8 text-gray-800">LOGIN</h1>
 
-        {loginMessage.text && (
+        {/* REMOVED: Message block is replaced with toast notifications */}
+        {/* {loginMessage.text && (
           <div
             className={`mb-4 p-3 rounded-md ${
               loginMessage.type === "error"
@@ -158,19 +208,18 @@ const Auth = () => {
           >
             {loginMessage.text}
           </div>
-        )}
+        )} */}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="relative">
             <input
               type="text"
               id="username"
-              value={formData.username}
+              value={loginCredentials.username || ""}
               onChange={handleChange}
               placeholder="Tên người dùng hoặc số điện thoại"
-              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${
-                errors.username ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
-              } focus:outline-none focus:ring-2`}
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.username ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
             />
             <User className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
             {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
@@ -180,12 +229,11 @@ const Auth = () => {
             <input
               type={showPassword ? "text" : "password"}
               id="password"
-              value={formData.password}
+              value={loginCredentials.password || ""}
               onChange={handleChange}
               placeholder="Mật khẩu"
-              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${
-                errors.password ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
-              } focus:outline-none focus:ring-2`}
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.password ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
             />
             <button
               type="button"
@@ -203,7 +251,7 @@ const Auth = () => {
                 type="checkbox"
                 id="remember"
                 checked={rememberMe}
-                onChange={() => setRememberMe(!rememberMe)}
+                onChange={() => dispatch(setRememberMe(!rememberMe))}
                 className="w-4 h-4 border-gray-300 rounded focus:ring-gray-500"
               />
               <label htmlFor="remember" className="ml-2 text-sm text-gray-700">
@@ -233,6 +281,9 @@ const Auth = () => {
           </p>
         </div>
       </div>
+
+      {/* ADDED: Toast container */}
+      <ToastContainer />
     </div>
   )
 }

@@ -1,23 +1,18 @@
-import { createSelector } from "@reduxjs/toolkit";
+// Auth selectors
+export const currentUserSelector = (state) => state.auth.currentUser
+export const isLoggedInSelector = (state) => state.auth.isLoggedIn
+export const loginMessageSelector = (state) => state.auth.loginMessage
+export const authErrorsSelector = (state) => state.auth.errors
+export const rememberMeSelector = (state) => state.auth.rememberMe
+export const loginCredentialsSelector = (state) => state.auth.loginCredentials
 
-export const searchTextSelector = (state) => state.filters.search;
-export const filterStatusSelector = (state) => state.filters.status;
-export const filterPrioritiesSelector = (state) => state.filters.priorities;
-export const todoListSelector = (state) => state.todoList;
+// Signup selectors
+export const signupFormDataSelector = (state) => state.signup.formData
+export const signupErrorsSelector = (state) => state.signup.errors
+export const signupMessageSelector = (state) => state.signup.signupMessage
+export const isSubmittingSelector = (state) => state.signup.isSubmitting
 
-export const todosRemainingSelector = createSelector(
-  searchTextSelector,
-  filterStatusSelector,
-  filterPrioritiesSelector,
-  todoListSelector,
-  (search, status, priorities, todoList) => {
-    return todoList.filter((todo) => {
-      const matchesSearch = todo.name.includes(search);
-      const matchesStatus =
-        status === "All" || (status === "Completed" ? todo.completed : !todo.completed);
-      const matchesPriority = !priorities.length || priorities.includes(todo.priority);
-
-      return [matchesSearch, matchesStatus, matchesPriority].every(Boolean);
-    });
-  }
-);
+// Forgot Password selectors
+export const forgotPasswordEmailSelector = (state) => state.forgotPassword.email
+export const forgotPasswordErrorSelector = (state) => state.forgotPassword.error
+export const emailSentSelector = (state) => state.forgotPassword.emailSent
