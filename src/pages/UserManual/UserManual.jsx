@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import TableOfContents from '../../components/TableOfContents';
-import userManual from '../../data/mocks/UserManual/userManual';
+import userManual from '../../data/mocks/UserManual/userManual.json';
 const userManualData = userManual;
 
 // Component displays each part of the tutorial

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import PropTypes from 'prop-types';
 import Button from '../../../components/Button';
 
@@ -44,13 +45,25 @@ const ContactForm = ({ onSuccess }) => {
         setErrors((prev) => ({ ...prev, [id]: error }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
 
-        console.log('Form Submitted:', formData);
-        setFormData({ name: '', email: '', phone: '', message: '' });
-        if (onSuccess) onSuccess();
+        try {
+            // Gửi email bằng EmailJS
+            await emailjs.send(
+                'service_lbmcq2y', // Thay bằng SERVICE_ID của bạn
+                'template_semmbij', // Thay bằng TEMPLATE_ID của bạn
+                formData,
+                'YPGeUl2DtPjPx1O5z', // Thay bằng PUBLIC_KEY của bạn
+            );
+            console.log('Email đã được gửi thành công!');
+            setFormData({ name: '', email: '', phone: '', message: '' });
+            if (onSuccess) onSuccess();
+        } catch (error) {
+            console.error('Lỗi khi gửi email:', error);
+            console.log('Đã xảy ra lỗi khi gửi email.');
+        }
     };
 
     const fields = [
