@@ -17,6 +17,8 @@ Instructor: Từ Thị Xuân Hiền
 
 ## Production deployment: [fe-tour-app.vercel.app](https://fe-tour-app.vercel.app)
 
+### Sitemap
+![Sitemap](/readme/tourx-sitemap.png)
 ### Home Page
 ![Home Page](/readme/home-page.png)
 ### Cruise Booking Page

@@ -52,10 +52,10 @@ const ContactForm = ({ onSuccess }) => {
         try {
             // Gửi email bằng EmailJS
             await emailjs.send(
-                'service_lbmcq2y', // Thay bằng SERVICE_ID của bạn
-                'template_semmbij', // Thay bằng TEMPLATE_ID của bạn
+                import.meta.env.VITE_SERVICE_ID,
+                import.meta.env.VITE_TEMPLATE_ID,
                 formData,
-                'YPGeUl2DtPjPx1O5z', // Thay bằng PUBLIC_KEY của bạn
+                import.meta.env.VITE_PUBLIC_KEY
             );
             console.log('Email đã được gửi thành công!');
             setFormData({ name: '', email: '', phone: '', message: '' });
