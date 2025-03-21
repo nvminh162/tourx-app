@@ -6,6 +6,8 @@ import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 import serviceCruiseJson from '../../../data/mocks/Services/cruises.json'
 import serviceHotelsJson from '../../../data/mocks/Services/hotels.json'
+import useDebounce from "../../../hooks/useDebounce";
+
 
 const SearchModal = ({ isOpen, onClose }) => {
   const [searchTerm, setSearchTerm] = useState("")
@@ -13,6 +15,7 @@ const SearchModal = ({ isOpen, onClose }) => {
   const [filteredResults, setFilteredResults] = useState([])
   const modalRef = useRef(null)
   const inputRef = useRef(null)
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -36,33 +39,32 @@ const SearchModal = ({ isOpen, onClose }) => {
   }, [isOpen, onClose])
 
   useEffect(() => {
-    // Filter results based on search term and selected category
-    if (searchTerm) {
-      let results = []
+    if (debouncedSearchTerm) {
+      let results = [];
 
       if (selectedCategory === "all" || selectedCategory === "cruise") {
         const filteredCruises = serviceCruiseJson.filter(
           (item) =>
-            item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            item.location.toLowerCase().includes(searchTerm.toLowerCase()),
-        )
-        results = [...results, ...filteredCruises]
+            item.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+            item.location.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+        );
+        results = [...results, ...filteredCruises];
       }
 
       if (selectedCategory === "all" || selectedCategory === "hotel") {
         const filteredHotels = serviceHotelsJson.filter(
           (item) =>
-            item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            item.location.toLowerCase().includes(searchTerm.toLowerCase()),
-        )
-        results = [...results, ...filteredHotels]
+            item.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+            item.location.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+        );
+        results = [...results, ...filteredHotels];
       }
 
-      setFilteredResults(results)
+      setFilteredResults(results);
     } else {
-      setFilteredResults([])
+      setFilteredResults([]);
     }
-  }, [searchTerm, selectedCategory])
+  }, [debouncedSearchTerm, selectedCategory]);
 
   const handleClickOutside = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
