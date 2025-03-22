@@ -15,8 +15,6 @@ Instructor: Từ Thị Xuân Hiền
 
   **[Class List DHKTPM18B](https://docs.google.com/spreadsheets/d/1gaygAMW25scOlaIoXddVJZmmhO2n-DJ-/edit?usp=sharing&ouid=101662654548516828365&rtpof=true&sd=true)**
 
-## Production deployment: [tourx-app.vercel.app](https://tourx-app.vercel.app)
-
 ### Sitemap
 ![Sitemap](./frontend/readme/tourx-sitemap.png)
 ### Home Page
