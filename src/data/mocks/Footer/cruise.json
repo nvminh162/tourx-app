@@ -1,5 +1,0 @@
-[
-    { "id": 301, "type": "navigation", "title": "Blog", "to": "/blog" },
-    { "id": 302, "type": "navigation", "title": "Quy định chung và lưu ý", "to": "/regulations" },
-    { "id": 303, "type": "navigation", "title": "Câu hỏi thường gặp", "to": "/faq" }
-]
