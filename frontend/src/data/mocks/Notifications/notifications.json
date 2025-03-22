@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1",
+    "type": "message",
+    "user": {
+      "name": "@sontungmtp",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDO7P9BEE0__bYxsdxf7qez4U516y3zdRVtg&s"
+    },
+    "content": "\"Chào bạn! Đã sẵn sàng cho chuyến đi Hạ Long cùng Tùng chưa?\"",
+    "timestamp": "a few moments ago",
+    "iconColor": "bg-primary-base"
+  },
+  {
+    "id": "2",
+    "type": "follow",
+    "user": {
+      "name": "Nguyen Van Minh",
+      "avatar": "https://avatars.githubusercontent.com/u/121565657?v=4"
+    },
+    "content": "",
+    "count": 999,
+    "timestamp": "10 minutes ago",
+    "iconColor": "bg-gray-900"
+  },
+  {
+    "id": "3",
+    "type": "like",
+    "user": {
+      "name": "Nguyen Van Minh",
+      "avatar": "https://avatars.githubusercontent.com/u/121565657?v=4"
+    },
+    "content": "",
+    "count": 141,
+    "timestamp": "44 minutes ago",
+    "iconColor": "bg-red-600"
+  },
+  {
+    "id": "4",
+    "type": "video",
+    "user": {
+      "name": "J97",
+      "avatar": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2019/12/27/775022/Sau-Khi-Jack-Bi-Da-R.jpg"
+    },
+    "content": "Khám phá Bali - Điểm đến thiên đường cho mùa hè này.",
+    "timestamp": "3 hours ago",
+    "iconColor": "bg-purple-500"
+  },
+  {
+    "id": "5",
+    "type": "mention",
+    "user": {
+      "name": "Nguyen Van Minh",
+      "avatar": "https://avatars.githubusercontent.com/u/121565657?v=4"
+    },
+    "content": "Bạn nghĩ sao về địa điểm này?",
+    "mention": "nvminh162",
+    "timestamp": "1 hour ago",
+    "iconColor": "bg-green-400"
+  }
+]

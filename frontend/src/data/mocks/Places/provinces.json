@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "ninh bình",
+        "image": "https://minio.fares.vn/mixivivu-dev/hotel/location/hotel/st0yrxsvr338xn91.webp",
+        "to": "/404"
+    },
+    {
+        "id": 2,
+        "name": "đà nẵng",
+        "image": "https://minio.fares.vn/mixivivu-dev/hotel/location/hotel/2johsh9rc8z1p9f1.webp",
+        "to": "/404"
+    },
+    {
+        "id": 3,
+        "name": "nha trang",
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/location/images/m24xg4lftaykx77i.webp",
+        "to": "/404"
+    },
+    {
+        "id": 4,
+        "name": "phú quốc",
+        "image": "https://minio.fares.vn/mixivivu-dev/hotel/location/hotel/kb00x3gqu3jvg574.webp",
+        "to": "/404"
+    },
+    {
+        "id": 5,
+        "name": "hạ long",
+        "image": "https://minio.fares.vn/mixivivu-dev/hotel/location/hotel/qon6fo1lgky50tcy.webp",
+        "to": "/404"
+    }
+]

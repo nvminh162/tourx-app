@@ -1,0 +1,135 @@
+[
+    {
+        "id": "1",
+        "title": "Chúng tôi là TourX",
+        "sections": [
+            {
+                "id": "1.1",
+                "subtitle": "",
+                "content": [
+                    "tourx-app.vercel.app là sản phẩm chính thức của Công ty TNHH Du lịch và Dịch vụ Tour Explore - TourX. Với niềm đam mê du lịch, ưa khám phá, chúng tôi đã cùng nhau xây dựng một website – nơi mà khách hàng sẽ dễ dàng lựa chọn cho mình cũng như những người thân yêu chuyến nghỉ dưỡng đáng nhớ. TourX chọn lọc các du thuyền, khách sạn và liên kết với các hãng hàng không nhằm cung cấp những dịch vụ đa dạng và tốt nhất cho du khách."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Tại sao chọn chúng tôi?",
+        "sections": [
+            {
+                "id": "2.1",
+                "subtitle": "",
+                "content": [
+                    "Chúng tôi mong muốn du khách tận hưởng các dịch vụ du lịch chất lương bằng sự trải nghiệm thực tế của chính đội ngũ của TourX. Các video về du thuyền, khách sạn hay những chuyến bay mà chúng tôi đã ghi lại cũng sẽ được chúng tôi giới thiệu tới du khách. Chính từ những hình ảnh này, quý khách có thể chọn lựa cho mình hay gia đình, bạn bè, đồng nghiệp những chuyến đi ý nghĩa nhất. Chúng tôi chắc chắn sẽ mang lại cho du khách những kỳ nghĩ đáng nhớ với:",
+                    {
+                        "card_grid": "grid grid-cols-1 md:grid-cols-2 gap-6",
+                        "card_set": [
+                            {
+                                "logo": "icon///src/assets/images/About/diamond.png",
+                                "role": "Đội ngũ chuyên nghiệp, tâm huyết",
+                                "context": "Chúng tôi có đội ngũ nhân viên kinh nghiệm, tâm huyết, luôn lắng nghe những thắc mắc, ý kiến của khách hàng thông qua hotline, fanpage được kết nối liên tục. Với vốn kiến thức quý giá tích lũy qua nhiều năm, chúng tôi sẽ tư vấn cho du khách những sản phẩm du lịch phù hợp nhất cũng như những vấn đề phát sinh trong chuyến nghỉ dưỡng. Ngoài ra, chúng tôi còn có những nhân viên mới trẻ trung, năng động hứa hẹn sẽ giới thiệu nhiều điểm đến mới hấp dẫn cho du khách."
+                            },
+                            {
+                                "logo": "icon///src/assets/images/About/star.png",
+                                "role": "Sản phẩm phong phú",
+                                "context": "Tại địa chỉ website: https://tourx-app.vercel.app/ của chúng tôi, du khách có thể dễ dàng tìm thấy một du thuyền sang trọng, một chuyến bay khứ hồi hay một khu nghỉ dưỡng tuyệt đẹp trên mảnh đất hình chữ S. Chúng tôi cũng đưa ra những thông tin đầy đủ, hình ảnh thực tế của các dịch vụ chất lượng. Qua đó, du khách sẽ chon lựa được một dịch vụ phù hợp cho chuyến đi cùng gia đình, bạn bè hay đồng nghiệp."
+                            },
+                            {
+                                "logo": "icon///src/assets/images/About/coin.png",
+                                "role": "Mức giá hấp dẫn",
+                                "context": "TourX luôn cam kết sẽ đem đến các dịch vụ chất lượng với các mức giá tốt nhất. Chúng tôi tin chắc rằng chi phí mà quý khách thanh toán là hoàn toàn xứng đáng. Bên cạnh đó, quý khách cũng có thể tìm thấy nhiều món quà hấp dẫn trong những đợt khuyến mại trên website của chúng tôi."
+                            },
+                            {
+                                "logo": "icon///src/assets/images/About/padlock.png",
+                                "role": "Bảo mật thông tin",
+                                "context": "Chúng tôi cam kết toàn bộ mọi thông tin cá nhân của khách hàng sẽ được giữ bí mật tuyệt đối. Quý khách có thể yên tâm trải nghiệm dịch vụ thực sự thoải mái và riêng tư. Hi vọng, tourx-app.vercel.app sẽ là một địa chỉ tin cậy trong mỗi chuyến đi , mỗi kỳ nghỉ của quý khách."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Sản phẩm dịch vụ",
+        "sections": [
+            {
+                "id": "3.1",
+                "subtitle": "",
+                "content": [
+                    {
+                        "list": [
+                            "TourX cung cấp nhiều dịch vụ du lịch phong phú và đa dạng giúp du khách có nhiều lựa chọn:",
+                            "li//Vé máy bay của các hãng hàng không trong và ngoài nước",
+                            "li//Du thuyền Hạ Long với đa dạng du thuyền, phù hợp với từng nhu cầu của du khách",
+                            "li//Đặt phòng khách sạn và resort"
+                        ]
+                    },
+                    "Ngoài ra, chúng tôi cũng cung cấp nhiều dịch vụ khác như: thuê xe du lịch chất lượng cao, thuê hướng dẫn viên du lịch, visa, vé tàu…giúp du khách thoải mái và dễ dàng cho những chuyến du lịch."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Đối tác của chúng tôi",
+        "sections": [
+            {
+                "id": "4.1",
+                "subtitle": "",
+                "content": [
+                    "Để xây dựng được hệ thống website nhanh và mạnh nhằm mang lại những dịch vụ tốt nhất cho quý khách, TourX xin được gửi lời cảm ơn tới các đối tác đã hỗ trợ và đồng hành cùng chúng tôi:",
+                    {
+                        "card_grid": "grid grid-cols-1 gap-6",
+                        "card_set": [
+                            {
+                                "logo": "/src/assets/images/About/fares.png",
+                                "link": "https://fares.vn/",
+                                "role": "Công nghệ thông tin",
+                                "context": "FARES., JSC cung cấp các giải pháp toàn diện về chuyển đổi số cho doanh nghiệp: Phát triển phần mềm theo yêu cầu, xây dựng hệ thống thông tin, xử lý và phân tích dữ liệu lớn phục vụ chiến lược Marketing, kinh doanh & quản lý. Với đội ngũ chuyên gia tài năng và kinh nghiệm, FARES., JSC cam kết mang đến những giải pháp đột phá và sáng tạo, giúp khách hàng tận dụng tối đa tiềm năng của công nghệ để nâng cao hiệu suất kinh doanh và đạt được sự cạnh tranh trong môi trường kinh doanh ngày càng phức tạp. FARES., JSC đã hỗ trợ và đồng hành cùng TourX trong việc xây dựng hệ thống website, nhằm mang lại cho khách hàng những thông tin nhanh và tin cậy nhất."
+                            },
+                            {
+                                "logo": "/src/assets/images/About/zestif_logo.svg",
+                                "link": "https://zestif.com/",
+                                "role": "Tư vấn thiết kế",
+                                "context": "Zestif là một công ty công nghệ blockchain có trụ sở tại Hà Lan và Hà Nội, Việt Nam. Công ty được thành lập vào năm 2017 với sứ mệnh mang công nghệ blockchain đến với các doanh nghiệp và tổ chức ở Việt Nam và Hà Lan. Zestif cung cấp các dịch vụ tư vấn, đào tạo và phát triển giải pháp blockchain. Công ty đã triển khai thành công nhiều giải pháp blockchain cho các doanh nghiệp và tổ chức ở Hà Lan, Vương quốc Anh và các quốc gia EU khác."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Liên hệ với chúng tôi",
+        "sections": [
+            {
+                "id": "5.1",
+                "subtitle": "",
+                "content": [
+                    {
+                        "card_grid": "grid grid-cols-1 gap-6",
+                        "card_set": [
+                            {
+                                "title": "CÔNG TY TNHH DU LỊCH VÀ DỊCH VỤ TOUR EXPLORE - TOURX",
+                                "sub_title": "TOURX TRAVEL AND SERVICE COMPANY LIMITED",
+                                "role": "Công nghệ thông tin",
+                                "context": [
+                                    "Mã số thuế: 0110376372 ",
+                                    "Giấy phép kinh doanh số: 0353999798 ",
+                                    "Nơi cấp: Sở KH & ĐT TP Hồ Chí Minh. ",
+                                    "br//",
+                                    "12 Nguyễn Văn Bảo, Phường 1, Quận Gò Vấp, Thành phố Hồ Chí Minh ",
+                                    "Điện thoại: 0353999999 ",
+                                    "Địa chỉ email: tourxcskh@gmail.com"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

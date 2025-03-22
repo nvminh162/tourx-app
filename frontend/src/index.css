@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+    --black: #000;
+    --white: #fff;
+    
+    --primary-light: #77dada;
+    --primary-base: #25b0cd;
+    --primary-dark: #0e4f4f;
+
+    --warning-light: #fedf89;
+    --warning-base: #f79009;
+    --warning-dark: #7a2e0e;
+}
+
+@theme {
+    --color-primary-light: var(--primary-light);
+    --color-primary-base: var(--primary-base);
+    --color-primary-dark: var(--primary-dark);
+
+    --color-warning-light: var(--warning-light);
+    --color-warning-base: var(--warning-base);
+    --color-warning-dark: var(--warning-dark);
+}
+
+/* Scroll design */
+html[style] {
+    overflow: auto !important;
+    padding-right: 0px !important;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+input,
+button,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+/* Đè CSS của thư viện MUI */
+.MuiOutlinedInput-root {
+    border-radius: 9999px !important;
+    border: 1px solid #ccc !important;
+    background-color: white !important;
+    transition: none !important;
+    box-shadow: none !important;
+}
+.MuiOutlinedInput-root.Mui-focused {
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    background-color: white !important;
+}
+.MuiOutlinedInput-root:hover {
+    border-color: #ccc !important;
+}
+.MuiOutlinedInput-notchedOutline {
+    border: none !important;
+}
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root {
+    color: #00000099 !important;
+    background-color: white !important;
+}

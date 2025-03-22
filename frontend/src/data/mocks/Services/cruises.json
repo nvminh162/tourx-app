@@ -1,0 +1,170 @@
+[
+    {
+        "id": 101,
+        "name": "Du thuyền Heritage Bình Chuẩn Cát Bà",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2019,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 20
+        },
+        "originalPrice": null,
+        "price": 3675000,
+        "rating": {
+            "score": 4.6,
+            "count": 578
+        },
+        "amenities": ["Cơ bản", "Bảo gồm tại chỗ bỏ ăn", "Quầy bar", "Lên 24 giờ", "Nhà hàng", "+10"],
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/2l1uxvb4jp973ya1.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/2l1uxvb4jp973ya1.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/zijzcqb3u2fvl6al.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/5wi49cs4yxosmkfp.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/l5vcfa270dz4z6s0.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/q4om9c6ar8dtx2f3.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/images/5w8gh78ihexozc0o.webp"
+        ],
+        "to": "/du-thuyen-heritage-binh-chuan-cat-ba"
+    },
+    {
+        "id": 102,
+        "name": "Du Thuyền Stellar of the Seas",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2018,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 22
+        },
+        "originalPrice": null,
+        "price": 5450000,
+        "rating": {
+            "score": 4.3,
+            "count": 643
+        },
+        "amenities": ["Cơ bản", "Bảo gồm tại chỗ bỏ ăn", "Quầy bar", "Lên 24 giờ", "Nhà hàng", "+10"],
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/d93skjm1sm2c0xju.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/d93skjm1sm2c0xju.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/wdzml2oad913oy6r.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/odn4qy2fu4schy4n.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/otsoogdz5iavkvnb.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/lb30la7mqcnrx1vy.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/president-cruises-halong/images/lb30la7mqcnrx1vy.webp"
+        ],
+        "to": "/du-thuyen-stellar-of-the-seas"
+    },
+    {
+        "id": 103,
+        "name": "Du thuyền Ambassador Hạ Long",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2018,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 46
+        },
+        "originalPrice": null,
+        "price": 4225000,
+        "rating": {
+            "score": 5.0,
+            "count": 312
+        },
+        "amenities": ["Cơ bản", "Bảo gồm tại chỗ bỏ ăn", "Quầy bar", "Lên 24 giờ", "Nhà hàng", "+10"],
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/0nwf5e709itcom32.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/0nwf5e709itcom32.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/qfo7o84sbci7xve7.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/ognkcpvwdy0gab11.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/hhhqbshqn6pxvbwd.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/iqmmohamsxhcweya.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-essencegrand/images/ezeki6xeis3hfmon.webp"
+        ],
+        "to": "/du-thuyen-ambassador-ha-long"
+    },
+    {
+        "id": 104,
+        "name": "Du thuyền Grand Pioneers",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2023,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 56
+        },
+        "originalPrice": null,
+        "price": 4700000,
+        "rating": {
+            "score": 3.0,
+            "count": 413
+        },
+        "amenities": ["Cơ bản", "Bảo gồm tại chỗ bỏ ăn", "Quầy bar", "Lên 24 giờ", "Nhà hàng", "+10"],
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/e03mmk9c8or24riz.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/e03mmk9c8or24riz.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/bfy5moekbgpswflm.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/mflwqqksvsk3uz1a.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/c3q681obk6nc6isb.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/ornpi3ldiybt9xm0.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-capella1/images/9eo0pa2w9unujss9.webp"
+        ],
+        "to": "/du-thuyen-grand-pioneers"
+    },
+    {
+        "id": 105,
+        "name": "Du thuyền Catherine",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2023,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 39
+        },
+        "originalPrice": null,
+        "price": 5050000,
+        "rating": {
+            "score": 4.5,
+            "count": 756
+        },
+        "amenities": ["Cơ bản", "Bảo gồm tại chỗ bỏ ăn", "Quầy bar", "Lên 24 giờ", "Nhà hàng", "+10"],
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/pd31qe637l03mk3p.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/pd31qe637l03mk3p.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/1799l78adrj9ij4e.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/ub3xjcm31yd1szlb.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/d7ckftksqau909w2.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/hxhzjyk2t4259emc.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-scarlet%20pearl1/images/8knin9nwa5pt6yik.webp"
+        ],
+        "to": "/du-thuyen-catherine"
+    },
+    {
+        "id": 106,
+        "name": "Du thuyền Capella",
+        "location": "Vịnh Hạ Long",
+        "category": "cruise",
+        "details": {
+            "launchYear": 2020,
+            "material": "Tàu vỏ Kim loại",
+            "rooms": 30
+        },
+        "originalPrice": 6000000,
+        "price": 4560000,
+        "rating": {
+            "score": 4.0,
+            "count": 286
+        },
+        "amenities": ["Cơ bản", "Bảo gồm tại chỗ bỏ ăn", "Quầy bar", "Lên 24 giờ", "Nhà hàng", "+10"],
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/vp70moxf4nlwu3p4.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/vp70moxf4nlwu3p4.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/yj8njcaq4ssio2nr.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/n73v93f78w11jcl2.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/540fkdtfujn3uw5h.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/lse6ki7gia3d0is1.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/duthuyenlyragrandeur/images/1k6fx646ntazj48f.webp"
+        ],
+        "to": "/du-thuyen-capella"
+    }
+]

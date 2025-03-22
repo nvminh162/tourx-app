@@ -1,0 +1,78 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    user-select: none; //not selection text
+    //Spacing between buttons
+    +.wrapper {
+        margin-left: 0px;
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.icon+.title,
+.title+.icon {
+    margin-left: 8px;
+}
+
+//Place after primary class so primary
+// @overwrite shows priority (round < primary)
+.rounded {
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-color: rgba(22, 24, 35, 0.12);
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgb(22, 24, 35, 0.03);
+    }
+}
+
+.outline {
+    color: var(--primary-base);
+    border-color: currentColor; //current color get with color up |^|
+    &:hover {
+        border-color: currentColor;
+        background-color: rgb(254, 44, 85, 0.06);
+    }
+}
+
+// btn types
+.primary {
+    background-color: var(--primary-light);
+    color: var(--black);
+    border-color: var(--primary-light);
+    &:hover {
+        color: var(--white);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), var(--primary-base);
+        border-color: var(--primary-base);
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+//disable
+// btn sizes
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}

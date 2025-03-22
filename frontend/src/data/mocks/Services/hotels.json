@@ -1,0 +1,163 @@
+[
+    {
+        "id": 201,
+        "name": "Citadines Marina Hạ Long",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 326
+        },
+        "price": 1550000,
+        "originalPrice": 1950000,
+        "rating": {
+            "score": 4.6,
+            "count": 764
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/96xlv3oe9oloymzl.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/96xlv3oe9oloymzl.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/o3gasdjpnz9olhjj.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/8ogkeezqn1oqjsb1.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/uh9fm6j9a4w0h60z.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/hixnk29x3q5124ib.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/5b4ustoe52sal054.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/citadines-marina-halong/images/7tf1toypilzdkrzo.webp"
+
+        ],
+        "to": "/citadines-marina-ha-long"
+    },
+    {
+        "id": 202,
+        "name": "Anya Hotel Quy Nhơn",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 580
+        },
+        "price": 1600000,
+        "originalPrice": 2000000,
+        "rating": {
+            "score": 4.0,
+            "count": 32
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/3x4mxob5vi4yy7yg.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/3x4mxob5vi4yy7yg.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/9gnl770wubxvjwb7.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/ved3w1ci1i8vq1f6.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/omkybpoy81jbja9t.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/cksk955vn1whyva0.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/hj7p5x2dfad6odaj.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/anya-hotel-quy-nhon/images/zovchn6xivywsjxk.webp"
+        ],
+        "to": "/anya-hotel-quy-nhon"
+    },
+    {
+        "id": 203,
+        "name": "Grand Tourane Hotel Đà Nẵng",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 354
+        },
+        "price": 2300000,
+        "originalPrice": 2700000,
+        "rating": {
+            "score": 4.9,
+            "count": 124
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/0320md5at6yf0p0o.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/0320md5at6yf0p0o.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/at39fr9v5q0q7mrn.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/0pys7a4zlijunqqx.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/dsdevzbilup7q6q4.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/61m65q0mf25qjnib.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/j3ki4g86g9cr2egs.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/j3ki4g86g9cr2egs.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/Grand-tourane-hotel-danang/images/wvyojrmjjr84d2fn.webp"
+        ],
+        "to": "/grand-tourane-hotel-da-nang"
+    },
+    {
+        "id": 204,
+        "name": "Nha Trang Marriott Resort & Spa",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 450
+        },
+        "price": 1700000,
+        "originalPrice": 2500000,
+        "rating": {
+            "score": 5.0,
+            "count": 258
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/m6uk22ghtekdvigf.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/m6uk22ghtekdvigf.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/2y90gy2gxl5pdolc.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/i87sb2p1v7mt3g7z.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/ktzxzjlr7d7ge8rw.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/6yji5ym6kayh3yln.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/c8iiriapzozlrseu.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/nha-trang-marriott-resort-and-spa/images/93vis9u6dl0g1ocs.webp"
+        ],
+        "to": "/nha-trang-marriott-resort-spa"
+    },
+    {
+        "id": 205,
+        "name": "Sol by Meliá Phú Quốc",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 186
+        },
+        "price": 1000000,
+        "originalPrice": 1600000,
+        "rating": {
+            "score": 4.5,
+            "count": 127
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/n3ppqlvuwg4rwlgx.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/n3ppqlvuwg4rwlgx.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/3e6xb26tsi63e3p3.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/n7jtue0hxdjzra1j.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/1teg4ezvdvc4jcfe.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/e10nv5xd3e2fulrj.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/wicvsf5qaxwm3c7y.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/lzdqewpk91g8kmf2.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/ysyyysanhyqraxjp.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sol-by-melia-phu-quoc/images/gwrmc1xamwlu17hr.webp"
+        ],
+        "to": "/sol-by-melia-phu-quoc"
+    },
+    {
+        "id": 206,
+        "name": "Sapa Jade Hill Resort & Spa",
+        "location": "Hạ Long",
+        "category": "hotel",
+        "details": {
+            "rooms": 80
+        },
+        "price": 950000,
+        "originalPrice": 1400000,
+        "rating": {
+            "score": 4.4,
+            "count": 987
+        },
+        "image": "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/tdc5pgqz3mh6wpg1.webp",
+        "images": [
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/tdc5pgqz3mh6wpg1.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/lri22mhkvaw995th.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/q4zzbjgzwvjfbwps.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/dtf5wdexguanm37v.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/g8orkj7lhrifnnzl.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/t4qd4gfl2or9xpdx.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/vgnvtcqg7t845phv.webp",
+            "https://minio.fares.vn/mixivivu-dev/tour/sapa-jade-hill-resort-and-spa/images/0ckkxr9z6hpfl8s2.webp"
+        ],
+        "to": "/sapa-jade-hill-resort-spa"
+    }
+]
