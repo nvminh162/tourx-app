@@ -147,16 +147,6 @@ const Auth = () => {
           type: "error",
           text: error.message || "Đăng nhập thất bại. Vui lòng kiểm tra thông tin đăng nhập."
         }));
-
-        toast.error(error.message || "Đăng nhập thất bại", {
-          position: "bottom-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          theme: "light",
-        });
       } finally {
         dispatch(setIsSubmitting(false));
       }
