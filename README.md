@@ -28,24 +28,12 @@ Instructor: Từ Thị Xuân Hiền
 
 ## 🌟 Introduction to TourX
 TourX is a platform that helps users easily search, book, and manage their tours conveniently. With an intuitive interface, smooth experience, and detailed information about destinations, TourX brings you the best journeys.
-
-## 📚 Let clone project, Setup & Run the Project  
-### 1. Clone Repo  
+ 
 ```sh  
 git clone https://github.com/nvminh162/tourx-app.git  
 ```
 ```sh  
 cd tourx-app 
-```
-
-### 2. Install Dependencies  
-```sh  
-npm install  
-```
-
-### 3. Run the Project  
-```sh  
-npm run dev  
 ```
 
 ## 🤝 Contributions

@@ -4,7 +4,7 @@
 - **Frontend**: ReactJS, Vite, SWC  
 - **UI Library**: TailwindCSS
 - **CSS Preprocessor**: SCSS
-- **State Management**: Redux Toolkit / Context API
+- **State Management**: Redux Toolkit
 - **Routing**: React Router  
 - **API**: RESTful API  
 <!-- - **Authentication**: Firebase Auth -->
@@ -80,14 +80,13 @@
   Redux DevTools
 ```
 
-## Tools and Libraries
+## Essential tools and libraries to know for frontend project
 ```
-Essential tools and libraries to know for the project
-- Knowledge of responsive website techniques
-- Syntax and usage of JavaScript programming language
-- Use Tailwind throughout the project
-- Use Redux Toolkit for state management
-- Use scss/sass for module styling
-- Clsx or classnames (recommend using clsx) to combine with SCSS/SASS
-- Basic knowledge of React hooks
+  Knowledge of responsive website techniques
+  Syntax and usage of JavaScript programming language
+  Use Tailwind throughout the project
+  Use Redux Toolkit for state management
+  Use scss/sass for module styling
+  Clsx or classnames (recommend using clsx) to combine with SCSS/SASS
+  Basic knowledge of React hooks
 ```

@@ -7,21 +7,80 @@ import CruiseRoom from "./CruiseRoom";
 import CruiseIntroduce from "./CruiseIntroduce";
 import CruiseReviews from "./CruiseReviews";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
-import serviceCruise from "../../data/mocks/Services/cruises.json";
+
+// Xóa import JSON cứng
+// import serviceCruise from "../../data/mocks/Services/cruises.json";
+import { getAllCruises, getCruiseById } from '../../services/cruiseService';
 
 const CruiseDetail = () => {
   const navigate = useNavigate();
   const { cruiseSlug } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [cruise, setCruise] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.858237982653!2d106.68427047522368!3d10.822158889329383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2sIndustrial%20University%20of%20Ho%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1741966573439!5m2!1sen!2s";
-  
-  const cruise = serviceCruise.find((item) => item.to === `/${cruiseSlug}`);
 
+  // Fetch cruise data from API
   useEffect(() => {
-    if (!cruise) {
-      navigate("/404", { replace: true });
-    }
-  }, [cruise, navigate]);
+    const fetchCruiseData = async () => {
+      try {
+        setLoading(true);
+        const cruises = await getAllCruises();
+        const foundCruise = cruises.find(item => item.to === `/${cruiseSlug}`);
+
+        if (foundCruise) {
+          setCruise(foundCruise);
+        } else {
+          // Nếu không tìm thấy theo slug, có thể thử fetch theo ID
+          try {
+            // Giả sử cruiseSlug có thể là ID
+            const cruiseData = await getCruiseById(cruiseSlug);
+            if (cruiseData) {
+              setCruise(cruiseData);
+            } else {
+              navigate("/404", { replace: true });
+            }
+          } catch (err) {
+            navigate("/404", { replace: true });
+            console.log(err);
+          }
+        }
+      } catch (err) {
+        console.error("Error fetching cruise data:", err);
+        setError("Không thể tải thông tin du thuyền. Vui lòng thử lại sau.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCruiseData();
+  }, [cruiseSlug, navigate]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-teal-500"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-red-500 text-center">
+          <h2 className="text-2xl font-bold mb-2">Có gì đó sai sai?</h2>
+          <p>{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="mt-4 px-4 py-2 bg-primary-light text-black rounded-md hover:bg-primary-base hover:text-white transition"
+          >
+            Thử lại
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (!cruise) return null;
 

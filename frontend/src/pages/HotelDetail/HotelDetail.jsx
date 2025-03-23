@@ -7,44 +7,103 @@ import HotelRoom from "./HotelRoom"
 import HotelIntroduce from "./HotelIntroduce"
 import HotelReviews from "./HotelReviews"
 import SectionHeader from "../../components/SectionHeader/SectionHeader"
-import serviceHotel from "../../data/mocks/Services/hotels.json"
+
+// Xóa import JSON cứng
+// import serviceHotel from "../../data/mocks/Services/hotels.json"
+import { getAllHotels, getHotelById } from '../../services/hotelService';
 
 const HotelDetail = () => {
   const navigate = useNavigate()
   const { hotelSlug } = useParams()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [hotel, setHotel] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
   const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.858237982653!2d106.68427047522368!3d10.822158889329383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2sIndustrial%20University%20of%20Ho%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1741966573439!5m2!1sen!2s"
 
-  const hotel = serviceHotel.find((item) => item.to === `/${hotelSlug}`)
-
+  // Fetch hotel data from API
   useEffect(() => {
-    if (!hotel) {
-      navigate("/404", { replace: true })
-    }
-  }, [hotel, navigate])
+    const fetchHotelData = async () => {
+      try {
+        setLoading(true);
+        const hotels = await getAllHotels();
+        const foundHotel = hotels.find(item => item.to === `/${hotelSlug}`);
 
-  if (!hotel) return null
+        if (foundHotel) {
+          setHotel(foundHotel);
+        } else {
+          // Nếu không tìm thấy theo slug, có thể thử fetch theo ID
+          try {
+            // Giả sử hotelSlug có thể là ID
+            const hotelData = await getHotelById(hotelSlug);
+            if (hotelData) {
+              setHotel(hotelData);
+            } else {
+              navigate("/404", { replace: true });
+            }
+          } catch (err) {
+            navigate("/404", { replace: true });
+            console.log(err);
+          }
+        }
+      } catch (err) {
+        console.error("Error fetching hotel data:", err);
+        setError("Không thể tải thông tin khách sạn. Vui lòng thử lại sau.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const { images, name, price, location, rating } = hotel
+    fetchHotelData();
+  }, [hotelSlug, navigate]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-teal-500"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-red-500 text-center">
+          <h2 className="text-2xl font-bold mb-2">Có gì đó sai sai</h2>
+          <p>{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="mt-4 px-4 py-2 bg-primary-light text-black rounded-md hover:bg-primary-base hover:text-white transition"
+          >
+            Thử lại
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!hotel) return null;
+
+  const { images, name, price, location, rating } = hotel;
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-  }
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
   const goToImage = (index) => {
-    setCurrentImageIndex(index)
-  }
+    setCurrentImageIndex(index);
+  };
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <div className="space-y-20 py-20">

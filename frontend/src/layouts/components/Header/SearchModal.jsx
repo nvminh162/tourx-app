@@ -4,18 +4,52 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass, faStar } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
-import serviceCruiseJson from '../../../data/mocks/Services/cruises.json'
-import serviceHotelsJson from '../../../data/mocks/Services/hotels.json'
 import useDebounce from "../../../hooks/useDebounce";
-
+// backup json file
+// import serviceCruiseJson from '../../../data/mocks/Services/cruises.json'
+// import serviceHotelsJson from '../../../data/mocks/Services/hotels.json'
+import { getAllCruises } from '../../../services/cruiseService';
+import { getAllHotels } from '../../../services/hotelService';
 
 const SearchModal = ({ isOpen, onClose }) => {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [filteredResults, setFilteredResults] = useState([])
+  const [cruises, setCruises] = useState([])
+  const [hotels, setHotels] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
   const modalRef = useRef(null)
   const inputRef = useRef(null)
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
+
+  // Fetch dữ liệu khi component mở
+  useEffect(() => {
+    const fetchData = async () => {
+      if (!isOpen) return;
+      
+      setLoading(true);
+      setError(null);
+      
+      try {
+        // Fetch dữ liệu từ API
+        const [cruiseData, hotelData] = await Promise.all([
+          getAllCruises(),
+          getAllHotels()
+        ]);
+        
+        setCruises(cruiseData.map(cruise => ({...cruise, category: "cruise"})));
+        setHotels(hotelData.map(hotel => ({...hotel, category: "hotel"})));
+      } catch (err) {
+        console.error("Error fetching data:", err);
+        setError("Không thể tải dữ liệu, vui lòng thử lại sau");
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, [isOpen]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -38,12 +72,13 @@ const SearchModal = ({ isOpen, onClose }) => {
     }
   }, [isOpen, onClose])
 
+  // Lọc kết quả dựa trên dữ liệu API
   useEffect(() => {
     if (debouncedSearchTerm) {
       let results = [];
 
       if (selectedCategory === "all" || selectedCategory === "cruise") {
-        const filteredCruises = serviceCruiseJson.filter(
+        const filteredCruises = cruises.filter(
           (item) =>
             item.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
             item.location.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
@@ -52,7 +87,7 @@ const SearchModal = ({ isOpen, onClose }) => {
       }
 
       if (selectedCategory === "all" || selectedCategory === "hotel") {
-        const filteredHotels = serviceHotelsJson.filter(
+        const filteredHotels = hotels.filter(
           (item) =>
             item.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
             item.location.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
@@ -64,7 +99,7 @@ const SearchModal = ({ isOpen, onClose }) => {
     } else {
       setFilteredResults([]);
     }
-  }, [debouncedSearchTerm, selectedCategory]);
+  }, [debouncedSearchTerm, selectedCategory, cruises, hotels]);
 
   const handleClickOutside = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -142,7 +177,13 @@ const SearchModal = ({ isOpen, onClose }) => {
         </div>
 
         <div className="overflow-y-auto flex-1">
-          {searchTerm ? (
+          {loading ? (
+            <div className="flex items-center justify-center h-40">
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-light"></div>
+            </div>
+          ) : error ? (
+            <div className="text-red-500 text-center py-8">{error}</div>
+          ) : searchTerm ? (
             <div className="p-4">
               {filteredResults.length > 0 ? (
                 <div className="space-y-4">
