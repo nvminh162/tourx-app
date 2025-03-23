@@ -20,6 +20,9 @@ import {
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
+import { loginUser } from '../../services/userService';
+import { setIsSubmitting } from "./signupSlice"
+
 
 const Auth = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -99,76 +102,66 @@ const Auth = () => {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    dispatch(setLoginMessage({ type: "", text: "" }))
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(setLoginMessage({ type: "", text: "" }));
 
     if (validateForm()) {
-      // Get users from localStorage
-      const users = JSON.parse(localStorage.getItem("users") || "[]")
+      try {
+        dispatch(setIsSubmitting(true));
 
-      // Find user by username or phone or email
-      const user = users.find(
-        (u) =>
-          u.username === loginCredentials.username ||
-          u.phone === loginCredentials.username ||
-          u.email === loginCredentials.username,
-      )
+        // Login using the userService
+        const userSession = await loginUser({
+          username: loginCredentials.username,
+          password: loginCredentials.password
+        });
 
-      if (!user) {
-        dispatch(
-          setLoginMessage({
-            type: "error",
-            text: "Tài khoản không tồn tại",
-          }),
-        )
-        return
+        // Save remember me preference
+        if (rememberMe) {
+          localStorage.setItem(
+            "rememberedUser",
+            JSON.stringify({
+              username: loginCredentials.username,
+              rememberMe: true,
+            })
+          );
+        } else {
+          localStorage.removeItem("rememberedUser");
+        }
+
+        // Update Redux store
+        dispatch(loginSuccess({
+          id: userSession.id,
+          fullname: userSession.fullname,
+          username: userSession.username,
+          email: userSession.email,
+          isLoggedIn: true
+        }));
+
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
+      } catch (error) {
+        // Keep the error toast message
+        dispatch(setLoginMessage({
+          type: "error",
+          text: error.message || "Đăng nhập thất bại. Vui lòng kiểm tra thông tin đăng nhập."
+        }));
+
+        toast.error(error.message || "Đăng nhập thất bại", {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        });
+      } finally {
+        dispatch(setIsSubmitting(false));
       }
-
-      // Check password
-      if (user.password !== loginCredentials.password) {
-        dispatch(
-          setLoginMessage({
-            type: "error",
-            text: "Mật khẩu không chính xác",
-          }),
-        )
-        return
-      }
-
-      // Login successful
-      const currentUser = {
-        id: user.id,
-        fullname: user.fullname,
-        username: user.username,
-        email: user.email,
-        isLoggedIn: true,
-      }
-
-      // Save current user to localStorage
-      localStorage.setItem("loginSession", JSON.stringify(currentUser))
-
-      // Save to remember me if checked
-      if (rememberMe) {
-        localStorage.setItem(
-          "rememberedUser",
-          JSON.stringify({
-            username: loginCredentials.username,
-            rememberMe: true,
-          }),
-        )
-      } else {
-        localStorage.removeItem("rememberedUser")
-      }
-
-      dispatch(loginSuccess(currentUser))
-
-      // Redirect to home page after successful login
-      setTimeout(() => {
-        navigate("/")
-      }, 1500)
     }
-  }
+  };
 
   // Check for remembered user on component mount
   useEffect(() => {
@@ -196,19 +189,6 @@ const Auth = () => {
       {/* Login Form */}
       <div className="relative z-10 w-full max-w-md p-8 mx-4 rounded-lg backdrop-blur-sm bg-white/20">
         <h1 className="text-3xl font-semibold text-center mb-8 text-gray-800">LOGIN</h1>
-
-        {/* REMOVED: Message block is replaced with toast notifications */}
-        {/* {loginMessage.text && (
-          <div
-            className={`mb-4 p-3 rounded-md ${
-              loginMessage.type === "error"
-                ? "bg-red-100 text-red-700 border border-red-200"
-                : "bg-green-100 text-green-700 border border-green-200"
-            }`}
-          >
-            {loginMessage.text}
-          </div>
-        )} */}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="relative">

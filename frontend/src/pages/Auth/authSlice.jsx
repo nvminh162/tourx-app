@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { toast } from 'react-toastify';
 
 const initialState = {
   currentUser: null,
@@ -41,14 +42,10 @@ const authSlice = createSlice({
       state.errors = {}
     },
     logout: (state) => {
-      state.currentUser = null
-      state.isLoggedIn = false
-      state.loginMessage = { type: "", text: "" }
-      // Also clear any login credentials when logging out
-      state.loginCredentials = {
-        username: "",
-        password: "",
-      }
+      console.log("Logout reducer running");
+      localStorage.removeItem("loginSession");
+      state.currentUser = null;
+      state.isLoggedIn = false;
     },
     loadRememberedUser: (state, action) => {
       if (action.payload) {
@@ -59,6 +56,22 @@ const authSlice = createSlice({
         state.rememberMe = true
       }
     },
+  },
+  loginSuccess: (state, action) => {
+    state.currentUser = action.payload
+    state.isLoggedIn = true
+    state.loginMessage = { type: "success", text: "Đăng nhập thành công!" }
+    state.errors = {}
+
+    toast.success("Đăng nhập thành công!", {
+      position: "bottom-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
   },
 })
 

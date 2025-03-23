@@ -4,7 +4,7 @@
 DHKTPM18B - 420301541302
 Instructor: Từ Thị Xuân Hiền
 ```
-## Project: Building a Tour Booking Website
+## MERN Project: Building a Tour Booking Website
 ### (Timeline: 08/02/2025 - 22/03/2025)
 ## 🤝 Team Members
 - `Nguyễn Văn Minh` - `22003405` - STT 53 (`Project Manager`)

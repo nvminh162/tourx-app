@@ -3,7 +3,6 @@ import { faUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import config from "../../../config"
 import { getCurrentUser, isLoggedIn } from "../../../utils/auth"
@@ -33,16 +32,9 @@ const UserDropdown = () => {
 
   // Handle logout with Redux and toast
   const handleLogout = () => {
-    // Clear any existing toasts
-    toast.dismiss()
-
-    // Remove user from localStorage
-    localStorage.removeItem("loginSession")
-
-    // Dispatch Redux logout action
-    dispatch(logout())
-
+    dispatch(logout());
     setIsOpen(false)
+    // Remove user from localStorage
   }
 
   const currentUser = isLoggedIn() ? getCurrentUser() : null

@@ -1,8 +1,8 @@
 # TourX App Backend
 
-This is the backend for the TourX App, built with Node.js, Express, and MongoDB.
+## backend for the TourX App, built with Node.js, Express, and MongoDB.
 
-## Project Structure
+### Project Structure
 
 ```
 .env
@@ -19,7 +19,7 @@ routes/
     hotelRoutes.js
 ```
 
-## Installation
+### Installation
 
 1. Clone the repository:
     ```sh
@@ -38,7 +38,7 @@ routes/
     MONGO_URI=your_mongodb_uri
     ```
 
-## Running the Server
+### Running the Server
 
 To start the server, run:
 ```sh
@@ -50,10 +50,9 @@ For development, you can use `nodemon` to automatically restart the server on co
 npx nodemon server.js
 ```
 
-## API Endpoints
+### API Endpoints
 
 ### Cruises
-
 - `GET /api/cruises` - Get all cruises
 - `GET /api/cruises/:id` - Get a cruise by ID
 - `POST /api/cruises` - Create a new cruise
@@ -61,14 +60,12 @@ npx nodemon server.js
 - `DELETE /api/cruises/:id` - Delete a cruise by ID
 
 ### Hotels
-
 - `GET /api/hotel` - Get all hotels
 - `GET /api/hotel/:id` - Get a hotel by ID
 - `POST /api/hotel` - Create a new hotel
 - `PUT /api/hotel/:id` - Update a hotel by ID
 
 ## Technologies Used
-
 - Node.js
 - Express
 - MongoDB
@@ -77,5 +74,5 @@ npx nodemon server.js
 - cors
 - nodemon (for development)
 
-## License
+### License
 @nvminh162

@@ -12,6 +12,7 @@ import {
 } from "../../redux/selectors"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import { registerUser, checkUserExists } from '../../services/userService';
 
 
 const SignUp = () => {
@@ -95,24 +96,64 @@ const SignUp = () => {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    dispatch(setIsSubmitting(true))
-    dispatch(clearErrors())
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(setIsSubmitting(true));
+    dispatch(clearErrors());
 
     if (validateForm()) {
-      // Get existing users
-      const users = JSON.parse(localStorage.getItem("users") || "[]")
+      try {
+        // Check if username or email already exists
+        const { usernameExists, emailExists } = await checkUserExists(formData.username, formData.email);
 
-      // Check if username or email already exists
-      const usernameExists = users.some((user) => user.username === formData.username)
-      const emailExists = users.some((user) => user.email === formData.email)
+        if (usernameExists) {
+          dispatch(setErrors({ username: "Tên người dùng đã tồn tại" }));
+          toast.error("Tên người dùng đã tồn tại", {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+          });
+          dispatch(setIsSubmitting(false));
+          return;
+        }
 
-      if (usernameExists) {
-        dispatch(setErrors({ username: "Tên người dùng đã tồn tại" }))
-        dispatch(setIsSubmitting(false))
-        // ADDED: Show toast for username exists error
-        toast.error("Tên người dùng đã tồn tại", {
+        if (emailExists) {
+          dispatch(setErrors({ email: "Email đã tồn tại" }));
+          toast.error("Email đã tồn tại", {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+          });
+          dispatch(setIsSubmitting(false));
+          return;
+        }
+
+        // Create new user in MongoDB
+        const newUser = {
+          fullname: formData.fullname,
+          username: formData.username,
+          email: formData.email,
+          password: formData.password,
+        };
+
+        await registerUser(newUser);
+        dispatch(signupSuccess());
+
+        // Redirect to login page after successful signup
+        setTimeout(() => {
+          navigate("/auth");
+        }, 2000);
+      } catch (error) {
+        dispatch(setIsSubmitting(false));
+        toast.error(error.message || "Đăng ký thất bại. Vui lòng thử lại.", {
           position: "bottom-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -120,49 +161,12 @@ const SignUp = () => {
           pauseOnHover: true,
           draggable: true,
           theme: "light",
-        })
-        return
+        });
       }
-
-      if (emailExists) {
-        dispatch(setErrors({ email: "Email đã tồn tại" }))
-        dispatch(setIsSubmitting(false))
-        // ADDED: Show toast for email exists error
-        toast.error("Email đã tồn tại", {
-          position: "bottom-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          theme: "light",
-        })
-        return
-      }
-
-      // Create new user
-      const newUser = {
-        id: Date.now().toString(),
-        fullname: formData.fullname,
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-      }
-
-      // Add to users array
-      users.push(newUser)
-      localStorage.setItem("users", JSON.stringify(users))
-
-      dispatch(signupSuccess())
-
-      // Redirect to login page after successful signup
-      setTimeout(() => {
-        navigate("/auth")
-      }, 2000)
     } else {
-      dispatch(setIsSubmitting(false))
+      dispatch(setIsSubmitting(false));
     }
-  }
+  };
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center">

@@ -25,3 +25,6 @@ app.use('/api/cruises', cruiseRoutes);
 
 const hotelRoutes = require('./routes/hotelRoutes');
 app.use('/api/hotel', hotelRoutes);
+
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/users', userRoutes);
