@@ -84,6 +84,7 @@ const ContactForm = ({ onSuccess }) => {
             <h2 className="text-xl md:text-2xl font-bold mb-3 text-center text-gray-900">
                 Khám phá Hạ Long cùng TourX
             </h2>
+            
             <p className="text-center mb-8 text-gray-600 text-sm md:text-base">
                 Khám phá Hạ Long cùng TourX - Hãy liên hệ ngay để trải nghiệm hành trình tuyệt vời!
             </p>

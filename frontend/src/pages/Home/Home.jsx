@@ -21,23 +21,11 @@ import News from '../../components/News/News';
 // import serviceCruisesJson from '../../data/mocks/Services/cruises.json';
 import { useEffect, useState } from 'react';
 import { getAllCruises } from '../../services/cruiseService';
-import { getAllUsers } from '../../services/userService'
 
 const Home = () => {
     const [cruises, setCruises] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-
-    const fetchUsers = async () => {
-        try {
-            const users = await getAllUsers();
-            console.log("Users from API:", users);
-        } catch (error) {
-            console.error("Lỗi khi lấy dữ liệu người dùng:", error);
-        }
-    };
-
-    fetchUsers();
 
     useEffect(() => {
         const fetchCruises = async () => {

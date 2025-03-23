@@ -5,7 +5,7 @@ import successImage from '../../assets/images/Contact/success-image.png'; // Giá
 const SuccessModal = ({ onClose }) => {
     return (
         <div
-            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[1000]"
+            className="fixed inset-0 flex items-center justify-center bg-black/50 z-[1000]"
             role="dialog"
             aria-modal="true"
             tabIndex="-1"
