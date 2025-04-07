@@ -90,3 +90,6 @@
   Clsx or classnames (recommend using clsx) to combine with SCSS/SASS
   Basic knowledge of React hooks
 ```
+
+### License
+@nvminh162

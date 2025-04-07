@@ -45,3 +45,17 @@ export const deleteHotel = async (id) => {
         throw error;
     }
 };
+
+
+// BOOKING
+export const saveHotelBooking = async (bookingData) => {
+    try {
+        console.log('Saving booking data:', bookingData);
+        const response = await httpRequest.post('hotel-bookings', bookingData);
+        console.log('Booking saved successfully:', response);
+        return response;
+    } catch (error) {
+        console.error('Failed to save booking:', error);
+        throw error;
+    }
+};

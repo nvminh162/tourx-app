@@ -5,8 +5,10 @@ const errorHandler = require('./middlewares/errorHandler');
 
 // Route imports
 const cruiseRoutes = require('./routes/cruiseRoutes');
-const hotelRoutes = require('./routes/hotelRoutes');
+const hotelRoutes = require('./routes/hotelRoutes'); 
 const userRoutes = require('./routes/userRoutes');
+const hotelBookingRoutes = require('./routes/hotelBookingRoutes');
+const cruiseBookingRoutes = require('./routes/cruiseBookingRoutes'); // Make sure this is imported
 
 // Initialize express app
 const app = express();
@@ -27,6 +29,8 @@ app.get('/', (req, res) => {
 app.use('/api/cruises', cruiseRoutes);
 app.use('/api/hotel', hotelRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/hotel-bookings', hotelBookingRoutes);
+app.use('/api/cruise-bookings', cruiseBookingRoutes); // Make sure this is mounted
 
 // Error handling middleware
 app.use(errorHandler);
