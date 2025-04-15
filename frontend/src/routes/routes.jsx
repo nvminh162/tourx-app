@@ -22,6 +22,7 @@ import {
     Auth,
     SignUp,
     ForgetPassword,
+    Lookup,
 } from '../pages';
 
 const publicRoutes = [
@@ -45,6 +46,7 @@ const publicRoutes = [
     { path: config.routes.auth, element: Auth },
     { path: config.routes.signup, element: SignUp },
     { path: config.routes.forgetPwd, element: ForgetPassword },
+    { path: config.routes.lookup, element: Lookup },
     { path: "*", element: NotFound },
 ];
 

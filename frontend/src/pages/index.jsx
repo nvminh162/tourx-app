@@ -17,3 +17,4 @@ export { default as Search } from './Search';
 export { default as CruiseDetail } from './CruiseDetail';
 export { Auth, SignUp, ForgetPassword } from './Auth';
 export { default as HotelDetail } from './HotelDetail';
+export { default as Lookup } from './Lookup';

@@ -20,6 +20,7 @@ const routes = {
     auth: '/auth',
     signup: '/signup',
     forgetPwd: '/forgot-password',
+    lookup: '/lookup',
 };
 
 export default routes;
