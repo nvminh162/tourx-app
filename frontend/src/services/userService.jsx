@@ -21,12 +21,13 @@ export const registerUser = async (userData) => {
     }
 };
 
-export const checkUserExists = async (username, email) => {
+export const checkUserExists = async (username, email, phone) => {
     try {
         const users = await getAllUsers();
         return {
             usernameExists: users.some(user => user.username === username),
-            emailExists: users.some(user => user.email === email)
+            emailExists: users.some(user => user.email === email),
+            phoneExists: users.some(user => user.phone === phone)
         };
     } catch (error) {
         console.error('Failed to check if user exists:', error);
@@ -55,6 +56,7 @@ export const loginUser = async (credentials) => {
             fullname: user.fullname,
             username: user.username,
             email: user.email,
+            phone: user.phone,
             isLoggedIn: true
         };
         

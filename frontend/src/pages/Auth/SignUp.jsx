@@ -3,7 +3,7 @@ import { Eye, EyeOff, User, Mail } from "lucide-react"
 import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import halongbayImg from "../../assets/images/Hero/halongbay.png"
-import { setFormField, setErrors, clearErrors, setIsSubmitting, signupSuccess } from "./signupSlice"
+import { setFormField, setErrors, clearErrors, setIsSubmitting, signupSuccess, setSignupMessage } from "./signupSlice"
 import {
   signupFormDataSelector,
   signupErrorsSelector,
@@ -54,6 +54,10 @@ const SignUp = () => {
     }
   }, [signupMessage])
 
+  useEffect(() => {
+    dispatch(setSignupMessage({ type: "", text: "" }));
+  }, [dispatch]);
+
   const togglePasswordVisibility = () => setShowPassword(!showPassword)
   const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword)
 
@@ -71,6 +75,15 @@ const SignUp = () => {
 
     if (!formData.username?.trim()) {
       newErrors.username = "Tên người dùng không được để trống"
+    }
+
+    if (!formData.phone?.trim()) {
+      newErrors.phone = "Số điện thoại không được để trống"
+    } else {
+      const phoneRegex = /^(0|\+84)\d{9,10}$/
+      if (!phoneRegex.test(formData.phone)) {
+        newErrors.phone = "Số điện thoại không hợp lệ"
+      }
     }
 
     if (!formData.email?.trim()) {
@@ -103,8 +116,8 @@ const SignUp = () => {
 
     if (validateForm()) {
       try {
-        // Check if username or email already exists
-        const { usernameExists, emailExists } = await checkUserExists(formData.username, formData.email);
+        // Check if username, email, or phone already exists
+        const { usernameExists, emailExists, phoneExists } = await checkUserExists(formData.username, formData.email, formData.phone);
 
         if (usernameExists) {
           dispatch(setErrors({ username: "Tên người dùng đã tồn tại" }));
@@ -136,10 +149,26 @@ const SignUp = () => {
           return;
         }
 
+        if (phoneExists) {
+          dispatch(setErrors({ phone: "Số điện thoại đã tồn tại" }));
+          toast.error("Số điện thoại đã tồn tại", {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+          });
+          dispatch(setIsSubmitting(false));
+          return;
+        }
+
         // Create new user in MongoDB
         const newUser = {
           fullname: formData.fullname,
           username: formData.username,
+          phone: formData.phone,
           email: formData.email,
           password: formData.password,
         };
@@ -220,6 +249,19 @@ const SignUp = () => {
             />
             <User className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
             {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
+          </div>
+
+          <div className="relative">
+            <input
+              type="text"
+              id="phone"
+              value={formData.phone || ""}
+              onChange={handleChange}
+              placeholder="Số điện thoại"
+              className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.phone ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
+                } focus:outline-none focus:ring-2`}
+            />
+            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
           </div>
 
           <div className="relative">

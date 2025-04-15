@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { toast } from 'react-toastify';
 
 const initialState = {
   formData: {
     fullname: "",
     username: "",
+    phone: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -63,25 +63,6 @@ const signupSlice = createSlice({
       state.isSubmitting = false
     },
   },
-  signupSuccess: (state) => {
-    state.signupMessage = {
-      type: "success",
-      text: "Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.",
-    }
-    state.formData = initialState.formData
-    state.errors = {}
-    state.isSubmitting = false
-    
-    toast.success("Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.", {
-      position: "bottom-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "light",
-    });
-  }
 })
 
 export const {

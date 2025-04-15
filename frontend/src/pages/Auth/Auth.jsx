@@ -187,7 +187,7 @@ const Auth = () => {
               id="username"
               value={loginCredentials.username || ""}
               onChange={handleChange}
-              placeholder="Tên người dùng hoặc số điện thoại"
+              placeholder="Tên người dùng"
               className={`w-full p-3 pl-4 pr-10 rounded-md bg-white/70 border ${errors.username ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-gray-400"
                 } focus:outline-none focus:ring-2`}
             />

@@ -46,6 +46,7 @@ const authSlice = createSlice({
       localStorage.removeItem("loginSession");
       state.currentUser = null;
       state.isLoggedIn = false;
+      // Đã bỏ toast ở đây, chỉ gọi toast ở component
     },
     loadRememberedUser: (state, action) => {
       if (action.payload) {

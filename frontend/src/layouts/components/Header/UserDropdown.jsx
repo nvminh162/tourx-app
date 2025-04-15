@@ -3,6 +3,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import config from '../../../config';
 import { getCurrentUser, isLoggedIn } from '../../../utils/auth';
@@ -34,7 +35,17 @@ const UserDropdown = () => {
     const handleLogout = () => {
         dispatch(logout());
         setIsOpen(false);
-        // Remove user from localStorage
+        setTimeout(() => {
+            toast.success("Đăng xuất thành công!", {
+                position: "bottom-right",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "light",
+            });
+        }, 100);
     };
 
     const currentUser = isLoggedIn() ? getCurrentUser() : null;
