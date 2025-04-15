@@ -9,8 +9,6 @@ import HotelIntroduce from './HotelIntroduce';
 import HotelReviews from './HotelReviews';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 
-// Xóa import JSON cứng
-// import serviceHotel from "../../data/mocks/Services/hotels.json"
 import { getAllHotels, getHotelById, saveHotelBooking } from '../../services/hotelService';
 
 const HotelDetail = () => {

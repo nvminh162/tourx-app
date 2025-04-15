@@ -70,17 +70,7 @@ const UserDropdown = () => {
               <ul className="py-2 text-sm text-gray-700">
                 <li>
                   <a href="#" className="block px-4 py-2 hover:bg-primary-base hover:text-white">
-                    Hồ sơ cá nhân
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-primary-base hover:text-white">
                     Tra cứu đơn đặt
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-primary-base hover:text-white">
-                    Lịch sử giao dịch
                   </a>
                 </li>
                 <li>
@@ -92,7 +82,7 @@ const UserDropdown = () => {
               <div className="py-2">
                 <Link
                   to={config.routes.auth}
-                  onClick={handleLogout} // Use the new handleLogout function
+                  onClick={handleLogout}
                   className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-primary-base hover:text-white"
                 >
                   Đăng xuất

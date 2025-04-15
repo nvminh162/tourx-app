@@ -44,7 +44,7 @@ const Hotel = () => {
     return (
         <>
             <Hero className="relative" videoSrc={videoHotel.hotel} imageSrc={imgHero.halongbay}>
-                <CruiseForm className="absolute left-1/2 -translate-x-1/2 top-1/2 lg:top-auto -translate-y-1/2 container lg:max-w-5xl" />
+                <CruiseForm className="absolute left-1/2 -translate-x-1/2 top-1/2 lg:top-auto -translate-y-1/2 container lg:max-w-5xl" to={config.routes.cruise}/>
             </Hero>
             <div className="lg:mt-32"></div>
             <SectionHeader

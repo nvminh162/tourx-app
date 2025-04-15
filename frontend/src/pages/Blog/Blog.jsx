@@ -1,15 +1,4 @@
-import { useState } from "react";
-
 const Blog = () => {
-  const [activeTab, setActiveTab] = useState("all");
-
-  const tabs = [
-    { id: "all", label: "Tất cả" },
-    { id: "travel", label: "Du lịch" },
-    { id: "hotel", label: "Khách sạn" },
-    { id: "cruise", label: "Du thuyền" }
-  ];
-
   const blogPosts = [
     {
       id: 1,
@@ -72,25 +61,6 @@ const Blog = () => {
             Hạ Long: Bí mật và Cuộc sống trong Vịnh - Khám phá và Cập nhật những tin tức hấp dẫn từ điểm đến tuyệt vời này.
           </p>
         </div>
-
-        <div className="flex justify-center space-x-4 mb-8">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              className={`px-4 py-2 rounded-lg font-semibold ${activeTab === tab.id
-                  ? "text-white"
-                  : "bg-gray-200 text-gray-800"
-                }`}
-              style={{
-                backgroundColor: activeTab === tab.id ? "#25b0cd" : undefined,
-              }}
-              onClick={() => setActiveTab(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {blogPosts.map((post) => (
             <div

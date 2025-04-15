@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 // import cruiseData from "../../data/mocks/Services/cruises.json"
 import { Link } from "react-router-dom"
 import { getAllCruises } from '../../services/cruiseService';
+import config from "../../config"
 
 const Cruise = () => {
     const [cruises, setCruises] = useState([])
@@ -98,7 +99,6 @@ const Cruise = () => {
         for (let i = startPage; i <= endPage; i++) {
             pages.push(i)
         }
-
         return pages
     }
 
@@ -109,7 +109,7 @@ const Cruise = () => {
     return (
         <>
             <Hero className="relative" videoSrc={videoHaLongBay.halongbay} imageSrc={imgHero.halongbay}>
-                <CruiseForm className="absolute left-1/2 -translate-x-1/2 top-1/2 lg:top-auto -translate-y-1/2 container lg:max-w-5xl" />
+                <CruiseForm className="absolute left-1/2 -translate-x-1/2 top-1/2 lg:top-auto -translate-y-1/2 container lg:max-w-5xl" to={config.routes.cruise} />
             </Hero>
 
             <div className="max-w-7xl mx-auto pt-50 px-4 lg:px-8">

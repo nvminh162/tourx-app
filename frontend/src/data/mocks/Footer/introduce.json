@@ -5,6 +5,6 @@
     { "id": 104, "type": "navigation", "title": "Hướng dẫn sử dụng", "to": "/user-manual" },
     { "id": 105, "type": "navigation", "title": "Hình thức thanh toán", "to": "/payments" },
     { "id": 106, "type": "navigation", "title": "Liên hệ", "to": "/contact" },
-    { "id": 107, "type": "phone", "title": "Hotline: 0353.999.787", "to": "0353999798" },
+    { "id": 107, "type": "phone", "title": "Hotline: 0353.999.798", "to": "0353999798" },
     { "id": 108, "type": "email", "title": "Email: nvminh162@gmail.com", "to": "nvminh162@gmail.com" }
 ]

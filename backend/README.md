@@ -58,6 +58,8 @@ cd tourx-app/backend
 2. Install dependencies:
 ```sh
 npm install
+
+npx nodemon server.js
 ```
 
 3. Create a `.env` file in the root directory and add your environment variables:
