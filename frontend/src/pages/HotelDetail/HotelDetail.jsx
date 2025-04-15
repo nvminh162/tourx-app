@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Star, MapPin, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { isLoggedIn } from '../../utils/auth';
+import config from '../../config';
 
 import HotelFeatures from './HotelFeatures';
 import HotelRoom from './HotelRoom';
@@ -153,6 +155,26 @@ const HotelDetail = () => {
     // Then modify the handleBookingSubmit function:
     const handleBookingSubmit = async (e) => {
         e.preventDefault();
+
+        if (!isLoggedIn()) {
+            // If not logged in, show a message and redirect to login page
+            setBookingErrors({ 
+                submit: 'Bạn cần đăng nhập để đặt phòng. Đang chuyển hướng đến trang đăng nhập...' 
+            });
+            
+            // Wait 2 seconds before redirecting
+            setTimeout(() => {
+                closeBookingModal();
+                navigate(config.routes.auth, { 
+                    state: { 
+                        from: `/hotel/${hotelSlug}`,
+                        message: 'Vui lòng đăng nhập để tiếp tục đặt phòng.' 
+                    } 
+                });
+            }, 2000);
+            
+            return;
+        }
 
         if (!validateBookingForm()) return;
 
