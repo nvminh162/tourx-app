@@ -88,7 +88,7 @@ const UserDropdown = () => {
                                         }}
                                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-primary-base hover:text-white"
                                     >
-                                        Tra cứu đơn đặt
+                                        Đơn đặt của bạn
                                     </Link>
                                 </li>
                                 <li className="border-t border-gray-300 mt-2">

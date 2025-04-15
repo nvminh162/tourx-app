@@ -30,3 +30,27 @@ export const saveCruiseBooking = async (bookingData) => {
         throw error;
     }
 };
+
+export const getAllCruiseBookings = async () => {
+    try {
+        console.log('Fetching all cruise bookings...');
+        const response = await httpRequest.get('cruise-bookings');
+        console.log('Cruise bookings API response:', response);
+        return response;
+    } catch (error) {
+        console.error('Failed to fetch cruise bookings:', error);
+        throw error;
+    }
+};
+
+export const searchCruiseBookings = async (field, query) => {
+    try {
+        console.log(`Searching cruise bookings with ${field}=${query}`);
+        const response = await httpRequest.get(`cruise-bookings/search?field=${field}&query=${query}`);
+        console.log('Search cruise bookings API response:', response);
+        return response;
+    } catch (error) {
+        console.error(`Failed to search cruise bookings with ${field}=${query}:`, error);
+        throw error;
+    }
+};

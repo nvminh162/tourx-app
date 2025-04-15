@@ -50,12 +50,36 @@ export const deleteHotel = async (id) => {
 // BOOKING
 export const saveHotelBooking = async (bookingData) => {
     try {
-        console.log('Saving booking data:', bookingData);
+        console.log('Saving hotel booking data:', bookingData);
         const response = await httpRequest.post('hotel-bookings', bookingData);
-        console.log('Booking saved successfully:', response);
+        console.log('Hotel booking saved successfully:', response);
         return response;
     } catch (error) {
-        console.error('Failed to save booking:', error);
+        console.error('Failed to save hotel booking:', error);
+        throw error;
+    }
+};
+
+export const getAllHotelBookings = async () => {
+    try {
+        console.log('Fetching all hotel bookings...');
+        const response = await httpRequest.get('hotel-bookings');
+        console.log('Hotel bookings API response:', response);
+        return response;
+    } catch (error) {
+        console.error('Failed to fetch hotel bookings:', error);
+        throw error;
+    }
+};
+
+export const searchHotelBookings = async (field, query) => {
+    try {
+        console.log(`Searching hotel bookings with ${field}=${query}`);
+        const response = await httpRequest.get(`hotel-bookings/search?field=${field}&query=${query}`);
+        console.log('Search hotel bookings API response:', response);
+        return response;
+    } catch (error) {
+        console.error(`Failed to search hotel bookings with ${field}=${query}:`, error);
         throw error;
     }
 };
