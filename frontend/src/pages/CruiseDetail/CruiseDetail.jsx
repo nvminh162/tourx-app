@@ -6,7 +6,7 @@ import { isLoggedIn } from '../../utils/auth';
 import config from '../../config';
 
 import CruiseFeatures from './CruiseFeatures';
-import CruiseRoom from './CruiseRoom';
+// import CruiseRoom from './CruiseRoom';
 import CruiseIntroduce from './CruiseIntroduce';
 import CruiseReviews from './CruiseReviews';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
@@ -349,7 +349,7 @@ const CruiseDetail = () => {
                 </div>
             </div>
             <CruiseFeatures />
-            <CruiseRoom />
+            {/* <CruiseRoom /> */}
             <CruiseIntroduce />
             <SectionHeader
                 id="cruise-map"

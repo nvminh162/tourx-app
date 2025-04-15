@@ -6,7 +6,7 @@ import { isLoggedIn } from '../../utils/auth';
 import config from '../../config';
 
 import HotelFeatures from './HotelFeatures';
-import HotelRoom from './HotelRoom';
+// import HotelRoom from './HotelRoom';
 import HotelIntroduce from './HotelIntroduce';
 import HotelReviews from './HotelReviews';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
@@ -399,7 +399,7 @@ const HotelDetail = () => {
                 </div>
             </div>
             <HotelFeatures />
-            <HotelRoom />
+            {/* <HotelRoom /> */}
             <HotelIntroduce />
             <SectionHeader
                 id="hotel-map"
