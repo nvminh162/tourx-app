@@ -55,7 +55,7 @@ git clone https://github.com/nvminh162/tourx-app.git
 cd tourx-app/backend
 ```
 
-2. Install dependencies:
+2. Install dependencies and run:
 ```sh
 npm install
 
@@ -67,18 +67,6 @@ npx nodemon server.js
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 NODE_ENV=development
-```
-
-## Running the Server
-
-To start the server in production mode:
-```sh
-npm start
-```
-
-For development with automatic restart:
-```sh
-npm run dev
 ```
 
 ## API Documentation
