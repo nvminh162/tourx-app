@@ -13,7 +13,7 @@ import { getCurrentUser, isLoggedIn } from '../../utils/auth';
 const Modal = ({ open, onClose, children }) => {
     if (!open) return null;
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-opacity">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity">
             <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full p-0 relative animate-fadeIn overflow-hidden">
                 <button
                     className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 rounded-full p-1 hover:bg-gray-100 transition-colors z-10"
@@ -34,14 +34,15 @@ const mockCruiseBookings = [];
 const mockFlightBookings = [];
 
 const TABS = [
-    { key: 'hotel', label: 'Khách sạn', icon: Hotel },
     { key: 'cruise', label: 'Du thuyền', icon: Ship },
+    { key: 'hotel', label: 'Khách sạn', icon: Hotel },
     { key: 'flight', label: 'Chuyến bay', icon: Plane },
 ];
 const FILTERS = [
     { key: 'all', label: 'Tất cả' },
-    { key: 'active', label: 'Hiệu lực' },
-    { key: 'expired', label: 'Hết hiệu lực' },
+    { key: 'upcoming', label: 'Chưa nhận' },
+    { key: 'ongoing', label: 'Đang diễn ra' },
+    { key: 'completed', label: 'Kết thúc' },
 ];
 
 // Helper function to safely format dates
@@ -63,6 +64,7 @@ const Lookup = () => {
     const [tab, setTab] = useState('hotel');
     const [filter, setFilter] = useState('all');
     const [loading, setLoading] = useState(false);
+    // eslint-disable-next-line no-unused-vars
     const [error, setError] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState(null);
@@ -174,25 +176,69 @@ const Lookup = () => {
     // Lọc theo filter
     const filterBookings = (data) => {
         const now = new Date();
+        now.setHours(0, 0, 0, 0); // Set to beginning of the day for consistent date comparison
         if (filter === 'all') return data;
+        
         if (tab === 'hotel') {
             return data.filter(b => {
+                const checkIn = b.checkInDate ? new Date(b.checkInDate) : null;
                 const checkOut = b.checkOutDate ? new Date(b.checkOutDate) : null;
-                return checkOut ? (filter === 'active' ? checkOut >= now : checkOut < now) : true;
+                
+                if (!checkIn || !checkOut) return false;
+                
+                // Normalize dates for comparison (remove time part)
+                const checkInDate = new Date(checkIn);
+                checkInDate.setHours(0, 0, 0, 0);
+                
+                const checkOutDate = new Date(checkOut);
+                checkOutDate.setHours(0, 0, 0, 0);
+                
+                // Tạo ngày kết thúc (sau ngày checkout 1 ngày)
+                const endDate = new Date(checkOutDate);
+                endDate.setDate(endDate.getDate() + 1);
+                
+                if (filter === 'upcoming') return checkInDate > now; // Chưa nhận - check-in date is in the future
+                if (filter === 'ongoing') return checkInDate <= now && checkOutDate >= now; // Đang diễn ra - we've reached or passed check-in date but haven't reached check-out date yet
+                if (filter === 'completed') return checkOutDate < now; // Kết thúc - check-out date has passed
+                return true;
             });
         }
+        
         if (tab === 'cruise') {
             return data.filter(b => {
-                const booking = b.bookingDate ? new Date(b.bookingDate) : null;
-                return booking ? (filter === 'active' ? booking >= now : booking < now) : true;
+                const bookingDate = b.bookingDate ? new Date(b.bookingDate) : null;
+                if (!bookingDate) return false;
+                
+                // Đặt giờ về 00:00:00 cho bookingDate để so sánh nhất quán
+                const bookingDateOnly = new Date(bookingDate);
+                bookingDateOnly.setHours(0, 0, 0, 0);
+                
+                // Giả sử thời gian du thuyền là 1 ngày (kết thúc vào cuối ngày đặt)
+                // Thêm logic kiểm tra ngày hiện tại với ngày đặt
+                
+                if (filter === 'upcoming') return bookingDateOnly > now; // Chưa nhận
+                if (filter === 'ongoing') return bookingDateOnly.getTime() === now.getTime(); // Đang diễn ra (chính ngày hôm đó)
+                if (filter === 'completed') return bookingDateOnly < now; // Kết thúc (đã qua ngày đặt)
+                return true;
             });
         }
+        
         if (tab === 'flight') {
             return data.filter(b => {
-                const dep = b.departureDate ? new Date(b.departureDate) : null;
-                return dep ? (filter === 'active' ? dep >= now : dep < now) : true;
+                const departureDate = b.departureDate ? new Date(b.departureDate) : null;
+                if (!departureDate) return false;
+                
+                // Đặt giờ về 00:00:00 cho departureDate để so sánh nhất quán
+                const departureDateOnly = new Date(departureDate);
+                departureDateOnly.setHours(0, 0, 0, 0);
+                
+                if (filter === 'upcoming') return departureDateOnly > now; // Chưa nhận
+                if (filter === 'ongoing') return departureDateOnly.getTime() === now.getTime(); // Đang diễn ra (chính ngày đó)
+                if (filter === 'completed') return departureDateOnly < now; // Kết thúc
+                return true;
             });
         }
+        
         return data;
     };
 
@@ -341,7 +387,7 @@ const Lookup = () => {
                 <div className="bg-teal-600 p-6 text-white">
                     <h2 className="text-xl font-bold">Chi tiết đơn đặt</h2>
                     <div className="mt-2 flex items-center">
-                        <span className="text-sm bg-white bg-opacity-20 px-2 py-0.5 rounded">
+                        <span className="text-sm bg-opacity-20 px-2 py-0.5 rounded">
                             #{modalData._id ? modalData._id.toString().slice(-6) : ''}
                         </span>
                         <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${getStatusColor()}`}>

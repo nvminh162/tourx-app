@@ -46,11 +46,24 @@ const UserDropdown = () => {
                 theme: "light",
             });
         }, 100);
+        handleScrollTop();
     };
 
     const currentUser = isLoggedIn() ? getCurrentUser() : null;
     const fullName = currentUser?.fullname || 'Không xác định';
     const username = currentUser?.username || 'Không xác định';
+
+    // Function to get avatar URL based on username
+    const getAvatarUrl = (username) => {
+        const validUsernames = ['22001075', '22002045', '22003405', '22638121', '22664411'];
+        
+        if (validUsernames.includes(username)) {
+            const extension = username === '22003405' ? 'JPEG' : 'jpg';
+            return `/readme/member/${username}.${extension}`;
+        }
+        
+        return '/readme/member/default.png';
+    };
 
     return (
         <div className="relative" ref={dropdownRef}>
@@ -62,7 +75,7 @@ const UserDropdown = () => {
                 {currentUser ? (
                     <img
                         className="w-8 h-8 rounded-full"
-                        src="https://avatars.githubusercontent.com/u/121565657?v=4"
+                        src={getAvatarUrl(username)}
                         alt="user photo"
                     />
                 ) : (
