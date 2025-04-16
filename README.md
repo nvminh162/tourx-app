@@ -45,4 +45,4 @@ The project is built and developed by team 11 - (2025-2026) - IUH.
 ## Source Reference:
 Get ideas from [Mixivivu](https://mixivivu.com/) for reference purposes only and not for business purposes.
 
-📢 *If you like this project, please ⭐ on GitHub!*
+📢 *If you like this project, please ⭐ on GitHub*
